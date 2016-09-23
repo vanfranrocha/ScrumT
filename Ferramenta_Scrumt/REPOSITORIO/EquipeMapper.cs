@@ -16,7 +16,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
                 col.ID_Equipe = (int)Record["ID_Equipe"];
                 col.Nome = (string)Record["Nome"];
                 col.Email = (string)Record["Email"];
-                col.Funcao = (string)Record["ID_Funcao"];
+                col.Funcao = (string)Record["Funcao"];
                 return col;
             }
         }

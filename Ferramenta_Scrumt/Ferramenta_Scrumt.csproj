@@ -784,10 +784,11 @@
     <Content Include="Scripts\vendors\twitter\lib\tmhOAuth.php" />
     <Content Include="Scripts\vendors\twitter\lib\tmhUtilities.php" />
     <Content Include="Views\Home\Menu.cshtml" />
+    <Content Include="Views\Equipe\Index.cshtml" />
+    <Content Include="Views\Equipe\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Equipe\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
