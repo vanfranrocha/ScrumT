@@ -786,6 +786,7 @@
     <Content Include="Views\Home\Menu.cshtml" />
     <Content Include="Views\Equipe\Index.cshtml" />
     <Content Include="Views\Equipe\Menu.cshtml" />
+    <Content Include="Views\Equipe\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
