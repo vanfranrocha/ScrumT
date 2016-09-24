@@ -1,11 +1,8 @@
 ﻿using Ferramenta_Scrumt.INFRA;
 using Ferramenta_Scrumt.MODEL;
-using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 
 namespace Ferramenta_Scrumt.REPOSITORIO
 {

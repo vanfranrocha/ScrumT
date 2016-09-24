@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Ferramenta_Scrumt.MODEL;
+﻿using Ferramenta_Scrumt.MODEL;
 using System.Data;
 
 namespace Ferramenta_Scrumt.REPOSITORIO

@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Ferramenta_Scrumt.MODEL.Projeto>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-heading">
+    <h3>
+        Projetos
+    </h3>
+    <div class="col-md-10 col-xs-8">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Cadastros</a>
+            </li>
+            <li class="active">Projeto</li>
+        </ul>
+    </div>
+    <div class="col-md-2 col-xs-8">
+        <p>
+            @Html.ActionLink("Adicionar Projeto", "Create", 0, new { @class = "btn btn-primary" })
+        </p>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-sm-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Projetos Cadastrados
+                    <span class="tools pull-right">
+                        <a href="javascript:;" class="fa fa-chevron-down"></a>
+                    </span>
+                </header>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="col-md-3 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Descricao)
+                                    </div>
+                                    <div class="col-md-3 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Data_Inicio)
+                                    </div>
+                                    <div class="col-md-3 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Data_Fim)
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        @foreach (var item in Model)
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col-md-3 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Descricao)
+                                            </b>@Html.DisplayFor(modelItem => item.Descricao)
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Data_Inicio)
+                                            </b>@Html.DisplayFor(modelItem => item.Data_Inicio)
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Data_Fim)
+                                            </b>@Html.DisplayFor(modelItem => item.Data_Fim)
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+
+                                            @Html.ActionLink("Editar", "Edit", new { id = item.ID_Projeto }, new { @class = "btn btn-success" })
+                                            @Html.ActionLink("Detalhes", "Details", new { id = item.ID_Projeto }, new { @class = "btn btn-info" })
+                                            @Html.ActionLink("Deletar", "Delete", new { id = item.ID_Projeto }, new { @class = "btn btn-danger" })
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+
