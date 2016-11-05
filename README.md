@@ -17,7 +17,7 @@ Auxiliar as equipes de desenvolvimento a gerenciar o projeto de desenvolvimento,
  Features    | ferramentas usadas
  ------ | -----
 **Tema** | [AdminEx](http://adminex.themebucket.net/)
-**Framework** | [MVC](http://sass-lang.com/) ([Padrão Repositorio](http://sass-lang.com/libsass) 
+**Framework** | [MVC](https://www.asp.net/mvc) ([Padrão Repositorio](http://www.macoratti.net/14/12/ef6_dalrp3.htm))
 
 ##Como Instalar
 1. No Visual Studio digitar Ctrl+J, Ctrl+M. `exibir>Team explorer`
