@@ -192,33 +192,42 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BacklogController.cs" />
-    <Compile Include="Controllers\EquipeController.cs" />
+    <Compile Include="Controllers\TestUnidadeController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProjetoController.cs" />
+    <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Controllers\SprintsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="INFRA\DBUtil.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="MODEL\Equipe.cs" />
+    <Compile Include="MODEL\TesteUnidade.cs" />
+    <Compile Include="MODEL\Users.cs" />
+    <Compile Include="MODEL\Funcao.cs" />
+    <Compile Include="MODEL\ProductBacklog.cs" />
     <Compile Include="MODEL\Projeto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="REPOSITORIO\EquipeMapper.cs" />
-    <Compile Include="REPOSITORIO\EquipeRepositorio.cs" />
+    <Compile Include="REPOSITORIO\TesteUnidadeMapper.cs" />
+    <Compile Include="REPOSITORIO\TesteUnidadeRepositorio.cs" />
+    <Compile Include="REPOSITORIO\UsersMapper.cs" />
+    <Compile Include="REPOSITORIO\UsersRepositorio.cs" />
+    <Compile Include="REPOSITORIO\FuncaoRepositorio.cs" />
+    <Compile Include="REPOSITORIO\Funcao_Mapper.cs" />
     <Compile Include="REPOSITORIO\ISQLMapper.cs" />
     <Compile Include="REPOSITORIO\ISQLMapperBase.cs" />
     <Compile Include="REPOSITORIO\ISQLRepository.cs" />
+    <Compile Include="REPOSITORIO\LoginMapper.cs" />
+    <Compile Include="REPOSITORIO\LoginRepositorio.cs" />
+    <Compile Include="REPOSITORIO\ProductBacklogMapper.cs" />
+    <Compile Include="REPOSITORIO\ProductBacklogRepositorio.cs" />
     <Compile Include="REPOSITORIO\ProjetoMapper.cs" />
     <Compile Include="REPOSITORIO\ProjetoRepositorio.cs" />
+    <Compile Include="REPOSITORIO\RegistrationMapper.cs" />
+    <Compile Include="REPOSITORIO\RegistrationRepositorio.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -746,7 +755,9 @@
     <Content Include="Scripts\vendors\revolution\js\jquery.themepunch.tools.min.js" />
     <Content Include="Scripts\vendors\twitter\jquery.tweet.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -757,29 +768,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\vendors\revolution\assets\arrows.psd" />
     <Content Include="Scripts\vendors\revolution\assets\bullets.psd" />
     <Content Include="Scripts\vendors\revolution\assets\small_arrows.psd" />
@@ -790,17 +779,29 @@
     <Content Include="Scripts\vendors\twitter\lib\tmhOAuth.php" />
     <Content Include="Scripts\vendors\twitter\lib\tmhUtilities.php" />
     <Content Include="Views\Home\Menu.cshtml" />
-    <Content Include="Views\Equipe\Index.cshtml" />
-    <Content Include="Views\Equipe\Menu.cshtml" />
-    <Content Include="Views\Equipe\Create.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Users\Menu.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
     <Content Include="Views\Projeto\Index.cshtml" />
     <Content Include="Views\Projeto\Menu.cshtml" />
-    <Content Include="Views\Backlog\Index.cshtml" />
     <Content Include="Views\Sprints\Index.cshtml" />
     <Content Include="Views\Sprints\Menu.cshtml" />
+    <Content Include="Views\Shared\_LayoutLogin.cshtml" />
+    <Content Include="Views\Backlog\Menu.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Shared\Menu.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Projeto\Create.cshtml" />
+    <Content Include="Views\Backlog\Index.cshtml" />
+    <Content Include="Views\Backlog\Create.cshtml" />
+    <Content Include="Views\Registration\Create.cshtml" />
+    <Content Include="Views\TestUnidade\Index.cshtml" />
+    <Content Include="Views\TestUnidade\Create.cshtml" />
+    <Content Include="Views\TestUnidade\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

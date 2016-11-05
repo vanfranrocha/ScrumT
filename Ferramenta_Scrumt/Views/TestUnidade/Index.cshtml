@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Ferramenta_Scrumt.MODEL.TesteUnidade>
+
+@{
+    ViewBag.Title = "Testes de Unidade";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-heading">
+    <h3>
+        Testes de Unidade
+    </h3>
+    <div class="col-md-10 col-xs-8">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Testes</a>
+            </li>
+            <li class="active">Unidade</li>
+        </ul>
+    </div>
+    <div class="col-md-2 col-xs-8">
+        <p>
+            @Html.ActionLink("Adicionar Teste", "Create", 0, new { @class = "btn btn-primary" })
+        </p>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-sm-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Testes Cadastrados
+                    <span class="tools pull-right">
+                        <a href="javascript:;" class="fa fa-chevron-down"></a>
+                    </span>
+                </header>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="col-md-1 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.ID_Backlog)
+                                    </div>
+                                    <div class="col-md-1 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.ID_Membro)
+                                    </div>
+                                    <div class="col-md-3 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Classe)
+                                    </div>
+                                    <div class="col-md-3 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Status)
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        @foreach (var item in Model)
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col-md-1 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.ID_Backlog)
+                                            </b>@Html.DisplayFor(modelItem => item.ID_Backlog)
+                                        </div>
+                                        <div class="col-md-1 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.ID_Membro)
+                                            </b>@Html.DisplayFor(modelItem => item.ID_Membro)
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Classe)
+                                            </b>@Html.DisplayFor(modelItem => item.Classe)
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Status)
+                                            </b>
+                                            <div class="progress progress-striped">
+                                                <div style="width: @Html.DisplayFor(modelItem => item.Status)%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
+                                                    <span class="">@Html.DisplayFor(modelItem => item.Status)%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                <div class="col-md-3 col-xs-8">
+
+                                                    @Html.ActionLink("Editar", "Edit", new { id = item.ID_TestUnidade }, new { @class = "btn btn-success" })
+                                                    @Html.ActionLink("Detalhes", "Details", new { id = item.ID_TestUnidade }, new { @class = "btn btn-info" })
+                                                    @Html.ActionLink("Deletar", "Delete", new { id = item.ID_TestUnidade }, new { @class = "btn btn-danger" })
+
+                                                </div>
+</td>
+                                </tr>
+                            </tbody>
+                        }
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

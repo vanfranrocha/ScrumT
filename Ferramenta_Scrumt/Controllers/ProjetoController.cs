@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Ferramenta_Scrumt.Controllers
 {
+    [Authorize]
     public class ProjetoController : Controller
     {
         // GET: Projeto
@@ -30,7 +31,6 @@ namespace Ferramenta_Scrumt.Controllers
         {
             CarregaLista();
             _ProjetoRep.ADD(P);
-            P.ID_Projeto = ProjetoList.Count == 0 ? 0 : ProjetoList.Last().ID_Projeto + 1;
             Session["Lista"] = ProjetoList;
             return RedirectToAction("Index");
         }

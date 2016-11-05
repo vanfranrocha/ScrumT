@@ -30,23 +30,23 @@ namespace Ferramenta_Scrumt.REPOSITORIO
 
             SqlParameter[] Param = new SqlParameter[]
             {
-                new SqlParameter("@Nome",Item.Descricao),
-                new SqlParameter("@Email",Item.Data_Inicio),
-                new SqlParameter("@Funcao",Item.Data_Fim),
+                new SqlParameter("@Descricao",Item.Descricao),
+                new SqlParameter("@DataInicio",Item.Data_Inicio),
+                new SqlParameter("@Datafim",Item.Data_Fim),
                 ID
             };
 
             DB.ExecSP("SP_PROJETO_INCLUIR", Param);
-        }
+            }
 
         public void Update(Projeto Item)
         {
 
             SqlParameter[] Param = new SqlParameter[]
             {
-                new SqlParameter("@Nome",Item.Descricao),
-                new SqlParameter("@Email",Item.Data_Inicio),
-                new SqlParameter("@Funcao",Item.Data_Fim),
+                new SqlParameter("@Descricao",Item.Descricao),
+                new SqlParameter("@Data_Inicio",Item.Data_Inicio),
+                new SqlParameter("@Datafim",Item.Data_Fim),
                 new SqlParameter("@ID",Item.ID_Projeto)
             };
 

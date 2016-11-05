@@ -1,0 +1,85 @@
+﻿@model Ferramenta_Scrumt.MODEL.Equipe
+
+@{
+    ViewBag.Title = "DetalhesEquipe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="page-heading">
+    <h3>
+        Equipe
+    </h3>
+    <div class="col-md-10 col-xs-8">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Cadastros</a>
+            </li>
+            <li class="#">Equipe</li>
+            <li class="active">Detalhes</li>
+        </ul>
+    </div>
+
+</div>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-sm-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    <h4>Equipe</h4>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ID_Equipe)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ID_Equipe)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Nome)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Email)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Funcao)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Funcao)
+                            
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Senha)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Senha)
+                        </dd>
+
+                    </dl>
+                </header>
+            </section>
+            @Html.ActionLink("Editar", "Edit", new { id = Model.ID_Equipe }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-danger" })
+        </div>
+
+        </div>
+</div>
+        

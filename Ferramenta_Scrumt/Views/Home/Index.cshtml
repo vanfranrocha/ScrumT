@@ -1,71 +1,148 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Inicio";
 }
-
-
     <!--body wrapper start-->
     <div class="wrapper">
-        <div class="row states-info">
-            <div class="col-md-3">
-                <div class="panel blue-bg">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-xs-4">
-                                <i class="fa fa-copy"></i>
-                            </div>
-                            <div class="col-xs-8">
-                                <span class="state-title"> Projetos em Execução </span>
-                                <h4>4</h4>
-                            </div>
+    <div class="row states-info">
+        <div class="col-md-3">
+            <div class="panel blue-bg">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <i class="fa fa-copy"></i>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="panel green-bg">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-xs-4">
-                                <i class="fa fa-clipboard"></i>
-                            </div>
-                            <div class="col-xs-8">
-                                <span class="state-title">  Projetos Finalizados  </span>
-                                <h4>5</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="panel yellow-bg">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-xs-4">
-                                <i class="fa fa-cogs"></i>
-                            </div>
-                            <div class="col-xs-8">
-                                <span class="state-title">  Testes Realizados  </span>
-                                <h4>6</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="panel red-bg">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-xs-4">
-                                <i class="fa fa-code"></i>
-                            </div>
-                            <div class="col-xs-8">
-                                <span class="state-title">  Testes em Espera  </span>
-                                <h4>9</h4>
-                            </div>
+                        <div class="col-xs-8">
+                            <span class="state-title"> Projetos em Execução </span>
+                            <h4>4</h4>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--body wrapper end-->
+        <div class="col-md-3">
+            <div class="panel green-bg">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <i class="fa fa-clipboard"></i>
+                        </div>
+                        <div class="col-xs-8">
+                            <span class="state-title">  Projetos Finalizados  </span>
+                            <h4>5</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel yellow-bg">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <i class="fa fa-cogs"></i>
+                        </div>
+                        <div class="col-xs-8">
+                            <span class="state-title">  Testes Realizados  </span>
+                            <h4>6</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel red-bg">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <i class="fa fa-code"></i>
+                        </div>
+                        <div class="col-xs-8">
+                            <span class="state-title">  Testes em Espera  </span>
+                            <h4>9</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="col-md-12">
+        <div class="panel">
+            <header class="panel-heading">
+                Progresso dos Projetos
+                <span class="tools pull-right">
+                    <a href="javascript:;" class="fa fa-chevron-down"></a>
+                    <a href="javascript:;" class="fa fa-times"></a>
+                </span>
+            </header>
+            <div class="panel-body">
+                <ul class="goal-progress">
+                    <li>
+                        
+                        <div class="details">
+                            <div class="title">
+                                <a href="#">John Doe</a> - Project Lead
+                            </div>
+                            <div class="progress progress-xs">
+                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                    <span class="">70%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="details">
+                            <div class="title">
+                                <a href="#">Cameron Doe</a> - Sales
+                            </div>
+                            <div class="progress progress-xs">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 91%">
+                                    <span class="">91%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="details">
+                            <div class="title">
+                                <a href="#">Hoffman Doe</a> - Support
+                            </div>
+                            <div class="progress progress-xs">
+                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                    <span class="">40%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="details">
+                            <div class="title">
+                                <a href="#">Jane Doe</a> - Marketing
+                            </div>
+                            <div class="progress progress-xs">
+                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                    <span class="">20%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+
+                        <div class="details">
+                            <div class="title">
+                                <a href="#">Hoffman Doe</a> - Support
+                            </div>
+                            <div class="progress progress-xs">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                                    <span class="">45%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="text-center"><a href="#">Ver todos os Projetos</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!--body wrapper end-->
+ 

@@ -1,8 +1,113 @@
-﻿
+﻿@model IEnumerable<Ferramenta_Scrumt.MODEL.ProductBacklog>
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Product Backlog";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+
+<div class="page-heading">
+    <h3>
+        Product Backlog
+    </h3>
+    <div class="col-md-10 col-xs-8">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Backlog</a>
+            </li>
+            <li class="active">Product Backlog</li>
+        </ul>
+    </div>
+    <div class="col-md-2 col-xs-8">
+        <p>
+            @Html.ActionLink("Adicionar Historia", "Create", 0, new { @class = "btn btn-primary" })
+        </p>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-sm-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Historias Cadastradas
+                    <span class="tools pull-right">
+                        <a href="javascript:;" class="fa fa-chevron-down"></a>
+                    </span>
+                </header>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="col-md-2 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Historia)
+                                    </div>
+                                    <div class="col-md-1 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Projeto)
+                                    </div>
+                                    <div class="col-md-2 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Estimativa_Inicio)
+                                    </div>
+                                    <div class="col-md-2 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Importancia)
+                                    </div>
+                                    
+                                    <div class="col-md-2 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Aceito)
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        @foreach (var item in Model)
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Historia)
+                                            </b>@Html.DisplayFor(modelItem => item.Historia)
+                                        </div>
+                                        <div class="col-md-1 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Projeto)
+                                            </b>@Html.DisplayFor(modelItem => item.Projeto)
+                                        </div>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Estimativa_Inicio)
+                                            </b>@Html.DisplayFor(modelItem => item.Estimativa_Inicio)
+                                        </div>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Importancia)
+                                            </b>@Html.DisplayFor(modelItem => item.Importancia)
+                                        </div>
+                                        
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Aceito)
+                                            </b>@Html.DisplayFor(modelItem => item.Aceito)
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+
+                                            @Html.ActionLink("Editar", "Edit", new { id = item.ID_PBacklog }, new { @class = "btn btn-success" })
+                                            @Html.ActionLink("Detalhes", "Details", new { id = item.ID_PBacklog }, new { @class = "btn btn-info" })
+                                            @Html.ActionLink("Deletar", "Delete", new { id = item.ID_PBacklog }, new { @class = "btn btn-danger" })
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
 

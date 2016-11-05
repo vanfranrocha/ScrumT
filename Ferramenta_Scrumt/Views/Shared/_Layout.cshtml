@@ -4,8 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - ScrumT</title>
-    
+    <link rel="icon" type="image/png" href="~/images/favicon.png" />
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="@Url.Content("~/Scripts/jquery.maskedinput.js")" type="text/javascript"></script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -198,15 +199,16 @@
                         </li>
                         <li>
                             <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                <img src="images/photos/user-avatar.png" alt="" />
-                                John Doe
+                                
+                                @Session["nomeUsuarioLogado"].ToString()
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
-                                <li><a href="#"><i class="fa fa-user"></i>  Profile</a></li>
-                                <li><a href="#"><i class="fa fa-cog"></i>  Settings</a></li>
-                                <li><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                                <li><a href="#"><i class="fa fa-user"></i> <span>Perfil</span></a></li>
+                                <li><a href="#"><i class="fa fa-cog"></i> <span>Configurações</span></a></li>
+                                <li><a href="/Login/LogOff"><i class="fa fa-sign-out"></i> <span>Sair</span></a></li>
                             </ul>
+                            
                         </li>
                     </ul>
                 </div>

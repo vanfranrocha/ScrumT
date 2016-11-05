@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace Ferramenta_Scrumt.MODEL
 {
     public class Projeto
     {
         public int ID_Projeto { get; set; }
-        public String Descricao { get; set; }
+        public string Descricao { get; set; }
+        [DataType(DataType.Date)]
         public DateTime Data_Inicio { get; set; }
+        [DataType(DataType.Date)]
         public DateTime Data_Fim { get; set; }
     }
 }

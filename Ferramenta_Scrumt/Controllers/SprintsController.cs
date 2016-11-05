@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Ferramenta_Scrumt.Controllers
 {
+    [Authorize]
     public class SprintsController : Controller
     {
         // GET: Sprints
