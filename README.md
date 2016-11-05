@@ -1,2 +1,2 @@
-# scrumT
-Ferramenta Ágil Coexistente entre Scrum e TDD
+# ScrumT
+Ferramenta Ágil de proposta Coexistente das práticas ágeis do framework Scrum e a metodologia TDD
