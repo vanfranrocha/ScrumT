@@ -20,11 +20,11 @@ Auxiliar as equipes de desenvolvimento a gerenciar o projeto de desenvolvimento,
 **Framework** | [MVC](http://sass-lang.com/) ([Padrão Repositorio](http://sass-lang.com/libsass) 
 
 ##Como Instalar
-1. Abra seu terminal e entre na pasta themes do seu projeto. `$ cd PATH/wp-content/themes/`
-2. Execute o comando git clone:`$ git clone git@github.com:3runoDesign/setRobot.git nome_do_tema`
-3. No seu terminal, entre na pasta do seu tema `nome_do_tema`:`$ cd PATH/wp-content/themes/nome_do_tema/`
-4. Ja dentro da pasta `nome_do_tema`, execute o comando: `$ npm run build`
-5. Por fim, execute o comando para os pacotes do composer: `$ composer install`
+1. No Visual Studio digitar Ctrl+J, Ctrl+M. `exibir>Team explorer`
+2. Com o Team Explorer aberto, clique em CLONAR e cole o link copiado do git, e clique novamente em "clonar":` git@github.com:vanfranrocha/ScrumT.git`
+3. Clique em ScrumT para abrir o projeto
+4. Clique duas vezes em Ferramenta_scrumT.sln
+5. Pronto Clonou o projeto!
 
 ##Framework - Publicações
  - https://www.thinkmind.org/index.php?view=article&articleid=icsea_2016_14_40_10203
