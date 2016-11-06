@@ -12,6 +12,7 @@ namespace Ferramenta_Scrumt.MODEL
         public String Email { get; set; }
         [Required]
         public int Funcao { get; set; }
+        public string Name_Funcao { get; set; }
         [Required]
         public String Senha { get; set; }
     }

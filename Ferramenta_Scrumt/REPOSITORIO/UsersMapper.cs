@@ -13,7 +13,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
                 equi.Nome = (string)Record["Nome"];
                 equi.Email = (string)Record["Email"];
                 equi.Funcao = (int)Record["ID_Funcao"];
-
+                equi.Name_Funcao = (string)Record["Nome_Funcao"];
                 return equi;
             }
         }

@@ -73,10 +73,10 @@ namespace Ferramenta_Scrumt.Controllers
 
         }
         public ActionResult Details(int id)
-        {
-            
+        {  
             CarregaLista();
             return View(EquipeList.Where(X => X.ID_Equipe == id).First());
         }
+       
     }
 }

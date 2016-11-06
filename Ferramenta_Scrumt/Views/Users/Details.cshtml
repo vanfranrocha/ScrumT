@@ -1,7 +1,7 @@
-﻿@model Ferramenta_Scrumt.MODEL.Equipe
+﻿@model Ferramenta_Scrumt.MODEL.Users
 
 @{
-    ViewBag.Title = "DetalhesEquipe";
+    ViewBag.Title = "Detalhes Equipe";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -57,11 +57,11 @@
                         </dd>
 
                         <dt>
-                            @Html.DisplayNameFor(model => model.Funcao)
+                            @Html.DisplayNameFor(model => model.Name_Funcao)
                         </dt>
 
                         <dd>
-                            @Html.DisplayFor(model => model.Funcao)
+                            @Html.DisplayFor(model => model.Name_Funcao)
                             
                         </dd>
 

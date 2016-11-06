@@ -28,7 +28,7 @@ namespace Ferramenta_Scrumt.Controllers
             if (_LogRep.Login(L))
             {
                 System.Web.Security.FormsAuthentication.SetAuthCookie(L.Email, false);
-                Session["nomeUsuarioLogado"] = L.Email.ToString();
+                Session["nomeUsuarioLogado"] = L.Nome.ToString();
                 return Redirect(returnUrl);
             }
             this.ModelState.AddModelError("", "Email ou Senha incorretos");
@@ -45,5 +45,6 @@ namespace Ferramenta_Scrumt.Controllers
             CarregaLista();
             return View();
         }
+
     }
 }
