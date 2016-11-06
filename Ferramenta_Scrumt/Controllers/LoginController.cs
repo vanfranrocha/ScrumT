@@ -44,6 +44,9 @@ namespace Ferramenta_Scrumt.Controllers
             CarregaLista();
             return View();
         }
-
+        public new ActionResult Profile()
+        {
+            return View();
+        }
     }
 }
