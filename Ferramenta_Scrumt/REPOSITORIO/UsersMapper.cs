@@ -17,5 +17,4 @@ namespace Ferramenta_Scrumt.REPOSITORIO
                 return equi;
             }
         }
-    
 }

@@ -1,0 +1,73 @@
+﻿@model Ferramenta_Scrumt.MODEL.Users
+
+@{
+    ViewBag.Title = "Deletar Membro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-heading">
+    <h3>
+        Equipe
+    </h3>
+    <ul class="breadcrumb">
+        <li>
+            <a href="/Home/Index">Home</a>
+        </li>
+        <li>
+            <a href="/Users/Index">Equipe</a>
+        </li>
+        <li class="active">Deletar Membro</li>
+    </ul>
+
+</div>
+
+<body>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        <h3>Deseja Realmente Excluir este Registro?</h3>
+                        <div>
+                            <hr />
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Nome)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Nome)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Name_Funcao)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Name_Funcao)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Email)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Email)
+                                </dd>
+                            </dl>
+
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div class="form-actions no-color">
+                                    <input type="submit" value="Deletar" class="btn btn-danger" />
+                                    @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-success" })
+                                </div>
+                            }
+                        </div>
+                    </header>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+

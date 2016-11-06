@@ -31,50 +31,35 @@
                 <header class="panel-heading">
                     <h4>Equipe</h4>
                     <hr />
-                    <dl class="dl-horizontal">
-                        <dt>
-                            @Html.DisplayNameFor(model => model.ID_Equipe)
-                        </dt>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ID_Equipe, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.DisplayFor(model => model.ID_Equipe, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
 
-                        <dd>
-                            @Html.DisplayFor(model => model.ID_Equipe)
-                        </dd>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Nome, "Nome: ", new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.DisplayFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                         </div>
 
-                        <dt>
-                            @Html.DisplayNameFor(model => model.Nome)
-                        </dt>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, "Email: ", new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.DisplayFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
 
-                        <dd>
-                            @Html.DisplayFor(model => model.Nome)
-                        </dd>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Name_Funcao,"Função: ", new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.DisplayFor(model => model.Name_Funcao, new { htmlAttributes = new { @class = "form-control" } })
 
-                        <dt>
-                            @Html.DisplayNameFor(model => model.Email)
-                        </dt>
+                        </div>
 
-                        <dd>
-                            @Html.DisplayFor(model => model.Email)
-                        </dd>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Senha, "Senha: ", new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.DisplayFor(model => model.Senha, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
 
-                        <dt>
-                            @Html.DisplayNameFor(model => model.Name_Funcao)
-                        </dt>
-
-                        <dd>
-                            @Html.DisplayFor(model => model.Name_Funcao)
-                            
-                        </dd>
-
-                        <dt>
-                            @Html.DisplayNameFor(model => model.Senha)
-                        </dt>
-
-                        <dd>
-                            @Html.DisplayFor(model => model.Senha)
-                        </dd>
-
-                    </dl>
-                </header>
+                        </div>
+</header>
             </section>
             @Html.ActionLink("Editar", "Edit", new { id = Model.ID_Equipe }, new { @class = "btn btn-info" }) |
             @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-danger" })
