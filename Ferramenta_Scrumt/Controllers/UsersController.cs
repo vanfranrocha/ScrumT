@@ -59,6 +59,8 @@ namespace Ferramenta_Scrumt.Controllers
             CarregaLista();
             //passando uma model P
             Users A = EquipeList.Where(X => X.ID_Equipe == id).First();
+            FuncaoList = _FuncaoRep.Lista(new FuncaoMapper());
+            ViewBag.Nome_Funcao = new SelectList(FuncaoList, "ID_Funcao", "Nome_Funcao");
             CarregaLista();
             return View(A);
         }

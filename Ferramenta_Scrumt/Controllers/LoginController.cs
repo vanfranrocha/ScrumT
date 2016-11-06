@@ -28,12 +28,11 @@ namespace Ferramenta_Scrumt.Controllers
             if (_LogRep.Login(L))
             {
                 System.Web.Security.FormsAuthentication.SetAuthCookie(L.Email, false);
-                Session["nomeUsuarioLogado"] = L.Nome.ToString();
+                Session["nomeUsuarioLogado"] = L.Email.ToString();
                 return Redirect(returnUrl);
             }
             this.ModelState.AddModelError("", "Email ou Senha incorretos");
             return View();
-
         }
         public ActionResult LogOff()
         {
