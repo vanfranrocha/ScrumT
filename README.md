@@ -32,4 +32,4 @@ Auxiliar as equipes de desenvolvimento a gerenciar o projeto de desenvolvimento,
 
 #Copyright e Licença
 Copyright 2016.
-A proposta de utilização de ambas as metodologias foi publicada em uma conferência internacional e um congresso brasileiro, e a ferramenta esta em desenvolvimento e é uma proposta da equipe com a finalidade de contribuir para as equipes de desenvolvimento.
+A proposta de utilização de ambas as metodologias foi publicada em uma conferência internacional e um congresso brasileiro, e a ferramenta esta em desenvolvimento, é uma proposta da equipe com a finalidade de contribuir para as equipes de desenvolvimento.
