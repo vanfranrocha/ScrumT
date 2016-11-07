@@ -12,6 +12,8 @@
 
 </head>
 <body class="sticky-header">
+
+<section>
         @{Html.RenderPartial("Menu"); }
 
         <div class="main-content">
@@ -216,9 +218,12 @@
             </div>
             <!-- header section end-->
             @RenderBody()
+            <footer>
+                @DateTime.Now.Year &copy; ScrumT - Joyce and Vanessa
+            </footer>
         </div>
-            <hr />
-
+   </section>         
+    
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
