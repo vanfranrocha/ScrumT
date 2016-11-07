@@ -802,6 +802,7 @@
     <Content Include="Views\Login\Profile.cshtml" />
     <Content Include="Views\Login\Menu.cshtml" />
     <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Projeto\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
