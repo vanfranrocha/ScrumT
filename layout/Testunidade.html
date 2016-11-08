@@ -63,13 +63,13 @@
 
             <!--sidebar nav start-->
             <ul class="nav nav-pills nav-stacked custom-nav">
-            <li><a href="#"><i class="fa fa-home"></i> <span>Home</span></a></li>
+            <li><a href="/index.html"><i class="fa fa-home"></i> <span>Home</span></a></li>
 
             <li class="menu-list">
                 <a href=""><i class="fa fa-laptop"></i> <span>Cadastros</span></a>
                 <ul class="sub-menu-list">
-                    <li><a href="/Equipe/Index"> Equipe</a></li>
-                    <li><a href="/Projeto/Index"> Projetos</a></li>
+                    <li><a href="Equipe.html"> Equipe</a></li>
+                    <li><a href="Projeto.html"> Projetos</a></li>
                     <li><a href="backlog.html"> Product Backlog</a></li>
                 </ul>
             </li>
@@ -246,32 +246,45 @@
         </div>
         <!-- header section end-->
 <div class="page-heading">
-        <h3>
-            Product Backlog
-        </h3>
-        <div class="col-md-10 col-xs-8">
+    <h3>
+        Testes de Unidade
+    </h3>
+    <div class="col-md-6 col-xs-8">
             <ul class="breadcrumb">
                 <li>
                     <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="#">Cadastros</a>
+                    <a href="active">Testes</a>
                 </li>
-                <li class="active">Product Backlog</li>
+                <li>
+                    <a href="active">Unidade</a>
+                </li>
             </ul>
+        </div>
+        <div class="col-md-1 col-xs-8">
+            <label class="col-lg-2 col-sm-2 control-label">Projeto</label>
+        </div>
+        <div class="col-md-3 col-xs-8">
+            <select class="form-control input-sm m-bot15">
+                <option>Projeto 1</option>
+                <option>projeto 2</option>
+                <option>Projeto 3</option>
+            </select>
         </div>
         <div class="col-md-2 col-xs-8">
             <p>
-                <a class="btn btn-primary" href="/Equipe/Create">Adicionar História</a>
+                <a class="btn btn-primary" href="Sprintadd.html">Adicionar Testes</a>
             </p>
         </div>
-    </div>
+        
+</div>
 <div class="wrapper">
     <div class="row">
         <div class="col-sm-12">
             <section class="panel">
                 <header class="panel-heading">
-                    Histórias Cadastrados
+                    Testes Cadastrados
                     <span class="tools pull-right">
                         <a href="javascript:;" class="fa fa-chevron-down"></a>
                     </span>
@@ -282,108 +295,158 @@
                             <tr>
                                 <th>
                                     <div class="col-md-2 col-xs-8">
-                                        Nome
+                                        História
                                     </div>
-                                    <div class="col-md-4 col-xs-8">
-                                        Descrição
+                                    <div class="col-md-1 col-xs-8">
+                                        Data
                                     </div>
-                                    <div class="col-md-1 col-xs-8" style="text-align: center">
-                                        Estimativa
+                                    <div class="col-md-2 col-xs-8">
+                                        Classe
                                     </div>
-                                    <div class="col-md-1 col-xs-8" style="text-align: center">
-                                        Aceito
+                                    <div class="col-md-2 col-xs-8">
+                                        Responsável
                                     </div>
-                                    <div class="col-md-1 col-xs-8" style="text-align: center">
-                                        Prioridade
+                                    <div class="col-md-2 col-xs-8">
+                                        Status
                                     </div>
                                 </th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="col-md-2 col-xs-8">
-                                        <b class="hidden-md hidden-lg">
-                                            Nome
-                                        </b>Estrutura BD
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                História
+                                            </b>Cliente
+                                        </div>
+                                        <div class="col-md-1 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Data
+                                            </b>20/09/2016
+                                        </div>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Classe
+                                            </b>Teste
+                                        </div>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Responsável
+                                            </b>Vanessa
+                                        </div>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Status
+                                            </b>
+                                            <div class="progress progress-striped">
+                                                <div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
+                                                    <span class="">66%</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-4 col-xs-8">
-                                        <b class="hidden-md hidden-lg">
-                                            Descrição
-                                        </b>Fazer Estrutura UML
-                                    </div>
-                                    <div class="col-md-1 col-xs-8" style="text-align: center">
-                                        <b class="hidden-md hidden-lg">
-                                            Estimativa
-                                        </b>4hrs
-                                    </div>
-                                    <div class="col-md-1 col-xs-8" style="text-align: center">
-                                        <b class="hidden-md hidden-lg">
-                                            Aceito
-                                        </b>
-                                        <input type="checkbox" checked>
-                                </div>
-                                    </div>
-                                    <div class="col-md-1 col-xs-8" style="text-align: center">
-                                        <b class="hidden-md hidden-lg">
-                                            Prioridade
-                                         </b><a href="#myModal" data-toggle="modal" class="btn btn-xs btn-warning">
-                                            Média
-                                        </a>
-                                        
-                                    </div>
-                                    <div class="col-md-3 col-xs-8">
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
 
-                                        <a class="btn btn-success" href="/Equipe/Edit/1">Editar</a>
-                                        <a class="btn btn-info" href="/Equipe/Details/1">Detalhes</a>
-                                        <a class="btn btn-danger" href="/Equipe/Delete/1">Deletar</a>
+                                            <a class="btn btn-success" href="/Projeto/Edit/1">Editar</a>
+                                            <a class="btn btn-info" href="/Projeto/Details/1">Detalhes</a>
+                                            <a class="btn btn-danger" href="/Projeto/Delete/1">Deletar</a>
 
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                História
+                                            </b>Vendas
+                                        </div>
+                                        <div class="col-md-1 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Data
+                                            </b>10/10/2016
+                                        </div>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Classe
+                                            </b>Teste
+                                        </div>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Responsável
+                                            </b>Vanessa
+                                        </div>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Status
+                                            </b>
+                                            <div class="progress progress-striped">
+                                                <div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
+                                                    <span class="">66%</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="col-md-2 col-xs-8">
-                                        <b class="hidden-md hidden-lg">
-                                            Nome
-                                        </b>Interface
-                                    </div>
-                                    <div class="col-md-4 col-xs-8">
-                                        <b class="hidden-md hidden-lg">
-                                            Descrição
-                                        </b>Fazer o Design Interface
-                                    </div>
-                                    <div class="col-md-1 col-xs-8" style="text-align: center">
-                                        <b class="hidden-md hidden-lg">
-                                            Estimativa
-                                        </b>2hrs
-                                    </div>
-                                    <div class="col-md-1 col-xs-8" style="text-align: center">
-                                        <b class="hidden-md hidden-lg">
-                                            Aceito
-                                        </b>
-                                        <input type="checkbox">
-                                    </div>
-                                    <div class="col-md-1 col-xs-8" style="text-align: center">
-                                        <b class="hidden-md hidden-lg">
-                                            Prioridade
-                                        </b><a href="#myModal" data-toggle="modal" class="btn btn-xs btn-danger">
-                                            Alta
-                                        </a>
-                                        
-                                    </div>
-                                    <div class="col-md-3 col-xs-8">
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
 
-                                        <a class="btn btn-success" href="/Equipe/Edit/2">Editar</a>
-                                        <a class="btn btn-info" href="/Equipe/Details/2">Detalhes</a>
-                                        <a class="btn btn-danger" href="/Equipe/Delete/2">Deletar</a>
+                                            <a class="btn btn-success" href="/Projeto/Edit/1">Editar</a>
+                                            <a class="btn btn-info" href="/Projeto/Details/1">Detalhes</a>
+                                            <a class="btn btn-danger" href="/Projeto/Delete/1">Deletar</a>
 
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                História
+                                            </b>Estoque
+                                        </div>
+                                        <div class="col-md-1 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Data
+                                            </b>23/09/2016
+                                        </div>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Classe
+                                            </b>Teste
+                                        </div>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Responsável
+                                            </b>Vanessa
+                                        </div>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Status
+                                            </b>
+                                            <div class="progress progress-striped">
+                                                <div style="width: 33%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-danger">
+                                                    <span class="">33%</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </td>
-                            </tr>
-                        </tbody>
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+
+                                            <a class="btn btn-success" href="/Projeto/Edit/1">Editar</a>
+                                            <a class="btn btn-info" href="/Projeto/Details/1">Detalhes</a>
+                                            <a class="btn btn-danger" href="/Projeto/Delete/1">Deletar</a>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
                     </table>
                 </div>
             </section>

@@ -33,7 +33,7 @@
 
         <!--logo and iconic logo start-->
         <div class="logo">
-            <a href="index.html"><img src="images/logo.png" alt=""></a>
+            <a href="index.html"><img src="images/logo.png" alt="" style="margin-top: -4px;"></a>
         </div>
 
         <div class="logo-icon text-center">
@@ -48,7 +48,7 @@
                 <div class="media logged-user">
                     <img alt="" src="images/photos/user-avatar.png" class="media-object">
                     <div class="media-body">
-                        <h4><a href="#">John Doe</a></h4>
+                        <h4><a href="#">Admin</a></h4>
                         <span>"Hello There..."</span>
                     </div>
                 </div>
@@ -63,13 +63,13 @@
 
             <!--sidebar nav start-->
             <ul class="nav nav-pills nav-stacked custom-nav">
-            <li><a href="#"><i class="fa fa-home"></i> <span>Home</span></a></li>
+            <li><a href="/index.html"><i class="fa fa-home"></i> <span>Home</span></a></li>
 
             <li class="menu-list">
                 <a href=""><i class="fa fa-laptop"></i> <span>Cadastros</span></a>
                 <ul class="sub-menu-list">
-                    <li><a href="/Equipe/Index"> Equipe</a></li>
-                    <li><a href="/Projeto/Index"> Projetos</a></li>
+                    <li><a href="Equipe.html"> Equipe</a></li>
+                    <li><a href="Projeto.html"> Projetos</a></li>
                     <li><a href="backlog.html"> Product Backlog</a></li>
                 </ul>
             </li>
@@ -88,12 +88,7 @@
             <li class="menu-list">
                 <a href=""><i class="fa fa-cogs"></i> <span>Testes</span></a>
                 <ul class="sub-menu-list">
-                    <li><a href="grids.html"> Grids</a></li>
-                    <li><a href="gallery.html"> Media Gallery</a></li>
-                    <li><a href="calendar.html"> Calendar</a></li>
-                    <li><a href="tree_view.html"> Tree View</a></li>
-                    <li><a href="nestable.html"> Nestable</a></li>
-
+                    <li><a href="Testunidade.html"> Unidade</a></li>
                 </ul>
             </li>
 
@@ -115,7 +110,7 @@
             </li>
 
 
-            <li><a href="/login"><i class="fa fa-sign-in"></i> <span>Login Page</span></a></li>
+            <li><a href="login.html"><i class="fa fa-sign-in"></i> <span>Login Page</span></a></li>
 
         </ul>
 
@@ -137,7 +132,7 @@
 
             <!--search start-->
             <form class="searchform" action="index.html" method="post">
-                <input type="text" class="form-control" name="keyword" placeholder="Search here..." />
+                <input type="text" class="form-control" name="keyword" placeholder="Pesquisar..." />
             </form>
             <!--search end-->
 
@@ -147,19 +142,19 @@
                     <li>
                         <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
                             <i class="fa fa-tasks"></i>
-                            <span class="badge">8</span>
+                            <span class="badge">9</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-head pull-right">
-                            <h5 class="title">You have 8 pending task</h5>
+                            <h5 class="title">9 Testes em Andamento</h5>
                             <ul class="dropdown-list user-list">
                                 <li class="new">
                                     <a href="#">
                                         <div class="task-info">
-                                            <div>Database update</div>
+                                            <div>Projeto 1 - Cliente (Teste)</div>
                                         </div>
                                         <div class="progress progress-striped">
-                                            <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
-                                                <span class="">40%</span>
+                                            <div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="66" role="progressbar" class="progress-bar progress-bar-warning">
+                                                <span class="">66%</span>
                                             </div>
                                         </div>
                                     </a>
@@ -167,11 +162,11 @@
                                 <li class="new">
                                     <a href="#">
                                         <div class="task-info">
-                                            <div>Dashboard done</div>
+                                            <div>Projeto 2 - Noticias (teste)</div>
                                         </div>
                                         <div class="progress progress-striped">
-                                            <div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" role="progressbar" class="progress-bar progress-bar-success">
-                                                <span class="">90%</span>
+                                            <div style="width: 99%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="99" role="progressbar" class="progress-bar progress-bar-info">
+                                                <span class="">99%</span>
                                             </div>
                                         </div>
                                     </a>
@@ -179,10 +174,10 @@
                                 <li>
                                     <a href="#">
                                         <div class="task-info">
-                                            <div>Web Development</div>
+                                            <div>Projeto 1 - Vendas (Teste)</div>
                                         </div>
                                         <div class="progress progress-striped">
-                                            <div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="66" role="progressbar" class="progress-bar progress-bar-info">
+                                            <div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="66" role="progressbar" class="progress-bar progress-bar-warning">
                                                 <span class="">66% </span>
                                             </div>
                                         </div>
@@ -191,7 +186,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="task-info">
-                                            <div>Mobile App</div>
+                                            <div>Projeto 1 - Estoque (Teste)</div>
                                         </div>
                                         <div class="progress progress-striped">
                                             <div style="width: 33%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="33" role="progressbar" class="progress-bar progress-bar-danger">
@@ -200,123 +195,41 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="task-info">
-                                            <div>Issues fixed</div>
-                                        </div>
-                                        <div class="progress progress-striped">
-                                            <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar">
-                                                <span class="">80% </span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="new"><a href="">See All Pending Task</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
-                            <i class="fa fa-envelope-o"></i>
-                            <span class="badge">5</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-head pull-right">
-                            <h5 class="title">You have 5 Mails </h5>
-                            <ul class="dropdown-list normal-list">
-                                <li class="new">
-                                    <a href="">
-                                        <span class="thumb"><img src="images/photos/user1.png" alt="" /></span>
-                                        <span class="desc">
-                                          <span class="name">John Doe <span class="badge badge-success">new</span></span>
-                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="thumb"><img src="images/photos/user2.png" alt="" /></span>
-                                        <span class="desc">
-                                          <span class="name">Jonathan Smith</span>
-                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="thumb"><img src="images/photos/user3.png" alt="" /></span>
-                                        <span class="desc">
-                                          <span class="name">Jane Doe</span>
-                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="thumb"><img src="images/photos/user4.png" alt="" /></span>
-                                        <span class="desc">
-                                          <span class="name">Mark Henry</span>
-                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="thumb"><img src="images/photos/user5.png" alt="" /></span>
-                                        <span class="desc">
-                                          <span class="name">Jim Doe</span>
-                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="new"><a href="">Read All Mails</a></li>
+                                <li class="new"><a href="">Todos os testes</a></li>
                             </ul>
                         </div>
                     </li>
                     <li>
                         <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
                             <i class="fa fa-bell-o"></i>
-                            <span class="badge">4</span>
+                            <span class="badge">2</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-head pull-right">
-                            <h5 class="title">Notifications</h5>
+                            <h5 class="title">Notificações</h5>
                             <ul class="dropdown-list normal-list">
                                 <li class="new">
                                     <a href="">
                                         <span class="label label-danger"><i class="fa fa-bolt"></i></span>
-                                        <span class="name">Server #1 overloaded.  </span>
-                                        <em class="small">34 mins</em>
+                                        <span class="name">1 história a ser testada</span>
+                                        
                                     </a>
                                 </li>
                                 <li class="new">
                                     <a href="">
                                         <span class="label label-danger"><i class="fa fa-bolt"></i></span>
-                                        <span class="name">Server #3 overloaded.  </span>
-                                        <em class="small">1 hrs</em>
+                                        <span class="name">1 Equipe esperando histórias</span>
+                                        
                                     </a>
                                 </li>
-                                <li class="new">
-                                    <a href="">
-                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
-                                        <span class="name">Server #5 overloaded.  </span>
-                                        <em class="small">4 hrs</em>
-                                    </a>
-                                </li>
-                                <li class="new">
-                                    <a href="">
-                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
-                                        <span class="name">Server #31 overloaded.  </span>
-                                        <em class="small">4 hrs</em>
-                                    </a>
-                                </li>
-                                <li class="new"><a href="">See All Notifications</a></li>
+                                
+                                <li class="new"><a href="">Todas as Notificações</a></li>
                             </ul>
                         </div>
                     </li>
                     <li>
                         <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                             <img src="images/photos/user-avatar.png" alt="" />
-                            John Doe
+                            Admin
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
@@ -333,32 +246,32 @@
         </div>
         <!-- header section end-->
 <div class="page-heading">
-        <h3>
-            Equipe
-        </h3>
-        <div class="col-md-10 col-xs-8">
-            <ul class="breadcrumb">
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">Cadastros</a>
-                </li>
-                <li class="active">Equipe</li>
-            </ul>
-        </div>
-        <div class="col-md-2 col-xs-8">
-            <p>
-                <a class="btn btn-primary" href="/Equipe/Create">Adicionar Membro</a>
-            </p>
-        </div>
+    <h3>
+        Projetos
+    </h3>
+    <div class="col-md-10 col-xs-8">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Cadastros</a>
+            </li>
+            <li class="active">Projeto</li>
+        </ul>
     </div>
+    <div class="col-md-2 col-xs-8">
+        <p>
+            <a class="btn btn-primary" href="/Projeto/Create">Adicionar Projeto</a>
+        </p>
+    </div>
+</div>
 <div class="wrapper">
     <div class="row">
         <div class="col-sm-12">
             <section class="panel">
                 <header class="panel-heading">
-                    Membros Cadastrados
+                    Projetos Cadastrados
                     <span class="tools pull-right">
                         <a href="javascript:;" class="fa fa-chevron-down"></a>
                     </span>
@@ -369,73 +282,73 @@
                             <tr>
                                 <th>
                                     <div class="col-md-3 col-xs-8">
-                                        Nome
+                                        Descricao
                                     </div>
                                     <div class="col-md-3 col-xs-8">
-                                        Email
+                                        Data_Inicio
                                     </div>
                                     <div class="col-md-3 col-xs-8">
-                                        Funcao
+                                        Data_Fim
                                     </div>
                                 </th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="col-md-3 col-xs-8">
-                                        <b class="hidden-md hidden-lg">
-                                            Nome
-                                        </b>José Maria
-                                    </div>
-                                    <div class="col-md-3 col-xs-8">
-                                        <b class="hidden-md hidden-lg">
-                                            Email
-                                        </b>jose@empresa.com.br
-                                    </div>
-                                    <div class="col-md-3 col-xs-8">
-                                        <b class="hidden-md hidden-lg">
-                                            Funcao
-                                        </b>Scrum Master
-                                    </div>
-                                    <div class="col-md-3 col-xs-8">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col-md-3 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Descricao
+                                            </b>Projeto 1
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Data_Inicio
+                                            </b>20/09/2016 00:00:00
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Data_Fim
+                                            </b>20/01/2017 00:00:00
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
 
-                                        <a class="btn btn-success" href="/Equipe/Edit/1">Editar</a>
-                                        <a class="btn btn-info" href="/Equipe/Details/1">Detalhes</a>
-                                        <a class="btn btn-danger" href="/Equipe/Delete/1">Deletar</a>
+                                            <a class="btn btn-success" href="/Projeto/Edit/1">Editar</a>
+                                            <a class="btn btn-info" href="/Projeto/Details/1">Detalhes</a>
+                                            <a class="btn btn-danger" href="/Projeto/Delete/1">Deletar</a>
 
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="col-md-3 col-xs-8">
-                                        <b class="hidden-md hidden-lg">
-                                            Nome
-                                        </b>Vanessa
-                                    </div>
-                                    <div class="col-md-3 col-xs-8">
-                                        <b class="hidden-md hidden-lg">
-                                            Email
-                                        </b>vanfranrocha@gmail.com
-                                    </div>
-                                    <div class="col-md-3 col-xs-8">
-                                        <b class="hidden-md hidden-lg">
-                                            Funcao
-                                        </b>Product Owner
-                                    </div>
-                                    <div class="col-md-3 col-xs-8">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col-md-3 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Descricao
+                                            </b>Projeto 2
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Data_Inicio
+                                            </b>10/10/2016 00:00:00
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                Data_Fim
+                                            </b>14/05/2017 00:00:00
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
 
-                                        <a class="btn btn-success" href="/Equipe/Edit/2">Editar</a>
-                                        <a class="btn btn-info" href="/Equipe/Details/2">Detalhes</a>
-                                        <a class="btn btn-danger" href="/Equipe/Delete/2">Deletar</a>
+                                            <a class="btn btn-success" href="/Projeto/Edit/1">Editar</a>
+                                            <a class="btn btn-info" href="/Projeto/Details/1">Detalhes</a>
+                                            <a class="btn btn-danger" href="/Projeto/Delete/1">Deletar</a>
 
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
                     </table>
                 </div>
             </section>
