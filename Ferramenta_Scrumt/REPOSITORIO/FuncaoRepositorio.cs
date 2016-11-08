@@ -28,7 +28,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
 
         public void ADD(Funcao Item)
         {
-            SqlParameter ID = new SqlParameter("@ID_Projeto", SqlDbType.Int);
+            SqlParameter ID = new SqlParameter("@ID", SqlDbType.Int);
             ID.Direction = ParameterDirection.Output;
 
             SqlParameter[] Param = new SqlParameter[]

@@ -32,12 +32,15 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Create(Users E)
         {
             _EquipeRep.ADD(E);
+            Session["Lista"] = EquipeList;
             return RedirectToAction("Index");
+
+            
         }
         
         public ActionResult Create()
         {
-            
+            CarregaLista();
             FuncaoList = _FuncaoRep.Lista(new FuncaoMapper());
             ViewBag.Nome_Funcao = new SelectList(FuncaoList, "ID_Funcao", "Nome_Funcao");
             return View();
@@ -57,18 +60,17 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Edit(int id)
         {
             CarregaLista();
-            //passando uma model P
-            Users A = EquipeList.Where(X => X.ID_Equipe == id).First();
+            //passando uma model E
+            Users E = EquipeList.Where(X => X.ID_Equipe == id).First();
             FuncaoList = _FuncaoRep.Lista(new FuncaoMapper());
             ViewBag.Nome_Funcao = new SelectList(FuncaoList, "ID_Funcao", "Nome_Funcao");
             CarregaLista();
-            return View(A);
+            return View(E);
         }
         [HttpPost]
         public ActionResult Edit(Users E)
         {
             //carrega lista e traz um objeto da lista para ser editado
-
             _EquipeRep.Update(E);
             CarregaLista();
             return RedirectToAction("Index");
