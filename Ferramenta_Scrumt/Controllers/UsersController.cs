@@ -1,9 +1,7 @@
 ﻿using Ferramenta_Scrumt.MODEL;
 using Ferramenta_Scrumt.REPOSITORIO;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Ferramenta_Scrumt.Controllers
@@ -34,8 +32,6 @@ namespace Ferramenta_Scrumt.Controllers
             _EquipeRep.ADD(E);
             Session["Lista"] = EquipeList;
             return RedirectToAction("Index");
-
-            
         }
         
         public ActionResult Create()
@@ -57,6 +53,16 @@ namespace Ferramenta_Scrumt.Controllers
             _EquipeRep.Delete(EquipeList.Where(X => X.ID_Equipe == E.ID_Equipe).First());
             return RedirectToAction("Index");
         }
+        [HttpPost]
+        public ActionResult Edit(Users E)
+        {
+            //carrega lista e traz um objeto da lista para ser editado
+            CarregaLista();
+            _EquipeRep.Update(E);
+            Session["Lista"] = EquipeList;
+            return RedirectToAction("Index");
+
+        }
         public ActionResult Edit(int id)
         {
             CarregaLista();
@@ -64,18 +70,9 @@ namespace Ferramenta_Scrumt.Controllers
             Users E = EquipeList.Where(X => X.ID_Equipe == id).First();
             FuncaoList = _FuncaoRep.Lista(new FuncaoMapper());
             ViewBag.Nome_Funcao = new SelectList(FuncaoList, "ID_Funcao", "Nome_Funcao");
-            CarregaLista();
             return View(E);
         }
-        [HttpPost]
-        public ActionResult Edit(Users E)
-        {
-            //carrega lista e traz um objeto da lista para ser editado
-            _EquipeRep.Update(E);
-            CarregaLista();
-            return RedirectToAction("Index");
-
-        }
+        
         public ActionResult Details(int id)
         {  
             CarregaLista();
