@@ -30,6 +30,8 @@
                         <h3>Deseja Realmente Excluir este Registro?</h3>
                         <div>
                             <hr />
+                            @using (Html.BeginForm())
+                            {
                             <dl class="dl-horizontal">
                                 <dt>
                                     @Html.DisplayNameFor(model => model.Nome)
@@ -39,11 +41,11 @@
                                     @Html.DisplayFor(model => model.Nome)
                                 </dd>
                                 <dt>
-                                    @Html.DisplayNameFor(model => model.Name_Funcao)
+                                    @Html.DisplayNameFor(model => model.Funcao)
                                 </dt>
 
                                 <dd>
-                                    @Html.DisplayFor(model => model.Name_Funcao)
+                                    @Html.DisplayFor(model => model.Funcao)
                                 </dd>
                                 <dt>
                                     @Html.DisplayNameFor(model => model.Email)
@@ -54,8 +56,7 @@
                                 </dd>
                             </dl>
 
-                            @using (Html.BeginForm())
-                            {
+                            
                                 @Html.AntiForgeryToken()
 
                                 <div class="form-actions no-color">

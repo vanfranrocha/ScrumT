@@ -211,15 +211,15 @@
     <Compile Include="MODEL\ProductBacklog.cs" />
     <Compile Include="MODEL\Projeto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REPOSITORIO\ISQLMapper.cs" />
+    <Compile Include="REPOSITORIO\ISQLRepository.cs" />
     <Compile Include="REPOSITORIO\TesteUnidadeMapper.cs" />
     <Compile Include="REPOSITORIO\TesteUnidadeRepositorio.cs" />
     <Compile Include="REPOSITORIO\UsersMapper.cs" />
     <Compile Include="REPOSITORIO\UsersRepositorio.cs" />
     <Compile Include="REPOSITORIO\FuncaoRepositorio.cs" />
     <Compile Include="REPOSITORIO\Funcao_Mapper.cs" />
-    <Compile Include="REPOSITORIO\ISQLMapper.cs" />
     <Compile Include="REPOSITORIO\ISQLMapperBase.cs" />
-    <Compile Include="REPOSITORIO\ISQLRepository.cs" />
     <Compile Include="REPOSITORIO\LoginMapper.cs" />
     <Compile Include="REPOSITORIO\LoginRepositorio.cs" />
     <Compile Include="REPOSITORIO\ProductBacklogMapper.cs" />

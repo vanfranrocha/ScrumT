@@ -19,7 +19,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             SqlParameter[] Param = new SqlParameter[]
             { };
-            string SQL = "SELECT [ID_Equipe],[Nome],[Email],[Nome_Funcao],Users.[ID_Funcao], [Senha] FROM Users Inner Join Funcao on Users.ID_Funcao = Funcao.ID_Funcao";
+            string SQL = "SELECT * from Users";
             return mapper.MapAllFromSource(DB.ListaSQL(Param, SQL).Tables[0]);
         }
         public void ADD(Users Item)
@@ -32,7 +32,6 @@ namespace Ferramenta_Scrumt.REPOSITORIO
                 new SqlParameter("@Nome",Item.Nome),
                 new SqlParameter("@Email",Item.Email),
                 new SqlParameter("@ID_Funcao",Item.Funcao),
-
                 ID
             };
 
