@@ -22,53 +22,52 @@
 </div>
 
 <body>
-    <div class="wrapper">
-        <div class="row">
-            <div class="col-sm-12">
-                <section class="panel">
-                    <header class="panel-heading">
-                        <h3>Deseja Realmente Excluir este Registro?</h3>
-                        <div>
-                            <hr />
-                            @using (Html.BeginForm())
-                            {
-                            <dl class="dl-horizontal">
-                                <dt>
-                                    @Html.DisplayNameFor(model => model.Nome)
-                                </dt>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-sm-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            <h3>Deseja Realmente Excluir este Registro?</h3>
+                            <div>
+                                <hr />
 
-                                <dd>
-                                    @Html.DisplayFor(model => model.Nome)
-                                </dd>
-                                <dt>
-                                    @Html.DisplayNameFor(model => model.Funcao)
-                                </dt>
+                                <dl class="dl-horizontal">
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.Nome)
+                                    </dt>
 
-                                <dd>
-                                    @Html.DisplayFor(model => model.Funcao)
-                                </dd>
-                                <dt>
-                                    @Html.DisplayNameFor(model => model.Email)
-                                </dt>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Nome)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.Funcao)
+                                    </dt>
 
-                                <dd>
-                                    @Html.DisplayFor(model => model.Email)
-                                </dd>
-                            </dl>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Funcao)
+                                    </dd>
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.Email)
+                                    </dt>
 
-                            
-                                @Html.AntiForgeryToken()
-
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Email)
+                                    </dd>
+                                </dl>
                                 <div class="form-actions no-color">
                                     <input type="submit" value="Deletar" class="btn btn-danger" />
                                     @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-success" })
                                 </div>
-                            }
-                        </div>
-                    </header>
-                </section>
+
+                            </div>
+                        </header>
+                    </section>
+
+                </div>
             </div>
         </div>
-    </div>
+    }
 </body>
-

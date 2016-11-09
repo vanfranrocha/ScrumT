@@ -217,8 +217,6 @@
     <Compile Include="REPOSITORIO\TesteUnidadeRepositorio.cs" />
     <Compile Include="REPOSITORIO\UsersMapper.cs" />
     <Compile Include="REPOSITORIO\UsersRepositorio.cs" />
-    <Compile Include="REPOSITORIO\FuncaoRepositorio.cs" />
-    <Compile Include="REPOSITORIO\Funcao_Mapper.cs" />
     <Compile Include="REPOSITORIO\ISQLMapperBase.cs" />
     <Compile Include="REPOSITORIO\LoginMapper.cs" />
     <Compile Include="REPOSITORIO\LoginRepositorio.cs" />
@@ -801,10 +799,10 @@
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Login\Profile.cshtml" />
     <Content Include="Views\Login\Menu.cshtml" />
-    <Content Include="Views\Users\Delete.cshtml" />
     <Content Include="Views\Projeto\Details.cshtml" />
     <Content Include="Views\Projeto\Edit.cshtml" />
     <Content Include="Views\Projeto\Delete.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

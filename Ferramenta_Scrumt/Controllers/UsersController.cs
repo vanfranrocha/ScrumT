@@ -47,6 +47,7 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Delete(Users E)
         {
             CarregaLista();
+
             _EquipeRep.Delete(EquipeList.Where(X => X.ID_Equipe == E.ID_Equipe).First());
             return RedirectToAction("Index");
         }

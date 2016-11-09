@@ -12,7 +12,7 @@ namespace Ferramenta_Scrumt.Controllers
         List<Users> EquipeList;
         List<Funcao> FuncaoList;
         RegistrationRepositorio _EquipeRep = new RegistrationRepositorio();
-        FuncaoRepositorio _FuncaoRep = new FuncaoRepositorio();
+        
 
         private void CarregaLista()
         {
@@ -33,10 +33,6 @@ namespace Ferramenta_Scrumt.Controllers
 
         public ActionResult Create()
         {
-
-            FuncaoList = _FuncaoRep.Lista(new FuncaoMapper());
-            ViewBag.Nome_Funcao = new SelectList(FuncaoList, "ID_Funcao", "Nome_Funcao");
-
             return View();
         }
  
