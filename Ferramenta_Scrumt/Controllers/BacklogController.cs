@@ -57,20 +57,20 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Delete(int id)
         {
             CarregaLista();
-            return View(PBacklogList.Where(X => X.ID_PBacklog == id).First());
+            return View(PBacklogList.Where(X => X.ID == id).First());
         }
         [HttpPost]
         public ActionResult Delete(ProductBacklog PB)
         {
             CarregaLista();
-            _PBacklogRep.Delete(PBacklogList.Where(X => X.ID_PBacklog == PB.ID_PBacklog).First());
+            _PBacklogRep.Delete(PBacklogList.Where(X => X.ID == PB.ID).First());
             return RedirectToAction("Index");
         }
         public ActionResult Edit(int id)
         {
             CarregaLista();
             //passando uma model P
-            ProductBacklog A = PBacklogList.Where(X => X.ID_PBacklog == id).First();
+            ProductBacklog A = PBacklogList.Where(X => X.ID == id).First();
             CarregaLista();
             return View(A);
         }
@@ -87,7 +87,7 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Details(int id)
         {
             CarregaLista();
-            return View(PBacklogList.Where(X => X.ID_PBacklog == id).First());
+            return View(PBacklogList.Where(X => X.ID == id).First());
         }
     }
 }

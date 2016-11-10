@@ -9,7 +9,7 @@ namespace Ferramenta_Scrumt.MODEL
         {
 
         }
-        public int ID_Projeto { get; set; }
+        public int ID { get; set; }
         public string Descricao { get; set; }
         [DataType(DataType.Date)]
         public DateTime Data_Inicio { get; set; }

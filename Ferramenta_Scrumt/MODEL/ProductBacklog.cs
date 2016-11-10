@@ -5,7 +5,7 @@ namespace Ferramenta_Scrumt.MODEL
 {
     public class ProductBacklog
     {
-        public int ID_PBacklog { get; set; }
+        public int ID { get; set; }
         public int Projeto { get; set; }
         public string Historia { get; set; }
         [DataType(DataType.Date)]

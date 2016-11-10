@@ -29,7 +29,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
             foreach (Equipe E in EquipeLista)
                 Projetos.Add(E.IDProjeto);
 
-            return Lista(new ProjetoMapper() ).Where(X => Projetos.Contains(X.ID_Projeto)).ToList();
+            return Lista(new ProjetoMapper() ).Where(X => Projetos.Contains(X.ID)).ToList();
         }
         public void ADD(Projeto Item)
         {
@@ -55,7 +55,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
                 new SqlParameter("@Descricao",Item.Descricao),
                 new SqlParameter("@Data_Inicio",Item.Data_Inicio),
                 new SqlParameter("@Datafim",Item.Data_Fim),
-                new SqlParameter("@ID",Item.ID_Projeto)
+                new SqlParameter("@ID",Item.ID)
             };
 
             DB.ExecSP("SP_PROJETO_UPDATE", Param);
@@ -65,7 +65,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             SqlParameter[] Param = new SqlParameter[]
             {
-                new SqlParameter("@ID",Item.ID_Projeto)
+                new SqlParameter("@ID",Item.ID)
             };
 
             DB.ExecSP("SP_PROJETO_DELETE", Param);

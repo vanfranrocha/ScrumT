@@ -7,14 +7,15 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             public override Users MapFromSource(DataRow Record)
             {
-                Users equi = new Users();
+                Users us = new Users();
 
-                equi.ID = (int)Record["ID_Equipe"];
-                equi.Nome = (string)Record["Nome"];
-                equi.Email = (string)Record["Email"];
-                equi.Funcao = (int)Record["ID_Funcao"];
-                equi.Senha = (string)Record["Senha"];
-                return equi;
+                us.ID = (int)Record["ID_Equipe"];
+                us.Nome = (string)Record["Nome"];
+                us.Email = (string)Record["Email"];
+                us.Funcao = (int)Record["ID_Funcao"];
+            us.Nome_Funcao = (string)Record["Nome_Funcao"];
+                us.Senha = (string)Record["Senha"];
+                return us;
             }
         }
 }

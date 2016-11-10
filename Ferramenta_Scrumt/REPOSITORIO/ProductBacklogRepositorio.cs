@@ -52,7 +52,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
                 new SqlParameter("@Estimativa",Item.Estimativa_Inicio),
                 new SqlParameter("@Importancia",Item.Importancia),
                 new SqlParameter("@Aceito",Item.Aceito),
-                new SqlParameter("@ID_PBacklog",Item.ID_PBacklog)
+                new SqlParameter("@ID_PBacklog",Item.ID)
             };
 
             DB.ExecSP("SP_PBACKLOG_UPDATE", Param);
@@ -62,7 +62,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             SqlParameter[] Param = new SqlParameter[]
             {
-                new SqlParameter("@ID_PBacklog",Item.ID_PBacklog)
+                new SqlParameter("@ID_PBacklog",Item.ID)
             };
 
             DB.ExecSP("SP_PBACKLOG_DELETE", Param);

@@ -214,6 +214,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="REPOSITORIO\EquipeMapper.cs" />
     <Compile Include="REPOSITORIO\EquipeRepositorio.cs" />
+    <Compile Include="REPOSITORIO\FuncaoMapper.cs" />
+    <Compile Include="REPOSITORIO\FuncaoRepositorio.cs" />
     <Compile Include="REPOSITORIO\ISQLMapper.cs" />
     <Compile Include="REPOSITORIO\ISQLRepository.cs" />
     <Compile Include="REPOSITORIO\TesteUnidadeMapper.cs" />
@@ -806,7 +808,6 @@
     <Content Include="Views\Projeto\Edit.cshtml" />
     <Content Include="Views\Projeto\Delete.cshtml" />
     <Content Include="Views\Users\Delete.cshtml" />
-    <Content Include="Views\Users\Delete2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

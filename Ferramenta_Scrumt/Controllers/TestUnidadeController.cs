@@ -47,20 +47,20 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Delete(int id)
         {
             CarregaLista();
-            return View(TesteUnidadeList.Where(X => X.ID_TestUnidade == id).First());
+            return View(TesteUnidadeList.Where(X => X.ID == id).First());
         }
         [HttpPost]
         public ActionResult Delete(TesteUnidade T)
         {
             CarregaLista();
-            _TesteRep.Delete(TesteUnidadeList.Where(X => X.ID_TestUnidade == T.ID_TestUnidade).First());
+            _TesteRep.Delete(TesteUnidadeList.Where(X => X.ID == T.ID).First());
             return RedirectToAction("Index");
         }
         public ActionResult Edit(int id)
         {
             CarregaLista();
             //passando uma model P
-            TesteUnidade T = TesteUnidadeList.Where(X => X.ID_TestUnidade == id).First();
+            TesteUnidade T = TesteUnidadeList.Where(X => X.ID == id).First();
             CarregaLista();
             return View(T);
         }
@@ -78,7 +78,7 @@ namespace Ferramenta_Scrumt.Controllers
         {
 
             CarregaLista();
-            return View(TesteUnidadeList.Where(X => X.ID_TestUnidade == id).First());
+            return View(TesteUnidadeList.Where(X => X.ID == id).First());
         }
     }
 }
