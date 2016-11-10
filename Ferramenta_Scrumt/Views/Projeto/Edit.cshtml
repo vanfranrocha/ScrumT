@@ -35,9 +35,9 @@
                             <form role="form">
                                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                                 <div class="form-group">
-                                    @Html.LabelFor(model => model.ID_Projeto, htmlAttributes: new { @class = "control-label col-md-2" })
-                                    @Html.DisplayFor(model => model.ID_Projeto, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.ID_Projeto, "", new { @class = "text-danger" })
+                                    @Html.LabelFor(model => model.ID, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.DisplayFor(model => model.ID, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.ID, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="form-group">
                                     @Html.LabelFor(model => model.Descricao, "Descrição do Projeto", htmlAttributes: new { @class = "control-label col-md-2" })

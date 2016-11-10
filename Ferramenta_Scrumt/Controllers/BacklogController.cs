@@ -40,7 +40,7 @@ namespace Ferramenta_Scrumt.Controllers
         {
 
             ProjetoList = _ProjetoRep.Lista(new ProjetoMapper());
-            ViewBag.Descricao = new SelectList(ProjetoList, "ID_Projeto", "Descricao");
+            ViewBag.Descricao = new SelectList(ProjetoList, "ID", "Descricao");
             ViewBag.Importancia = new SelectList(new[]
             {
                 new {Valor=1,Texto="Baixa"},

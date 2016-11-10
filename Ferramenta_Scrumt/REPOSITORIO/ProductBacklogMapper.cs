@@ -11,6 +11,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
             ProductBacklog pback = new ProductBacklog();
 
             pback.ID = (int)Record["ID_PBacklog"];
+            pback.Nome_Projeto = (string)Record["Descricao"];
             pback.Projeto = (int)Record["ID_Projeto"];
             pback.Historia = (string)Record["Historia"];
             pback.Estimativa_Inicio = (DateTime)Record["Estimativa_Inicio"];

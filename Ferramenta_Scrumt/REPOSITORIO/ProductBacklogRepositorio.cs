@@ -19,7 +19,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             SqlParameter[] Param = new SqlParameter[]
             { };
-            string SQL = "SELECT * Product_Backlog";
+            string SQL = "SELECT [ID_PBacklog],[Historia],Projeto.[Descricao],Product_Backlog.[ID_Projeto],[Estimativa_Inicio],[Aceito],[Importancia] FROM Product_Backlog Inner Join Projeto on Product_Backlog.ID_Projeto = Projeto.ID_Projeto";
             return mapper.MapAllFromSource(DB.ListaSQL(Param, SQL).Tables[0]);
         }
 
@@ -30,7 +30,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
 
             SqlParameter[] Param = new SqlParameter[]
             {
-                new SqlParameter("@ID_Projeto",Item.Projeto),
+                new SqlParameter("@IDProjeto",Item.Projeto),
                 new SqlParameter("@Historia",Item.Historia),
                 new SqlParameter("@Estimativa",Item.Estimativa_Inicio),
                 new SqlParameter("@Importancia",Item.Importancia),
