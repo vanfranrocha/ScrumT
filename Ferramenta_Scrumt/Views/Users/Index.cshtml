@@ -26,6 +26,7 @@
             @Html.ActionLink("Adicionar Membro", "Create", 0, new { @class = "btn btn-primary" })
         </p>
     </div>
+    <hr>
 </div>
 <div class="wrapper">
     <div class="row">
@@ -76,9 +77,9 @@
                                     </div>
                                     <div class="col-md-3 col-xs-8">
 
-                                        @Html.ActionLink("Editar", "Edit", new { id = item.ID_Equipe }, new { @class = "btn btn-success" })
-                                        @Html.ActionLink("Detalhes", "Details", new { id = item.ID_Equipe }, new { @class = "btn btn-info" })
-                                        @Html.ActionLink("Deletar", "Delete", new { id = item.ID_Equipe }, new { @class = "btn btn-danger" })
+                                        @Html.ActionLink("Editar", "Edit", new { id = item.ID }, new { @class = "btn btn-success" })
+                                        @Html.ActionLink("Detalhes", "Details", new { id = item.ID }, new { @class = "btn btn-info" })
+                                        @Html.ActionLink("Deletar", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
 
                                     </div>
                                 </td>

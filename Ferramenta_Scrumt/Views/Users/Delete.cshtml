@@ -20,11 +20,7 @@
     </ul>
 
 </div>
-
 <body>
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
         <div class="wrapper">
             <div class="row">
                 <div class="col-sm-12">
@@ -35,6 +31,13 @@
                                 <hr />
 
                                 <dl class="dl-horizontal">
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.ID)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.ID)
+                                    </dd>
                                     <dt>
                                         @Html.DisplayNameFor(model => model.Nome)
                                     </dt>
@@ -57,11 +60,15 @@
                                         @Html.DisplayFor(model => model.Email)
                                     </dd>
                                 </dl>
-                                <div class="form-actions no-color">
-                                    <input type="submit" value="Deletar" class="btn btn-danger" />
-                                    @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-success" })
-                                </div>
-
+                                @using (Html.BeginForm())
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <div class="form-actions no-color">
+                            
+                                        <input type="submit" formmethod="post" value="Deletar" class="btn btn-danger" />
+                                        @Html.ActionLink( "Voltar", "Index", 0, new { @class = "btn btn-success" })
+                                    </div>
+                                }
                             </div>
                         </header>
                     </section>
@@ -69,5 +76,5 @@
                 </div>
             </div>
         </div>
-    }
+    
 </body>

@@ -10,7 +10,6 @@ namespace Ferramenta_Scrumt.Controllers
     {
         // GET: Equipe
         List<Users> EquipeList;
-        List<Funcao> FuncaoList;
         RegistrationRepositorio _EquipeRep = new RegistrationRepositorio();
         
 

@@ -9,7 +9,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             Users equi = new Users();
 
-            equi.ID_Equipe = (int)Record["ID_Equipe"];
+            equi.ID = (int)Record["ID_Equipe"];
             equi.Nome = (string)Record["Nome"];
             equi.Email = (string)Record["Email"];
             equi.Funcao = (int)Record["ID_Funcao"];

@@ -2,6 +2,7 @@
 using Ferramenta_Scrumt.MODEL;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Data.SqlClient;
 
 namespace Ferramenta_Scrumt.REPOSITORIO
@@ -22,7 +23,14 @@ namespace Ferramenta_Scrumt.REPOSITORIO
             string SQL = "select * from Projeto";
             return mapper.MapAllFromSource(DB.ListaSQL(Param, SQL).Tables[0]);
         }
+        public List<Projeto> Lista(ISQLMapper<Projeto> mapper, List<Equipe> EquipeLista)
+        {
+            List<int> Projetos = new List<int>();
+            foreach (Equipe E in EquipeLista)
+                Projetos.Add(E.IDProjeto);
 
+            return Lista(new ProjetoMapper() ).Where(X => Projetos.Contains(X.ID_Projeto)).ToList();
+        }
         public void ADD(Projeto Item)
         {
             SqlParameter ID = new SqlParameter("@ID_Projeto", SqlDbType.Int);

@@ -48,7 +48,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
                 new SqlParameter("@Nome",Item.Nome),
                 new SqlParameter("@Email",Item.Email),
                 new SqlParameter("@ID_Funcao",Item.Funcao),
-                new SqlParameter("@ID",Item.ID_Equipe)
+                new SqlParameter("@ID",Item.ID)
             };
 
             DB.ExecSP("SP_EQUIPE_UPDATE", Param);
@@ -58,7 +58,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             SqlParameter[] Param = new SqlParameter[]
             {
-                new SqlParameter("@ID",Item.ID_Equipe)
+                new SqlParameter("@ID",Item.ID)
             };
 
             DB.ExecSP("SP_EQUIPE_DELETE", Param);

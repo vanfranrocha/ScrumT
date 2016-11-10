@@ -5,6 +5,10 @@ namespace Ferramenta_Scrumt.MODEL
 {
     public class Projeto
     {
+        public Projeto()
+        {
+
+        }
         public int ID_Projeto { get; set; }
         public string Descricao { get; set; }
         [DataType(DataType.Date)]

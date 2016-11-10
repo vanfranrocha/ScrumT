@@ -37,18 +37,19 @@ namespace Ferramenta_Scrumt.Controllers
             CarregaLista();
             return View();
         }
-        [HttpGet]
+      
         public ActionResult Delete(int id)
         {
             CarregaLista();
-            return View(EquipeList.Where(X => X.ID_Equipe == id).First());
+            return View((Users)EquipeList.Where(X => X.ID == id).First());
         }
+
         [HttpPost]
         public ActionResult Delete(Users E)
         {
             CarregaLista();
 
-            _EquipeRep.Delete(EquipeList.Where(X => X.ID_Equipe == E.ID_Equipe).First());
+            _EquipeRep.Delete(EquipeList.Where(X => X.ID == E.ID).First());
             return RedirectToAction("Index");
         }
         
@@ -56,7 +57,7 @@ namespace Ferramenta_Scrumt.Controllers
         {
             CarregaLista();
             //passando uma model E
-            Users E = EquipeList.Where(X => X.ID_Equipe == id).First();
+            Users E = EquipeList.Where(X => X.ID == id).First();
             return View(E);
         }
         [HttpPost]
@@ -72,7 +73,7 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Details(int id)
         {  
             CarregaLista();
-            return View(EquipeList.Where(X => X.ID_Equipe == id).First());
+            return View(EquipeList.Where(X => X.ID == id).First());
         }
        
     }

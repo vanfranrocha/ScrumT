@@ -14,7 +14,9 @@ namespace Ferramenta_Scrumt.Controllers
         ProjetoRepositorio _ProjetoRep = new ProjetoRepositorio();
         private void CarregaLista()
         {
-            ProjetoList = _ProjetoRep.Lista(new ProjetoMapper());
+            List<Equipe> Equipes = (List<Equipe>)Session["Equipes"];
+
+            ProjetoList = _ProjetoRep.Lista(new ProjetoMapper(),Equipes);
             Session["Lista"] = ProjetoList;
         }
         public ActionResult Index()
