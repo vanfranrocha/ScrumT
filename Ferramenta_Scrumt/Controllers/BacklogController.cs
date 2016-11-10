@@ -32,7 +32,7 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Create(ProductBacklog PB)
         {
             _PBacklogRep.ADD(PB);
-
+            Session["Lista"] = PBacklogList;
             return RedirectToAction("Index");
         }
 
