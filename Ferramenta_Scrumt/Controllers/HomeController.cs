@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 
+
 namespace Ferramenta_Scrumt.Controllers
 {
     [Authorize]
@@ -8,6 +9,7 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Index()
         {
             return View();
+            
         }
 
     }

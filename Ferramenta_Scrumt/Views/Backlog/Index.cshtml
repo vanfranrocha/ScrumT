@@ -45,13 +45,13 @@
                                     <div class="col-md-2 col-xs-8">
                                         @Html.DisplayNameFor(model => model.Historia)
                                     </div>
-                                    <div class="col-md-3 col-xs-8">
+                                    <div class="col-md-2 col-xs-8">
                                         @Html.DisplayNameFor(model => model.Nome_Projeto)
                                     </div>
                                     <div class="col-md-2 col-xs-8">
                                         @Html.DisplayNameFor(model => model.Estimativa_Inicio)
                                     </div>
-                                    <div class="col-md-1 col-xs-8">
+                                    <div class="col-md-2 col-xs-8">
                                         @Html.DisplayNameFor(model => model.Importancia)
                                     </div>
                                     
@@ -71,7 +71,7 @@
                                                 @Html.DisplayNameFor(model => model.Historia)
                                             </b>@Html.DisplayFor(modelItem => item.Historia)
                                         </div>
-                                        <div class="col-md-3 col-xs-8">
+                                        <div class="col-md-2 col-xs-8">
                                             <b class="hidden-md hidden-lg">
                                                 @Html.DisplayNameFor(model => model.Nome_Projeto)
                                             </b>@Html.DisplayFor(modelItem => item.Nome_Projeto)
@@ -81,13 +81,14 @@
                                                 @Html.DisplayNameFor(model => model.Estimativa_Inicio)
                                             </b>@Html.DisplayFor(modelItem => item.Estimativa_Inicio)
                                         </div>
-                                        <div class="col-md-1 col-xs-8">
+                                        <div class="col-md-2 col-xs-8">
                                             <b class="hidden-md hidden-lg">
                                                 @Html.DisplayNameFor(model => model.Importancia)
-                                            </b>@Html.DisplayFor(modelItem => item.Importancia)
+                                            </b><a href="#myModal"  data-toggle="modal" class="btn btn-xs btn-primary">
+                                            @Html.DisplayFor(modelItem => item.Importancia)</a>
                                         </div>
                                         
-                                        <div class="col-md-1 col-xs-8">
+                                        <div class="col-md-1 col-xs-8" style="text-align: center">
                                             <b class="hidden-md hidden-lg">
                                                 @Html.DisplayNameFor(model => model.Aceito)
                                             </b>@Html.DisplayFor(modelItem => item.Aceito)
