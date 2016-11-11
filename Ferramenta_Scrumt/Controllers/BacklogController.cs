@@ -44,13 +44,13 @@ namespace Ferramenta_Scrumt.Controllers
             ViewBag.Importancia = new SelectList(new[]
             {
                 new {Valor=1,Texto="Baixa"},
-                new {Valor=1,Texto="Média"},
-                new {Valor=1,Texto="Alta"}
+                new {Valor=2,Texto="Média"},
+                new {Valor=3,Texto="Alta"}
             }, "Valor", "Texto");
             ViewBag.Aceito = new SelectList(new[]
             {
                 new {Valor=1,Texto="Sim"},
-                new {Valor=1,Texto="Não"}
+                new {Valor=2,Texto="Não"}
             }, "Valor", "Texto");
             return View();
         }

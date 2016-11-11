@@ -194,6 +194,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BacklogController.cs" />
+    <Compile Include="Controllers\EquipeController.cs" />
     <Compile Include="Controllers\TestUnidadeController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -809,6 +810,7 @@
     <Content Include="Views\Projeto\Delete.cshtml" />
     <Content Include="Views\Users\Delete.cshtml" />
     <Content Include="Views\Shared\_LayoutError.cshtml" />
+    <Content Include="Views\Equipe\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

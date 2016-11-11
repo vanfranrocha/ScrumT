@@ -3,6 +3,7 @@ using Ferramenta_Scrumt.MODEL;
 using System;
 
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -14,7 +15,17 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         DBUtil DB = new DBUtil();
         public void ADD(Equipe Item)
         {
-            throw new NotImplementedException();
+            SqlParameter ID = new SqlParameter("@ID_ProjUser", SqlDbType.Int);
+            ID.Direction = ParameterDirection.Output;
+
+            SqlParameter[] Param = new SqlParameter[]
+            {
+                new SqlParameter("@ID_User",Item.IDUser),
+                new SqlParameter("@ID_Projeto",Item.IDProjeto),
+                ID
+            };
+
+            DB.ExecSP("SP_PROJUSER_INCLUIR", Param);
         }
 
         public void Delete(Equipe Item)
