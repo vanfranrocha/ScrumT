@@ -811,6 +811,7 @@
     <Content Include="Views\Users\Delete.cshtml" />
     <Content Include="Views\Shared\_LayoutError.cshtml" />
     <Content Include="Views\Backlog\Edit.cshtml" />
+    <Content Include="Views\Backlog\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
