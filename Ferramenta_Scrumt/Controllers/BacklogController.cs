@@ -38,7 +38,6 @@ namespace Ferramenta_Scrumt.Controllers
 
         public ActionResult Create()
         {
-
             ProjetoList = _ProjetoRep.Lista(new ProjetoMapper());
             ViewBag.Descricao = new SelectList(ProjetoList, "ID", "Descricao");
             ViewBag.Importancia = new SelectList(new[]
@@ -69,18 +68,19 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Edit(int id)
         {
             CarregaLista();
-            //passando uma model P
+            //passando uma model A
             ProductBacklog A = PBacklogList.Where(X => X.ID == id).First();
-            CarregaLista();
+            ProjetoList = _ProjetoRep.Lista(new ProjetoMapper());
+            ViewBag.Descricao = new SelectList(ProjetoList, "ID", "Descricao");
             return View(A);
         }
         [HttpPost]
         public ActionResult Edit(ProductBacklog PB)
         {
             //carrega lista e traz um objeto da lista para ser editado
-
-            _PBacklogRep.Update(PB);
             CarregaLista();
+            _PBacklogRep.Update(PB);
+            Session["Lista"] = PBacklogList;
             return RedirectToAction("Index");
 
         }
