@@ -52,7 +52,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
                 new SqlParameter("@Estimativa",Item.Estimativa_Inicio),
                 new SqlParameter("@Importancia",Item.Importancia),
                 new SqlParameter("@Aceito",Item.Aceito),
-                new SqlParameter("@ID_PBacklog",Item.ID)
+                new SqlParameter("@ID",Item.ID)
             };
 
             DB.ExecSP("SP_PBACKLOG_UPDATE", Param);

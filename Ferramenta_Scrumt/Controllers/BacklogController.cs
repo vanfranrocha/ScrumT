@@ -26,14 +26,6 @@ namespace Ferramenta_Scrumt.Controllers
             CarregaLista();
             return View(PBacklogList);
         }
-        [HttpPost]
-        public ActionResult Create(ProductBacklog PB)
-        {
-            _PBacklogRep.ADD(PB);
-            Session["Lista"] = PBacklogList;
-            return RedirectToAction("Index");
-        }
-
         public ActionResult Create()
         {
             ProjetoList = _ProjetoRep.Lista(new ProjetoMapper());
@@ -44,12 +36,20 @@ namespace Ferramenta_Scrumt.Controllers
                 new {Valor=2,Texto="Média"},
                 new {Valor=3,Texto="Alta"}
             }, "Valor", "Texto");
-            ViewBag.Aceito = new SelectList(new[]
-            {
-                new {Valor=1,Texto="Sim"},
-                new {Valor=2,Texto="Não"}
-            }, "Valor", "Texto");
+
+            ViewBag.Aceito = new List<SelectListItem> {
+                 new SelectListItem { Text = "Não", Value = "1"},
+                 new SelectListItem { Text = "Sim", Value = "2"}
+             };
+            
             return View();
+        }
+        [HttpPost]
+        public ActionResult Create(ProductBacklog PB)
+        {
+            _PBacklogRep.ADD(PB);
+            Session["Lista"] = PBacklogList;
+            return RedirectToAction("Index");
         }
         public ActionResult Delete(int id)
         {
@@ -63,6 +63,7 @@ namespace Ferramenta_Scrumt.Controllers
             _PBacklogRep.Delete(PBacklogList.Where(X => X.ID == PB.ID).First());
             return RedirectToAction("Index");
         }
+        [HttpGet]
         public ActionResult Edit(int id)
         {
             CarregaLista();
@@ -72,6 +73,7 @@ namespace Ferramenta_Scrumt.Controllers
             ViewBag.Descricao = new SelectList(ProjetoList, "ID", "Descricao");
             return View(A);
         }
+
         [HttpPost]
         public ActionResult Edit(ProductBacklog PB)
         {

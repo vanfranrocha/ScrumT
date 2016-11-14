@@ -7,7 +7,7 @@
 
 <div class="page-heading">
     <h3>
-        Equipe
+        Product Backlog
     </h3>
     <ul class="breadcrumb">
         <li>
@@ -21,9 +21,6 @@
 
 </div>
 <body>
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
         <section class="wrapper">
             <div class="row">
                 <div class="col-lg-12">
@@ -56,20 +53,22 @@
                                 </div>
                                 <div class="form-group col-md-4">
                                     @Html.LabelFor(model => model.Aceito, htmlAttributes: new { @class = "control-label col-md-2" })
-                                    @Html.DropDownList("Aceito", (SelectList)ViewBag.Aceito, "Selecione o Aceite", htmlAttributes: new { @class = "form-control" })
+                                    @Html.DropDownList("Aceito", new SelectList(ViewBag.Aceito, "Value", "Text"), "Selecione o Aceite", htmlAttributes: new { @class = "form-control" })
                                     @Html.ValidationMessageFor(model => model.Aceito, "", new { @class = "text-danger" })
                                 </div>
 
                             </form>
-                            <div class="form-group">
-                                <input type="submit" value="Adicionar" class="btn btn-primary" />
-                                @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-danger" })
-                            </div>
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="form-group">
+                                    <input type="submit" formmethod="post" value="Adicionar" class="btn btn-primary" />
+                                    @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-danger" })
+                                </div>
+                            }
                         </div>
                     </section>
                 </div>
             </div>
         </section>
-    }
-
 </body>
