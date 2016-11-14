@@ -73,6 +73,18 @@ namespace Ferramenta_Scrumt.Controllers
             ProductBacklog A = PBacklogList.Where(X => X.ID == id).First();
             ProjetoList = _ProjetoRep.Lista(new ProjetoMapper());
             ViewBag.Descricao = new SelectList(ProjetoList, "ID", "Descricao");
+
+            ViewBag.Importancia = new List<SelectListItem>
+            {
+                new SelectListItem{Text = "Baixa", Value = "Baixa"},
+                new SelectListItem{Text = "Média", Value = "Média"},
+                new SelectListItem{Text = "Alta", Value = "Alta"}
+            };
+
+            ViewBag.Aceito = new List<SelectListItem> {
+                 new SelectListItem { Text = "Não", Value = "Não"},
+                 new SelectListItem { Text = "Sim", Value = "Sim"}
+             };
             return View(A);
         }
 

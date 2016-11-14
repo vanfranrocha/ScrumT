@@ -47,7 +47,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
 
             SqlParameter[] Param = new SqlParameter[]
             {
-                 new SqlParameter("@ID_Projeto",Item.Projeto),
+                 new SqlParameter("@IDProjeto",Item.Projeto),
                 new SqlParameter("@Historia",Item.Historia),
                 new SqlParameter("@Estimativa",Item.Estimativa_Inicio),
                 new SqlParameter("@Importancia",Item.Importancia),
