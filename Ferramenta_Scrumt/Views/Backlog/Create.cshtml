@@ -21,6 +21,9 @@
 
 </div>
 <body>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
         <section class="wrapper">
             <div class="row">
                 <div class="col-lg-12">
@@ -38,7 +41,7 @@
                                 </div>
                                 <div class="form-group col-md-12">
                                     @Html.LabelFor(model => model.Projeto, htmlAttributes: new { @class = "control-label col-md-2" })
-                                    @Html.DropDownList("Descricao", (SelectList)ViewBag.Descricao, "Selecione um Projeto", htmlAttributes: new { @class = "form-control" })
+                                    @Html.EditorFor(model => model.Projeto, new { htmlAttributes = new { @class = "form-control" } })
                                     @Html.ValidationMessageFor(model => model.Projeto, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="form-group col-md-4">
@@ -48,7 +51,7 @@
                                 </div>
                                 <div class="form-group col-md-4">
                                     @Html.LabelFor(model => model.Importancia, htmlAttributes: new { @class = "control-label col-md-2" })
-                                    @Html.DropDownList("Importancia", (SelectList)ViewBag.Importancia, "Selecione a Importancia", htmlAttributes: new { @class = "form-control" })
+                                    @Html.DropDownList("Importancia", new SelectList(ViewBag.Importancia, "Value", "Text"), "Selecione a Importancia", htmlAttributes: new { @class = "form-control" })
                                     @Html.ValidationMessageFor(model => model.Importancia, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="form-group col-md-4">
@@ -56,19 +59,15 @@
                                     @Html.DropDownList("Aceito", new SelectList(ViewBag.Aceito, "Value", "Text"), "Selecione o Aceite", htmlAttributes: new { @class = "form-control" })
                                     @Html.ValidationMessageFor(model => model.Aceito, "", new { @class = "text-danger" })
                                 </div>
-
-                            </form>
-                            @using (Html.BeginForm())
-                            {
-                                @Html.AntiForgeryToken()
+                            </form> 
                                 <div class="form-group">
-                                    <input type="submit" formmethod="post" value="Adicionar" class="btn btn-primary" />
+                                    <input type="submit" value="Adicionar" class="btn btn-primary" />
                                     @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-danger" })
                                 </div>
-                            }
                         </div>
                     </section>
-                </div>
-            </div>
+                </div>      
+            </div>  
         </section>
+}
 </body>

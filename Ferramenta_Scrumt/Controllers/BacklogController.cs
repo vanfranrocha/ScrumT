@@ -9,7 +9,6 @@ namespace Ferramenta_Scrumt.Controllers
     [Authorize]
     public class BacklogController : Controller
     {
-        // GET: Equipe
         List<ProductBacklog> PBacklogList;
         List<Projeto> ProjetoList;
         ProductBacklogRepositorio _PBacklogRep = new ProductBacklogRepositorio();
@@ -26,28 +25,31 @@ namespace Ferramenta_Scrumt.Controllers
             CarregaLista();
             return View(PBacklogList);
         }
+        [HttpGet]
         public ActionResult Create()
         {
+            CarregaLista();
             ProjetoList = _ProjetoRep.Lista(new ProjetoMapper());
             ViewBag.Descricao = new SelectList(ProjetoList, "ID", "Descricao");
-            ViewBag.Importancia = new SelectList(new[]
+            ViewBag.Importancia = new List<SelectListItem>
             {
-                new {Valor=1,Texto="Baixa"},
-                new {Valor=2,Texto="Média"},
-                new {Valor=3,Texto="Alta"}
-            }, "Valor", "Texto");
+                new SelectListItem{Text = "Baixa", Value = "Baixa"},
+                new SelectListItem{Text = "Média", Value = "Média"},
+                new SelectListItem{Text = "Alta", Value = "Alta"}
+            };
 
             ViewBag.Aceito = new List<SelectListItem> {
-                 new SelectListItem { Text = "Não", Value = "1"},
-                 new SelectListItem { Text = "Sim", Value = "2"}
-             };
-            
+                 new SelectListItem { Text = "Não", Value = "Não"},
+                 new SelectListItem { Text = "Sim", Value = "Sim"}
+             }; 
             return View();
         }
         [HttpPost]
         public ActionResult Create(ProductBacklog PB)
         {
+            CarregaLista();
             _PBacklogRep.ADD(PB);
+            PB.ID = PBacklogList.Count == 0 ? 0 : PBacklogList.Last().ID + 1;
             Session["Lista"] = PBacklogList;
             return RedirectToAction("Index");
         }

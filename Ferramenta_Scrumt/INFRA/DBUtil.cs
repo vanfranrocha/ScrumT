@@ -94,8 +94,7 @@ namespace Ferramenta_Scrumt.INFRA
             var Con = (SqlConnection)Conexao();
             SqlCommand Comm;
 
-            try
-            {
+           
                 Comm = new SqlCommand(StoredProcedure, Con);
                 Comm.Parameters.AddRange(P);
                 Comm.CommandType = CommandType.StoredProcedure;
@@ -104,16 +103,8 @@ namespace Ferramenta_Scrumt.INFRA
 
                 Comm.ExecuteNonQuery();
                 return true;
-            }
-            catch
-            {
-                return false;
-            }
-            finally
-            {
-                if (Con.State == ConnectionState.Open)
-                    Con.Close();
-            }
+            
+            
         }
         public Boolean ExecSP(String StoredProcedure)
         {

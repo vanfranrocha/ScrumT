@@ -10,7 +10,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             Projeto proj = new Projeto();
 
-            proj.ID = (int)Record["ID"];
+            proj.ID = (int)Record["ID_Projeto"];
             proj.Descricao = (string)Record["Descricao"];
             proj.Data_Inicio = (DateTime)Record["Data_Inicio"];
             proj.Data_Fim = (DateTime)Record["Data_Fim"];

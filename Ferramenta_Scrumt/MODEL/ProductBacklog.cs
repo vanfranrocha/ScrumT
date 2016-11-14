@@ -14,7 +14,6 @@ namespace Ferramenta_Scrumt.MODEL
         public string Nome_Projeto { get; set; }
         public int Projeto { get; set; }
         public string Historia { get; set; }
-        [DataType(DataType.Date)]
         public DateTime Estimativa_Inicio { get; set; }
         public string Aceito { get; set; }
         public string Importancia { get; set; }
