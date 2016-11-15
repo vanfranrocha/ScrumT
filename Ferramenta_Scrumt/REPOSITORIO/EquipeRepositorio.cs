@@ -42,7 +42,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             SqlParameter[] Param = new SqlParameter[]
             { };
-            string SQL = "select * from Equipe";
+            string SQL = "Select Equipe.[ID_ProjUser], Equipe.[ID_User], Users.Nome,Equipe.ID_Projeto from Equipe Inner Join Users on Equipe.ID_User = Users.ID_Equipe";
             return mapper.MapAllFromSource(DB.ListaSQL(Param, SQL).Tables[0]);
         }
         public List<Equipe> Lista(ISQLMapper<Equipe> mapper,int IDUser)

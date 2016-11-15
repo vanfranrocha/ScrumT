@@ -813,6 +813,7 @@
     <Content Include="Views\Backlog\Edit.cshtml" />
     <Content Include="Views\Backlog\Details.cshtml" />
     <Content Include="Views\Backlog\Delete.cshtml" />
+    <Content Include="Views\Equipe\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

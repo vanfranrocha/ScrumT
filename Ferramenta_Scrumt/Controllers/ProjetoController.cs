@@ -12,6 +12,7 @@ namespace Ferramenta_Scrumt.Controllers
         // GET: Projeto
         List<Projeto> ProjetoList;
         ProjetoRepositorio _ProjetoRep = new ProjetoRepositorio();
+
         private void CarregaLista()
         {
             List<Equipe> Equipes = (List<Equipe>)Session["Equipes"];

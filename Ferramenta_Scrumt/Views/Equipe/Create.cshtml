@@ -1,0 +1,71 @@
+﻿@model Ferramenta_Scrumt.MODEL.Equipe
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-heading">
+    <h3>
+        Projeto
+    </h3>
+    <ul class="breadcrumb">
+        <li>
+            <a href="/Home/Index">Home</a>
+        </li>
+        <li>
+            <a href="/Projeto/Index">Projetos</a>
+        </li>
+        <li class="active">Adicionar Projeto</li>
+    </ul>
+</div>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+
+                        <section class="panel">
+                            <header class="panel-heading custom-tab">
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#home2" data-toggle="tab">Projeto</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#about2" data-toggle="tab">Membros</a>
+                                </ul>
+                            </header>
+                            <div class="panel-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane " id="home2">
+                                        <div class="panel-body">
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane active" id="about2">
+                                        <div class="col-sm-9 icheck ">
+                                            <div class="minimal single-row">
+                                                <div class="checkbox ">
+                                                    @Html.LabelFor(model => model.Membro, htmlAttributes: new { @class = "control-label col-md-2" })
+                                                    @Html.CheckBox("Membro", new SelectList(ViewBag.Membro, "Value", "Text"))
+                                                    @Html.ValidationMessageFor(model => model.Membro, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="form-group">
+                            <input type="submit" value="Adicionar" class="btn btn-primary" />
+                            @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-danger" })
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    }
+
+</body>

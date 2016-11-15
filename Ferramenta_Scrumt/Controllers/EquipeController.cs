@@ -12,9 +12,9 @@ namespace Ferramenta_Scrumt.Controllers
     public class EquipeController : Controller
     {
         List<Equipe> EquiList;
-        List<Projeto> ProjList;
+        List<Users> UsersList;
         EquipeRepositorio _EquiRep = new EquipeRepositorio();
-        ProjetoRepositorio _ProjRep = new ProjetoRepositorio();
+        UsersRepositorio _UsersRep = new UsersRepositorio();
 
         private void CarregaLista()
         {
@@ -37,8 +37,8 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Create()
         {
             CarregaLista();
-            ProjList = _ProjRep.Lista(new ProjetoMapper());
-            ViewBag.Nome_Projeto = new SelectList(ProjList, "ID", "Descricao");
+            UsersList = _UsersRep.Lista(new UsersMapper());
+            ViewBag.Membro = new SelectList(UsersList, "ID", "Nome");
             return View();
         }
 
