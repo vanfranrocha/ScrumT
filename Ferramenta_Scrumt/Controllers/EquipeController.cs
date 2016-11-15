@@ -11,8 +11,9 @@ namespace Ferramenta_Scrumt.Controllers
     [Authorize]
     public class EquipeController : Controller
     {
-        List<Equipe> EquiList;
+        
         List<Users> UsersList;
+        List<Equipe> EquiList;
         EquipeRepositorio _EquiRep = new EquipeRepositorio();
         UsersRepositorio _UsersRep = new UsersRepositorio();
 
