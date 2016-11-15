@@ -39,9 +39,9 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Create()
         {
             UserList = _UserRep.Lista(new UsersMapper());
-            ViewBag.Nome = new SelectList(UserList, "ID_Equipe", "Nome");
+            ViewBag.Nome = new SelectList(UserList, "ID", "Nome");
             ProductList = _ProductRep.Lista(new ProductBacklogMapper());
-            ViewBag.Historia = new SelectList(ProductList, "ID_PBacklog", "Historia");
+            ViewBag.Historia = new SelectList(ProductList, "ID", "Historia");
             return View();
         }
         public ActionResult Delete(int id)

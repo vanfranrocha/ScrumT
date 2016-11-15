@@ -42,7 +42,7 @@
                             <tr>
                                 <th>
                                     <div class="col-md-2 col-xs-8">
-                                        @Html.DisplayNameFor(model => model.PBacklog)
+                                        @Html.DisplayNameFor(model => model.Historia)
                                     </div>
                                     <div class="col-md-2 col-xs-8">
                                         @Html.DisplayNameFor(model => model.Membro)
@@ -63,8 +63,8 @@
                                     <td>
                                         <div class="col-md-2 col-xs-8">
                                             <b class="hidden-md hidden-lg">
-                                                @Html.DisplayNameFor(model => model.PBacklog)
-                                            </b>@Html.DisplayFor(modelItem => item.PBacklog)
+                                                @Html.DisplayNameFor(model => model.Historia)
+                                            </b>@Html.DisplayFor(modelItem => item.Historia)
                                         </div>
                                         <div class="col-md-2 col-xs-8">
                                             <b class="hidden-md hidden-lg">
@@ -86,14 +86,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                                <div class="col-md-3 col-xs-8">
+                                        <div class="col-md-3 col-xs-8">
 
-                                                    @Html.ActionLink("Editar", "Edit", new { id = item.ID_TestUnidade }, new { @class = "btn btn-success" })
-                                                    @Html.ActionLink("Detalhes", "Details", new { id = item.ID_TestUnidade }, new { @class = "btn btn-info" })
-                                                    @Html.ActionLink("Deletar", "Delete", new { id = item.ID_TestUnidade }, new { @class = "btn btn-danger" })
+                                            @Html.ActionLink("Editar", "Edit", new { id = item.ID }, new { @class = "btn btn-success" })
+                                            @Html.ActionLink("Detalhes", "Details", new { id = item.ID }, new { @class = "btn btn-info" })
+                                            @Html.ActionLink("Deletar", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
 
-                                                </div>
-</td>
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                         }
