@@ -33,7 +33,7 @@ namespace Ferramenta_Scrumt.Controllers
                 System.Web.Security.FormsAuthentication.SetAuthCookie(L.Email, false);
                 Session["Usuario"] = L;
                 Session["nomeUsuarioLogado"] = L.Nome;
-                Session["Funcao"] = L.Funcao;
+                Session["Funcao"] = L.Nome_Funcao;
                 Session["Equipes"] = _EqRep.Lista(new EquipeMapper(), L.ID).ToList();
                 return Redirect(returnUrl);
             }
