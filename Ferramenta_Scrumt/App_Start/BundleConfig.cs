@@ -20,22 +20,18 @@ namespace Ferramenta_Scrumt
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/jquery-1.10.2.min.js",
+                      "~/Scripts/jquery.multi-select.js",
                       "~/Scripts/jquery-ui-1.9.2.custom.min.js",
                       "~/Scripts/jquery-migrate-1.2.1.min.js",
                       "~/Scripts/bootstrap.min.js",
                       "~/Scripts/modernizr.min.js",
                       "~/Scripts/jquery.nicescroll.js",
-
                       "~/Scripts/easypiechart/jquery.easypiechart.js",
                       "~/Scripts/easypiechart/easypiechart-init.js.js",
-
                       "~/Scripts/sparkline/jquery.sparkline.js",
                       "~/Scripts/sparkline/sparkline-init.js",
-
                       "~/Scripts/iCheck/jquery.icheck.js",
                       "~/Scripts/icheck-init.js",
-
                       "~/Scripts/flot-chart/jquery.flot.js",
                       "~/Scripts/flot-chart/jquery.flot.tooltip.js",
                       "~/Scripts/flot-chart/jquery.flot.resize.js",
@@ -44,15 +40,14 @@ namespace Ferramenta_Scrumt
                       "~/Scripts/flot-chart/jquery.flot.stack.js",
                       "~/Scripts/flot-chart/jquery.flot.time.js",
                       "~/Scripts/main-chart.js",
-
                       "~/Scripts/scripts.js"                     
                        ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/multi-select.css",
                       "~/Content/clndr.css",
                       "~/Content/style.css",
                       "~/Content/style-responsive.css",
-
                       "~/Scripts/iCheck/skins/minimal/minimal.css",
                       "~/Scripts/iCheck/skins/square/square.css",
                       "~/Scripts/iCheck/skins/minimal/red.css",

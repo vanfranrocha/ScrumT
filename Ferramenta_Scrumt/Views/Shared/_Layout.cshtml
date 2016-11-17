@@ -6,8 +6,13 @@
     <title>@ViewBag.Title - ScrumT</title>
     <link rel="icon" type="image/png" href="~/images/favicon.png" />
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.multi-select.js"></script>
+    
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    
 
 </head>
 <body class="sticky-header">
@@ -220,8 +225,15 @@
             
         </div>
    </section>         
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#example-getting-started').multiselect();
+    });
+    </script>
     
     @Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/jquery.multi-select.js"></script>
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

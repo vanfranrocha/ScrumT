@@ -253,6 +253,25 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\404-error.png" />
+    <Content Include="images\500-error.png" />
+    <Content Include="images\alert.png" />
+    <Content Include="images\details_close.png" />
+    <Content Include="images\details_open.png" />
+    <Content Include="images\error.png" />
+    <Content Include="images\favicon.png" />
+    <Content Include="images\input-spinner.gif" />
+    <Content Include="images\invoice-logo.jpg" />
+    <Content Include="images\lockscreen-bg.jpg" />
+    <Content Include="images\login-bg.jpg" />
+    <Content Include="images\login-bg.png" />
+    <Content Include="images\login-logo.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo_icon.png" />
+    <Content Include="images\minus.png" />
+    <Content Include="images\plus-white.png" />
+    <Content Include="images\plus.png" />
+    <Content Include="images\user-avatar.png" />
     <Content Include="Scripts\advanced-datatable\css\demo_page.css" />
     <Content Include="Scripts\advanced-datatable\css\demo_table.css" />
     <Content Include="Scripts\advanced-datatable\css\demo_table_jui.css" />
@@ -305,8 +324,6 @@
     <Content Include="Scripts\advanced-datatable\src\model\model.row.js" />
     <Content Include="Scripts\advanced-datatable\src\model\model.search.js" />
     <Content Include="Scripts\advanced-datatable\src\model\model.settings.js" />
-    <Content Include="Scripts\ai.0.22.9-build00167.js" />
-    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap-colorpicker\css\colorpicker.css" />
     <Content Include="Scripts\bootstrap-colorpicker\img\alpha.png" />
     <Content Include="Scripts\bootstrap-colorpicker\img\hue.png" />
@@ -366,7 +383,6 @@
     <Content Include="Scripts\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.zh-CN.js" />
     <Content Include="Scripts\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.zh-TW.js" />
     <Content Include="Scripts\bootstrap-datetimepicker\less\datetimepicker.css" />
-    <Content Include="Scripts\bootstrap-fileupload.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -389,11 +405,6 @@
     <Content Include="Scripts\flot-chart\PLUGINS.md" />
     <Content Include="Scripts\flot-chart\README.md" />
     <Content Include="Scripts\iCheck\README.md" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\dashboard-chart-init.js" />
-    <Content Include="Scripts\dynamic_table_init.js" />
-    <Content Include="Scripts\editable-table.js" />
-    <Content Include="Scripts\external-dragging-calendar.js" />
     <Content Include="Scripts\flot-chart\excanvas.js" />
     <Content Include="Scripts\flot-chart\excanvas.min.js" />
     <Content Include="Scripts\flot-chart\jquery.colorhelpers.js" />
@@ -439,7 +450,6 @@
     <Content Include="Scripts\flot-chart\jquery.min.js" />
     <Content Include="Scripts\flot-chart\LICENSE.txt" />
     <Content Include="Scripts\flot.chart.init.js" />
-    <Content Include="Scripts\html5shiv.js" />
     <Content Include="Scripts\icheck-init.js" />
     <Content Include="Scripts\iCheck\jquery.icheck.js" />
     <Content Include="Scripts\iCheck\jquery.icheck.min.js" />
@@ -558,16 +568,19 @@
     <Content Include="Scripts\iCheck\skins\square\_all.css" />
     <Content Include="Scripts\iCheck\zepto.icheck.js" />
     <Content Include="Scripts\iCheck\zepto.icheck.min.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-migrate-1.2.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.10.3.min.js" />
     <Content Include="Scripts\jquery-ui-1.9.2.custom.min.js" />
-    <Content Include="Scripts\jquery.cookies.js" />
-    <Content Include="Scripts\jquery.isotope.js" />
+    <Content Include="Scripts\jquery.multi-select.js" />
     <Content Include="Scripts\jquery.nicescroll.js" />
-    <Content Include="Scripts\jquery.stepy.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -575,20 +588,9 @@
     <Content Include="Scripts\main-chart.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\modernizr.min.js" />
-    <Content Include="Scripts\multi-select-init.js" />
-    <Content Include="Scripts\nestable-init.js" />
-    <Content Include="Scripts\owl.carousel.js" />
-    <Content Include="Scripts\owl.carousel.min.js" />
-    <Content Include="Scripts\pickers-init.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\scripts.js" />
     <Content Include="Scripts\sparkline\jquery.sparkline.js" />
     <Content Include="Scripts\sparkline\sparkline-init.js" />
-    <Content Include="Scripts\spinner-init.js" />
-    <Content Include="Scripts\tagsinput-init.js" />
-    <Content Include="Scripts\tree-init.js" />
-    <Content Include="Scripts\validation-init.js" />
     <Content Include="Scripts\vendors\bootstrap-slider.js" />
     <Content Include="Scripts\vendors\bootstrap.min.js" />
     <Content Include="Scripts\vendors\gmaps.js" />
@@ -758,7 +760,6 @@
     <Content Include="Scripts\vendors\revolution\js\jquery.themepunch.revolution.min.js" />
     <Content Include="Scripts\vendors\revolution\js\jquery.themepunch.tools.min.js" />
     <Content Include="Scripts\vendors\twitter\jquery.tweet.min.js" />
-    <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -825,7 +826,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

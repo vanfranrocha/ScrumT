@@ -12,6 +12,8 @@ namespace Ferramenta_Scrumt.Controllers
         // GET: Projeto
         List<Projeto> ProjetoList;
         ProjetoRepositorio _ProjetoRep = new ProjetoRepositorio();
+        List<Users> UsersList;
+        UsersRepositorio _UsersRep = new UsersRepositorio();
 
         private void CarregaLista()
         {
@@ -27,6 +29,8 @@ namespace Ferramenta_Scrumt.Controllers
         }
         public ActionResult Create()
         {
+            UsersList = _UsersRep.Lista(new UsersMapper());
+            ViewBag.Nome_Membro = new SelectList(UsersList, "ID", "Nome");
             return View();
         }
         [HttpPost]
