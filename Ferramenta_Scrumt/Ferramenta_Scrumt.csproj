@@ -243,6 +243,7 @@
     <Content Include="Content\custom-ico-fonts.css" />
     <Content Include="Content\jquery-ui-1.10.3.css" />
     <Content Include="Content\jquery.stepy.css" />
+    <Content Include="Content\multi-select.css" />
     <Content Include="Content\owl.carousel.css" />
     <Content Include="Content\owl.theme.css" />
     <Content Include="Content\style-responsive.css" />
@@ -271,6 +272,7 @@
     <Content Include="images\minus.png" />
     <Content Include="images\plus-white.png" />
     <Content Include="images\plus.png" />
+    <Content Include="images\switch.png" />
     <Content Include="images\user-avatar.png" />
     <Content Include="Scripts\advanced-datatable\css\demo_page.css" />
     <Content Include="Scripts\advanced-datatable\css\demo_table.css" />

@@ -66,7 +66,16 @@
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="about2">
-                                        @Html.DropDownList("Nome_Membro", new SelectList(ViewBag.Nome_Membro, "Value", "Text"), htmlAttributes: new { @id = "example-getting-started", multiple = "multiple" })
+                                        <div class="container">
+                                            <br>
+                                            <h4>
+                                                Equipe
+                                            </h4>
+                                            @Html.DropDownList("Nome_Membro", new SelectList(ViewBag.Nome_Membro, "Value", "Text"), htmlAttributes: new { @id = "pre-selected-options", multiple = "multiple" })
+                                            <br>
+                                        </div>
+                                        <hr>
+
                                     </div>
                                 </div>
                                 <div class="form-group">
