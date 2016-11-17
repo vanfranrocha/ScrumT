@@ -12,6 +12,8 @@ namespace Ferramenta_Scrumt.REPOSITORIO
 
             Eq.ID = (int)Record["ID_Equipe"];
             Eq.Nome = (string)Record["Nome"];
+            Eq.Funcao = (int)Record["ID_Funcao"];
+            Eq.Nome_Funcao = (string)Record["Nome_Funcao"];
             Eq.Email = (string)Record["Email"];
             Eq.Senha = (string)Record["Senha"];
             return Eq;

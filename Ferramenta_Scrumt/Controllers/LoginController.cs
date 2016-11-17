@@ -12,6 +12,7 @@ namespace Ferramenta_Scrumt.Controllers
         List<Users> LogList;
         EquipeRepositorio _EqRep = new EquipeRepositorio();
         LoginRepositorio _LogRep = new LoginRepositorio();
+        
         private void CarregaLista()
         {
             LogList = _LogRep.Lista(new LoginMapper());
@@ -34,6 +35,7 @@ namespace Ferramenta_Scrumt.Controllers
                 Session["Usuario"] = L;
                 Session["nomeUsuarioLogado"] = L.Nome;
                 Session["Funcao"] = L.Nome_Funcao;
+                Session["Email"] = L.Email;
                 Session["Equipes"] = _EqRep.Lista(new EquipeMapper(), L.ID).ToList();
                 return Redirect(returnUrl);
             }
