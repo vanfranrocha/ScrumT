@@ -14,7 +14,6 @@ namespace Ferramenta_Scrumt.REPOSITORIO
             pback.Nome_Projeto = (string)Record["Descricao"];
             pback.Projeto = (int)Record["ID_Projeto"];
             pback.Historia = (string)Record["Historia"];
-            pback.Estimativa_Inicio = (DateTime)Record["Estimativa_Inicio"];
             pback.Aceito = (string)Record["Aceito"];
             pback.Importancia = (string)Record["Importancia"];
             return pback;
