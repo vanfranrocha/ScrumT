@@ -9,7 +9,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             ReleaseBacklog relback = new ReleaseBacklog();
 
-            relback.ID = (int)Record["ID_Projeto"];
+            relback.ID = (int)Record["ID_ProductRelease"];
             relback.ID_Membro = (int)Record["ID_Membro"];
             relback.ID_Pbacklog = (int)Record["ID_PBacklog"];
             relback.Nome_Membro = (string)Record["Nome"];

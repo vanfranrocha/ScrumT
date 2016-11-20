@@ -195,6 +195,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BacklogController.cs" />
     <Compile Include="Controllers\EquipeController.cs" />
+    <Compile Include="Controllers\ReleaseBacklogController.cs" />
     <Compile Include="Controllers\TestUnidadeController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -207,6 +208,7 @@
     </Compile>
     <Compile Include="INFRA\DBUtil.cs" />
     <Compile Include="MODEL\Equipe.cs" />
+    <Compile Include="MODEL\ReleaseBacklog.cs" />
     <Compile Include="MODEL\TesteUnidade.cs" />
     <Compile Include="MODEL\Users.cs" />
     <Compile Include="MODEL\Funcao.cs" />
@@ -219,6 +221,8 @@
     <Compile Include="REPOSITORIO\FuncaoRepositorio.cs" />
     <Compile Include="REPOSITORIO\ISQLMapper.cs" />
     <Compile Include="REPOSITORIO\ISQLRepository.cs" />
+    <Compile Include="REPOSITORIO\ReleaseBacklogMapper.cs" />
+    <Compile Include="REPOSITORIO\ReleaseBacklogRepositorio.cs" />
     <Compile Include="REPOSITORIO\TesteUnidadeMapper.cs" />
     <Compile Include="REPOSITORIO\TesteUnidadeRepositorio.cs" />
     <Compile Include="REPOSITORIO\UsersMapper.cs" />
@@ -817,6 +821,8 @@
     <Content Include="Views\Backlog\Details.cshtml" />
     <Content Include="Views\Backlog\Delete.cshtml" />
     <Content Include="Views\Equipe\Create.cshtml" />
+    <Content Include="Views\ReleaseBacklog\Menu.cshtml" />
+    <Content Include="Views\ReleaseBacklog\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
