@@ -3,7 +3,6 @@ using Ferramenta_Scrumt.REPOSITORIO;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
-
 namespace Ferramenta_Scrumt.Controllers
 {
     [Authorize]

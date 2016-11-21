@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="page-heading">
+    <h3>
+        Draggable Calendar
+    </h3>
+    <ul class="breadcrumb">
+        <li>
+            <a href="#">Dashboard</a>
+        </li>
+        <li>
+            <a href="#">Components</a>
+        </li>
+        <li class="active">  Draggable Calendar  </li>
+    </ul>
+</div>
+<!-- page heading end-->
+<!--body wrapper start-->
+<div class="wrapper">
+
+    <!-- page start-->
+    <div class="row">
+        <aside class="col-md-3">
+            <h4 class="drg-event-title"> Draggable Events</h4>
+            <div id='external-events'>
+                <div class='external-event label label-primary'>My Event 1</div>
+                <div class='external-event label label-success'>My Event 2</div>
+                <div class='external-event label label-info'>My Event 3</div>
+                <div class='external-event label label-primary'>My Event 4</div>
+                <div class='external-event label label-warning'>My Event 5</div>
+                <div class='external-event label label-danger'>My Event 6</div>
+                <div class='external-event label label-default'>My Event 7</div>
+                <div class='external-event label label-primary'>My Event 8</div>
+                <div class='external-event label label-info'>My Event 9</div>
+                <div class='external-event label label-success'>My Event 10</div>
+                <p class="border-top drp-rmv">
+                    <input type='checkbox' id='drop-remove' />
+                    Remove after drop
+                </p>
+                <br />
+            </div>
+        </aside>
+        <aside class="col-md-9">
+            <section class="panel">
+                <div id="calendar" class="has-toolbar"></div>
+            </section>
+        </aside>
+
+    </div>
+    <!-- page end-->
+
+</div>
