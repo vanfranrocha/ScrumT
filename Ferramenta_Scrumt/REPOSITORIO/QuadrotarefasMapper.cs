@@ -11,6 +11,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
 
             qtarefas.id_Pbacklog = (int)Record["ID_PBacklog"];
             qtarefas.Historia = (string)Record["Historia"];
+            qtarefas.Projeto = (string)Record["Descricao"];
             qtarefas.Situacao = (string)Record["Situacao_Quadrotarefas"];
             return qtarefas;
         }

@@ -11,15 +11,20 @@ namespace Ferramenta_Scrumt.Controllers
         // GET: Quadrotarefas
         List<Quadro_tarefas> QtarefasList;
         QuadrotarefasRepositorio _QtarefasRep = new QuadrotarefasRepositorio();
+        List<Projeto> ProjetoList;
+        ProjetoRepositorio _ProjetoRep = new ProjetoRepositorio();
 
         private void CarregaLista()
         {
-            QtarefasList = _QtarefasRep.Listaquadro(new QuadrotarefasMapper(), "Select [Product_Backlog].[Historia],[Product_Release].[ID_PBacklog],[Situacao_Quadrotarefas] from Product_Release Inner Join Product_Backlog on Product_Release.ID_PBacklog = Product_Backlog.ID_PBacklog");
+            QtarefasList = _QtarefasRep.Listaquadro(new QuadrotarefasMapper(), "Select [Product_Backlog].[Historia],[Projeto].[Descricao],[Product_Release].[ID_PBacklog],[Situacao_Quadrotarefas] from Product_Release Inner Join Product_Backlog on Product_Release.ID_PBacklog = Product_Backlog.ID_PBacklog Inner Join Projeto on Product_Backlog.ID_Projeto = Projeto.ID_Projeto");
             Session["Lista"] = QtarefasList;
         }
         public ActionResult Index()
         {
             CarregaLista();
+            List<Equipe> Equipes = (List<Equipe>)Session["Equipes"];
+            ProjetoList = _ProjetoRep.Lista(new ProjetoMapper(),Equipes);
+            ViewBag.Projeto = new SelectList(ProjetoList, "ID", "Descricao");
             return View(QtarefasList);
         }
     }

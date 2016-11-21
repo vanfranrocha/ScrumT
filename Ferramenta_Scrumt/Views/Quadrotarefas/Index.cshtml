@@ -9,7 +9,7 @@
     <h3>
         Quadro de Tarefas
     </h3>
-    <div class="col-md-10 col-xs-8">
+    <div class="col-md-6 col-xs-8">
         <ul class="breadcrumb">
             <li>
                 <a href="~/Home/Index">Home</a>
@@ -19,6 +19,12 @@
             </li>
             <li class="active">Quadro de Tarefas</li>
         </ul>
+    </div>
+    <div class="col-md-1 col-xs-8">
+        <label class="col-lg-2 col-sm-2 control-label">Projeto</label>
+    </div>
+    <div class="col-md-3 col-xs-8">
+        @Html.DropDownList("Descricao", (SelectList)ViewBag.Projeto, "Selecione um Projeto", htmlAttributes: new { @class = "form-control" })
     </div>
     <div class="col-md-2 col-xs-8">
         <p>
@@ -32,10 +38,6 @@
         <div class="panel">
             <header class="panel-heading">
                 A Fazer
-                <span class="tools pull-right">
-                    <a class="fa fa-chevron-down" href="javascript:;"></a>
-                    <a class="fa fa-times" href="javascript:;"></a>
-                </span>
             </header>
             <div class="panel-body">
                 <ul class="to-do-list ui-sortable" id="sortable-todo">

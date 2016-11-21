@@ -7,6 +7,7 @@
 
         }
         public int id_Pbacklog { get; set; }
+        public string Projeto { get; set; }
         public string Historia { get; set; }
         public string Situacao { get; set; }
     }
