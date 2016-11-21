@@ -38,6 +38,8 @@ namespace Ferramenta_Scrumt
                       "~/Scripts/flot-chart/jquery.flot.pie.resize.js",
                       "~/Scripts/flot-chart/jquery.flot.selection.js",
                       "~/Scripts/flot-chart/jquery.flot.stack.js",
+                      "~/Scripts/fullcalendar/fullcalendar.min.js",
+                      "~/Scripts/external-dragging-calendar.js",
                       "~/Scripts/flot-chart/jquery.flot.time.js",
                       "~/Scripts/main-chart.js",
                       "~/Scripts/scripts.js"                     
@@ -45,6 +47,7 @@ namespace Ferramenta_Scrumt
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/multi-select.css",
+                      "~/Scripts/fullcalendar/bootstrap-fullcalendar.css",
                       "~/Content/clndr.css",
                       "~/Content/style.css",
                       "~/Content/style-responsive.css",

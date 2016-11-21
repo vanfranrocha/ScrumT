@@ -410,6 +410,7 @@
     <Content Include="Scripts\easypiechart\easypiechart.js" />
     <Content Include="Scripts\easypiechart\jquery.easypiechart.js" />
     <Content Include="Scripts\easypiechart\jquery.easypiechart.min.js" />
+    <Content Include="Scripts\external-dragging-calendar.js" />
     <Content Include="Scripts\flot-chart\API.md" />
     <Content Include="Scripts\flot-chart\build.log" />
     <Content Include="Scripts\flot-chart\CONTRIBUTING.md" />
@@ -418,6 +419,12 @@
     <Content Include="Scripts\flot-chart\NEWS.md" />
     <Content Include="Scripts\flot-chart\PLUGINS.md" />
     <Content Include="Scripts\flot-chart\README.md" />
+    <Content Include="Scripts\fullcalendar\bootstrap-fullcalendar.css" />
+    <Content Include="Scripts\fullcalendar\fullcalendar.css" />
+    <Content Include="Scripts\fullcalendar\fullcalendar.js" />
+    <Content Include="Scripts\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Scripts\fullcalendar\fullcalendar.print.css" />
+    <Content Include="Scripts\fullcalendar\gcal.js" />
     <Content Include="Scripts\iCheck\README.md" />
     <Content Include="Scripts\flot-chart\excanvas.js" />
     <Content Include="Scripts\flot-chart\excanvas.min.js" />
@@ -834,6 +841,7 @@
     <Content Include="Views\Quadrotarefas\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Calendar\Index.cshtml" />
+    <Content Include="Views\Calendar\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
