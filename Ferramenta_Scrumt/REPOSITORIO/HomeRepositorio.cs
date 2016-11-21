@@ -27,7 +27,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
             throw new NotImplementedException();
         }
 
-        public List<Home> Listaqtprojetos(ISQLMapper<Home> mapper, string SQL)
+        public List<Home> Listaqt(ISQLMapper<Home> mapper, string SQL)
         {
             SqlParameter[] Param = new SqlParameter[]
             { };

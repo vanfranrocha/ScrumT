@@ -14,7 +14,7 @@ namespace Ferramenta_Scrumt.Controllers
 
         private void CarregaLista()
         {
-            HomeList = _HomeRep.Listaqtprojetos(new HomeMapper(), "Select count(ID_Projeto) as 'totalprojeto' from Projeto");
+            HomeList = _HomeRep.Listaqt(new HomeMapper(), "Select (Select count(ID_TestUnidade)  from Teste_Unidade) as 'totaltestes', (Select count(ID_Projeto) from Projeto) as 'totalprojeto'");
             Session["Lista"] = HomeList;
         }
         public ActionResult Index()
