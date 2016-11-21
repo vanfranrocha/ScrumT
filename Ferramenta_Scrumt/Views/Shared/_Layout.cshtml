@@ -39,73 +39,43 @@
                                 <span class="badge">8</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-head pull-right">
-                                <h5 class="title">You have 8 pending task</h5>
+                                <h5 class="title">Progresso Testes Unidade</h5>
                                 <ul class="dropdown-list user-list">
+                                @foreach (var item in ViewBag.Teste)
+                                {
                                     <li class="new">
                                         <a href="#">
                                             <div class="task-info">
-                                                <div>Database update</div>
+                                                <div>@item.Text</div>
                                             </div>
-                                            <div class="progress progress-striped">
-                                                <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
-                                                    <span class="">40%</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="new">
-                                        <a href="#">
-                                            <div class="task-info">
-                                                <div>Dashboard done</div>
-                                            </div>
-                                            <div class="progress progress-striped">
-                                                <div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" role="progressbar" class="progress-bar progress-bar-success">
-                                                    <span class="">90%</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="task-info">
-                                                <div>Web Development</div>
-                                            </div>
-                                            <div class="progress progress-striped">
-                                                <div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="66" role="progressbar" class="progress-bar progress-bar-info">
-                                                    <span class="">66% </span>
-                                                </div>
+                                            <div class="progress progress-striped active progress-sm">
+                                                @if (item.Value == "33")
+                                                {
+                                                    <div style="width: 33%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-danger">
+                                                        <span class="">33%</span>
+                                                    </div>
+                                                }
+                                                @if (item.Value == "66")
+                                                {
+                                                    <div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
+                                                        <span class="">66%</span>
+                                                    </div>
+                                                }
+                                                @if (item.Value == "100")
+                                                {
+                                                    <div style="width: 100%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-success">
+                                                        <span class="">100%</span>
+                                                    </div>
+                                                }
                                             </div>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="task-info">
-                                                <div>Mobile App</div>
-                                            </div>
-                                            <div class="progress progress-striped">
-                                                <div style="width: 33%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="33" role="progressbar" class="progress-bar progress-bar-danger">
-                                                    <span class="">33% </span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-
-                                        <a href="#">
-                                            <div class="task-info">
-                                                <div>Issues fixed</div>
-                                            </div>
-                                            <div class="progress progress-striped">
-                                                <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar">
-                                                    <span class="">80% </span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="new"><a href="">See All Pending Task</a></li>
+                                    }
+                                    <li class="new"><a href="~/TesteUnidade/Index">Testes Cadastrados</a></li>
                                 </ul>
                             </div>
                         </li>
+                        
                         <li>
                             <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
                                 <i class="fa fa-bell-o"></i>

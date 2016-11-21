@@ -13,6 +13,7 @@ namespace Ferramenta_Scrumt.Controllers
         EquipeRepositorio _EqRep = new EquipeRepositorio();
         LoginRepositorio _LogRep = new LoginRepositorio();
 
+
         private void CarregaLista()
         {
             LogList = _LogRep.Lista(new LoginMapper());

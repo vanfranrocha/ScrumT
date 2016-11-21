@@ -12,6 +12,8 @@ namespace Ferramenta_Scrumt.Controllers
         HomeRepositorio _HomeRep = new HomeRepositorio();
         List<ProductBacklog> PBacklogList;
         ProductBacklogRepositorio _PBacklogRep = new ProductBacklogRepositorio();
+        List<TesteUnidade> TestList;
+        TesteUnidadeRepositorio _TestRep = new TesteUnidadeRepositorio();
 
         private void CarregaLista()
         {
@@ -24,6 +26,9 @@ namespace Ferramenta_Scrumt.Controllers
             CarregaLista();
             PBacklogList = _PBacklogRep.Listahist(new ProductBacklogMapper());
             ViewBag.Historia = new SelectList(PBacklogList, "Importancia", "Historia");
+            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
+            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
+
             return View(HomeList);
         }
 

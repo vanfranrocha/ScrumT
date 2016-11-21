@@ -22,7 +22,13 @@ namespace Ferramenta_Scrumt.REPOSITORIO
             string SQL = "SELECT  [ID_TestUnidade],Teste_Unidade.[ID_Backlog],Product_Backlog.[Historia],Users.[Nome],Teste_Unidade.ID_Membro, [Classe],[Status] FROM Teste_Unidade Inner Join Product_Backlog on Teste_Unidade.ID_Backlog = Product_Backlog.ID_PBacklog Inner Join Users on Teste_Unidade.ID_Membro = Users.ID_Equipe";
             return mapper.MapAllFromSource(DB.ListaSQL(Param, SQL).Tables[0]);
         }
-
+        public List<TesteUnidade> Listatest(ISQLMapper<TesteUnidade> mapper)
+        {
+            SqlParameter[] Param = new SqlParameter[]
+            { };
+            string SQL = "Select top 4 Product_Backlog.Historia, Teste_Unidade.Status,Users.[Nome], Teste_Unidade.ID_Backlog, Teste_Unidade.ID_Membro, Teste_Unidade.ID_TestUnidade, Teste_Unidade.Classe from Teste_Unidade Inner Join Product_Backlog on Teste_Unidade.ID_Backlog = Product_Backlog.ID_PBacklog Inner Join Users on Teste_Unidade.ID_Membro = Users.ID_Equipe";
+            return mapper.MapAllFromSource(DB.ListaSQL(Param, SQL).Tables[0]);
+        }
         public void ADD(TesteUnidade Item)
         {
             SqlParameter ID = new SqlParameter("@ID_TestUnidade", SqlDbType.Int);
