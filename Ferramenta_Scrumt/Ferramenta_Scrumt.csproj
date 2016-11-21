@@ -209,6 +209,7 @@
     </Compile>
     <Compile Include="INFRA\DBUtil.cs" />
     <Compile Include="MODEL\Equipe.cs" />
+    <Compile Include="MODEL\Home.cs" />
     <Compile Include="MODEL\Quadro_tarefas.cs" />
     <Compile Include="MODEL\ReleaseBacklog.cs" />
     <Compile Include="MODEL\TesteUnidade.cs" />
@@ -221,6 +222,8 @@
     <Compile Include="REPOSITORIO\EquipeRepositorio.cs" />
     <Compile Include="REPOSITORIO\FuncaoMapper.cs" />
     <Compile Include="REPOSITORIO\FuncaoRepositorio.cs" />
+    <Compile Include="REPOSITORIO\HomeMapper.cs" />
+    <Compile Include="REPOSITORIO\HomeRepositorio.cs" />
     <Compile Include="REPOSITORIO\ISQLMapper.cs" />
     <Compile Include="REPOSITORIO\ISQLRepository.cs" />
     <Compile Include="REPOSITORIO\QuadrotarefasMapper.cs" />
@@ -783,7 +786,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\vendors\revolution\assets\arrows.psd" />
     <Content Include="Scripts\vendors\revolution\assets\bullets.psd" />
     <Content Include="Scripts\vendors\revolution\assets\small_arrows.psd" />
@@ -829,6 +831,7 @@
     <Content Include="Views\ReleaseBacklog\Index.cshtml" />
     <Content Include="Views\Quadrotarefas\Menu.cshtml" />
     <Content Include="Views\Quadrotarefas\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

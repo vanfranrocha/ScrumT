@@ -1,69 +1,76 @@
-﻿@{
-    ViewBag.Title = "Inicio";
+﻿@model IEnumerable<Ferramenta_Scrumt.MODEL.Home>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    <!--body wrapper start-->
-    <div class="wrapper">
+  <!--body wrapper start-->
+
+<div class="wrapper">
     <div class="row states-info">
-        <div class="col-md-3">
-            <div class="panel blue-bg">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-xs-4">
-                            <i class="fa fa-copy"></i>
-                        </div>
-                        <div class="col-xs-8">
-                            <span class="state-title"> Projetos em Execução </span>
-                            <h4>4</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="panel green-bg">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-xs-4">
-                            <i class="fa fa-clipboard"></i>
-                        </div>
-                        <div class="col-xs-8">
-                            <span class="state-title">  Projetos Finalizados  </span>
-                            <h4>5</h4>
+        @foreach (var item in Model)
+        {
+                <div class="col-md-3">
+                    <div class="panel blue-bg">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <i class="fa fa-copy"></i>
+                                </div>
+                                <div class="col-xs-8">
+                                    <span class="state-title"> Projetos em Execução </span>
+                                    <h4>@Html.DisplayFor(modelItem => item.totalprojeto)</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="panel yellow-bg">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-xs-4">
-                            <i class="fa fa-cogs"></i>
-                        </div>
-                        <div class="col-xs-8">
-                            <span class="state-title">  Testes Realizados  </span>
-                            <h4>6</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="panel red-bg">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-xs-4">
-                            <i class="fa fa-code"></i>
-                        </div>
-                        <div class="col-xs-8">
-                            <span class="state-title">  Testes em Espera  </span>
-                            <h4>9</h4>
+                <div class="col-md-3">
+                    <div class="panel green-bg">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <i class="fa fa-clipboard"></i>
+                                </div>
+                                <div class="col-xs-8">
+                                    <span class="state-title">  Projetos Finalizados  </span>
+                                    <h4>5</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+                <div class="col-md-3">
+                    <div class="panel yellow-bg">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <i class="fa fa-cogs"></i>
+                                </div>
+                                <div class="col-xs-8">
+                                    <span class="state-title">  Testes Realizados  </span>
+                                    <h4>6</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel red-bg">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <i class="fa fa-code"></i>
+                                </div>
+                                <div class="col-xs-8">
+                                    <span class="state-title">  Testes em Espera  </span>
+                                    <h4>9</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        }
     </div>
     <div class="col-md-12">
         <div class="panel">
@@ -77,7 +84,7 @@
             <div class="panel-body">
                 <ul class="goal-progress">
                     <li>
-                        
+
                         <div class="details">
                             <div class="title">
                                 <a href="#">John Doe</a> - Project Lead
@@ -144,5 +151,4 @@
         </div>
     </div>
 </div>
-        <!--body wrapper end-->
- 
+<!--body wrapper end-->
