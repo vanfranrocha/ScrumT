@@ -42,6 +42,7 @@ namespace Ferramenta_Scrumt.Controllers
             ViewBag.Nome = new SelectList(UserList, "ID", "Nome");
             ProductList = _ProductRep.Lista(new ProductBacklogMapper());
             ViewBag.Historia = new SelectList(ProductList, "ID", "Historia");
+
             ViewBag.Status = new List<SelectListItem>
             {
                 new SelectListItem{Text = "33", Value = "33"},

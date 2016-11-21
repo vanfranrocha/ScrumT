@@ -75,7 +75,7 @@
     <div class="col-md-12">
         <div class="panel">
             <header class="panel-heading">
-                Progresso dos Projetos
+                Histórias Cadastradas
                 <span class="tools pull-right">
                     <a href="javascript:;" class="fa fa-chevron-down"></a>
                     <a href="javascript:;" class="fa fa-times"></a>
@@ -83,21 +83,39 @@
             </header>
             <div class="panel-body">
                 <ul class="goal-progress">
+                    @foreach (var item in ViewBag.Historia)
+                    {
                     <li>
 
                         <div class="details">
                             <div class="title">
-                                <a href="#">John Doe</a> - @Html.Display("Historia",(string)ViewBag.Importancia)
+                                <a href="#">@item.Text</a> - Importância
                             </div>
-                            <div class="progress progress-xs">
-                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                                    <span class="">70%</span>
-                                </div>
+                            <div class="progress progress-striped active progress-sm">
+                                @if (item.Value == "Alta")
+                                {
+                                    <div style="width: 100%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-danger">
+                                        <span class="">Alta</span>
+                                    </div>
+                                }
+                                @if (item.Value == "Média")
+                                {
+                                    <div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
+                                        <span class="">Média</span>
+                                    </div>
+                                }
+                                @if (item.Value == "Baixa")
+                                {
+                                    <div style="width: 33%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-success">
+                                        <span class="">Baixa</span>
+                                    </div>
+                                }
                             </div>
                         </div>
                     </li>
+                    }
                 </ul>
-                <div class="text-center"><a href="#">Ver todos os Projetos</a></div>
+                <div class="text-center"><a href="#">Ver todos as Histórias</a></div>
             </div>
         </div>
     </div>

@@ -10,16 +10,20 @@ namespace Ferramenta_Scrumt.Controllers
     {
         List<Home> HomeList;
         HomeRepositorio _HomeRep = new HomeRepositorio();
+        List<ProductBacklog> PBacklogList;
+        ProductBacklogRepositorio _PBacklogRep = new ProductBacklogRepositorio();
 
         private void CarregaLista()
         {
-            HomeList = _HomeRep.Listaqt(new LayoutMapper(), "Select (Select count(ID_TestUnidade)  from Teste_Unidade) as 'totaltestes', (Select count(ID_Projeto) from Projeto) as 'totalprojeto', (Select count(ID_PBacklog) from Product_Backlog) as 'totalhistorias'");
+            HomeList = _HomeRep.Listaqt(new HomeMapper(), "Select (Select count(ID_TestUnidade)  from Teste_Unidade) as 'totaltestes', (Select count(ID_Projeto) from Projeto) as 'totalprojeto', (Select count(ID_PBacklog) from Product_Backlog) as 'totalhistorias'");
             Session["Lista"] = HomeList;
 
         }
         public ActionResult Index()
         {
             CarregaLista();
+            PBacklogList = _PBacklogRep.Listahist(new ProductBacklogMapper());
+            ViewBag.Historia = new SelectList(PBacklogList, "Importancia", "Historia");
             return View(HomeList);
         }
 

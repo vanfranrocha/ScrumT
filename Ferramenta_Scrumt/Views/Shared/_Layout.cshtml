@@ -6,17 +6,17 @@
     <title>@ViewBag.Title - ScrumT</title>
     <link rel="icon" type="image/png" href="~/images/favicon.png" />
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    
-    
+
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
-    
+
 
 </head>
 <body class="sticky-header">
 
-<section>
+    <section>
         @{Html.RenderPartial("Menu"); }
 
         <div class="main-content">
@@ -90,7 +90,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        
+
                                         <a href="#">
                                             <div class="task-info">
                                                 <div>Issues fixed</div>
@@ -103,28 +103,6 @@
                                         </a>
                                     </li>
                                     <li class="new"><a href="">See All Pending Task</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
-                                <i class="fa fa-envelope-o"></i>
-                                <span class="badge">5</span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-head pull-right">
-                                <h5 class="title">Últimas Histórias Adicionadas </h5>
-                                <ul class="dropdown-list normal-list">
-                                    <li class="new">
-                                        <a href="">
-                                            
-                                            <span class="desc">
-                                                <span class="name">John Doe <span class="badge badge-success">new</span></span>
-                                                <span class="msg">asdasd </span>
-                                            </span>
-                                        </a>
-                                    </li>
-                              
-                                    <li class="new"><a href="">Read All Mails</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -179,7 +157,7 @@
                                 <li><a href="#"><i class="fa fa-cog"></i> <span>Configurações</span></a></li>
                                 <li><a href="/Login/LogOff"><i class="fa fa-sign-out"></i> <span>Sair</span></a></li>
                             </ul>
-                            
+
                         </li>
                     </ul>
                 </div>
@@ -191,15 +169,15 @@
                 @DateTime.Now.Year &copy; Scrumt - Joyce Karoline e Vanessa Rocha
             </footer>
         </div>
-    
-   </section>
+
+    </section>
     <script type="text/javascript">CRISP_WEBSITE_ID = "7007a537-b989-4563-93c8-03121d241759";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="~/Scripts/jquery.multi-select.js"></script>
     <script type="text/javascript">
         $('#pre-selected-options').multiSelect();
     </script>
-    
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

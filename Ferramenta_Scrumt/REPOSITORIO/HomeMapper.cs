@@ -3,7 +3,7 @@ using System.Data;
 
 namespace Ferramenta_Scrumt.REPOSITORIO
 {
-    public class LayoutMapper : SqlMapperBase<Home>
+    public class HomeMapper : SqlMapperBase<Home>
     {
         public override Home MapFromSource(DataRow Record)
         {

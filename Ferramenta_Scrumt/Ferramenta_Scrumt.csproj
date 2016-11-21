@@ -793,7 +793,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\vendors\revolution\assets\arrows.psd" />
     <Content Include="Scripts\vendors\revolution\assets\bullets.psd" />
     <Content Include="Scripts\vendors\revolution\assets\small_arrows.psd" />
@@ -842,6 +841,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Calendar\Index.cshtml" />
     <Content Include="Views\Calendar\Menu.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
