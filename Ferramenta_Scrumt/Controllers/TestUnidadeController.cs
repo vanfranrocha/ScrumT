@@ -27,6 +27,8 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Index()
         {
             CarregaLista();
+            TesteUnidadeList = _TesteRep.Listatest(new TesteUnidadeMapper());
+            ViewBag.Teste = new SelectList(TesteUnidadeList, "Status", "Historia");
             return View(TesteUnidadeList);
         }
         [HttpPost]

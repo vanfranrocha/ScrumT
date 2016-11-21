@@ -14,6 +14,8 @@ namespace Ferramenta_Scrumt.Controllers
         ProjetoRepositorio _ProjetoRep = new ProjetoRepositorio();
         List<Users> UsersList;
         UsersRepositorio _UsersRep = new UsersRepositorio();
+        List<TesteUnidade> TestList;
+        TesteUnidadeRepositorio _TestRep = new TesteUnidadeRepositorio();
 
         private void CarregaLista()
         {
@@ -25,6 +27,8 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Index()
         {
             CarregaLista();
+            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
+            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
             return View(ProjetoList);
         }
         public ActionResult Create()

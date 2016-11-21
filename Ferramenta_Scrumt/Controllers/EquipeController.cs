@@ -16,7 +16,8 @@ namespace Ferramenta_Scrumt.Controllers
         List<Equipe> EquiList;
         EquipeRepositorio _EquiRep = new EquipeRepositorio();
         UsersRepositorio _UsersRep = new UsersRepositorio();
-
+        List<TesteUnidade> TestList;
+        TesteUnidadeRepositorio _TestRep = new TesteUnidadeRepositorio();
         private void CarregaLista()
         {
             EquiList = _EquiRep.Lista(new EquipeMapper());
@@ -25,6 +26,8 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Index()
         {
             CarregaLista();
+            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
+            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
             return View(EquiList);
         }
         [HttpPost]

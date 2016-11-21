@@ -13,6 +13,8 @@ namespace Ferramenta_Scrumt.Controllers
         List<Projeto> ProjetoList;
         ProductBacklogRepositorio _PBacklogRep = new ProductBacklogRepositorio();
         ProjetoRepositorio _ProjetoRep = new ProjetoRepositorio();
+        List<TesteUnidade> TestList;
+        TesteUnidadeRepositorio _TestRep = new TesteUnidadeRepositorio();
 
         private void CarregaLista()
         {
@@ -23,6 +25,9 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Index()
         {
             CarregaLista();
+            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
+            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
+
             return View(PBacklogList);
         }
         [HttpGet]

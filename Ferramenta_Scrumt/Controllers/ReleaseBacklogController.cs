@@ -11,6 +11,9 @@ namespace Ferramenta_Scrumt.Controllers
         // GET: ReleaseBacklog
         List<ReleaseBacklog> RBacklogList;
         ReleaseBacklogRepositorio _RBacklogRep = new ReleaseBacklogRepositorio();
+        List<TesteUnidade> TestList;
+        TesteUnidadeRepositorio _TestRep = new TesteUnidadeRepositorio();
+
         private void CarregaLista()
         {
             RBacklogList = _RBacklogRep.Lista(new ReleaseBacklogMapper());
@@ -19,6 +22,8 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Index()
         {
             CarregaLista();
+            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
+            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
             return View(RBacklogList);
         }
     }

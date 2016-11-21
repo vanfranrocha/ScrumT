@@ -13,6 +13,8 @@ namespace Ferramenta_Scrumt.Controllers
         QuadrotarefasRepositorio _QtarefasRep = new QuadrotarefasRepositorio();
         List<Projeto> ProjetoList;
         ProjetoRepositorio _ProjetoRep = new ProjetoRepositorio();
+        List<TesteUnidade> TestList;
+        TesteUnidadeRepositorio _TestRep = new TesteUnidadeRepositorio();
 
         private void CarregaLista()
         {
@@ -25,6 +27,8 @@ namespace Ferramenta_Scrumt.Controllers
             List<Equipe> Equipes = (List<Equipe>)Session["Equipes"];
             ProjetoList = _ProjetoRep.Lista(new ProjetoMapper(),Equipes);
             ViewBag.Projeto = new SelectList(ProjetoList, "ID", "Descricao");
+            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
+            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
             return View(QtarefasList);
         }
     }

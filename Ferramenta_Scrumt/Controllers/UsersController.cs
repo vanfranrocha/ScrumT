@@ -14,6 +14,8 @@ namespace Ferramenta_Scrumt.Controllers
         List<Funcao> FuncaoList;
         UsersRepositorio _UsersRep = new UsersRepositorio();
         FuncaoRepositorio _FunRep = new FuncaoRepositorio();
+        List<TesteUnidade> TestList;
+        TesteUnidadeRepositorio _TestRep = new TesteUnidadeRepositorio();
 
         private void CarregaLista()
         {
@@ -24,6 +26,8 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Index()
         {
             CarregaLista();
+            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
+            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
             return View(UsersList);
         }
         [HttpPost]
