@@ -11,6 +11,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
 
             hom.totalprojeto = (int)Record["totalprojeto"];
             hom.totalteste = (int)Record["totaltestes"];
+            hom.totalhistorias = (int)Record["totalhistorias"];
             return hom;
         }
     }
