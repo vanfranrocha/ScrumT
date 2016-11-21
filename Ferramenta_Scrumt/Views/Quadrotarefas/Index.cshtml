@@ -1,0 +1,417 @@
+﻿@model IEnumerable<Ferramenta_Scrumt.MODEL.ReleaseBacklog>
+
+@{
+    ViewBag.Title = "Quadro de Tarefas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="page-heading">
+    <h3>
+        Quadro de Tarefas
+    </h3>
+    <div class="col-md-10 col-xs-8">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Backlog</a>
+            </li>
+            <li class="active">Quadro de Tarefas</li>
+        </ul>
+    </div>
+    <div class="col-md-2 col-xs-8">
+        <p>
+            @Html.ActionLink("Adicionar Historia", "Create", 0, new { @class = "btn btn-primary" })
+        </p>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="col-md-3">
+        <div class="panel">
+            <header class="panel-heading">
+                A Fazer
+                <span class="tools pull-right">
+                    <a class="fa fa-chevron-down" href="javascript:;"></a>
+                    <a class="fa fa-times" href="javascript:;"></a>
+                </span>
+            </header>
+            <div class="panel-body">
+                <ul class="to-do-list ui-sortable" id="sortable-todo">
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check">
+                            <label for="todo-check"></label>
+                        </div>
+                        <p class="todo-title">
+                            Dashboard Design &amp; Wiget placement
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check1">
+                            <label for="todo-check1"></label>
+                        </div>
+                        <p class="todo-title">
+                            Wireframe prepare for new design
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check2">
+                            <label for="todo-check2"></label>
+                        </div>
+                        <p class="todo-title">
+                            UI perfection testing for Mega Section
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check3">
+                            <label for="todo-check3"></label>
+                        </div>
+                        <p class="todo-title">
+                            Wiget &amp; Design placement
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check4">
+                            <label for="todo-check4"></label>
+                        </div>
+                        <p class="todo-title">
+                            Development &amp; Wiget placement
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel">
+            <header class="panel-heading">
+                Em Execução
+                <span class="tools pull-right">
+                    <a class="fa fa-chevron-down" href="javascript:;"></a>
+                    <a class="fa fa-times" href="javascript:;"></a>
+                </span>
+            </header>
+            <div class="panel-body">
+                <ul class="to-do-list ui-sortable" id="sortable-todo">
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check">
+                            <label for="todo-check"></label>
+                        </div>
+                        <p class="todo-title">
+                            Dashboard Design &amp; Wiget placement
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check1">
+                            <label for="todo-check1"></label>
+                        </div>
+                        <p class="todo-title">
+                            Wireframe prepare for new design
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check2">
+                            <label for="todo-check2"></label>
+                        </div>
+                        <p class="todo-title">
+                            UI perfection testing for Mega Section
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check3">
+                            <label for="todo-check3"></label>
+                        </div>
+                        <p class="todo-title">
+                            Wiget &amp; Design placement
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check4">
+                            <label for="todo-check4"></label>
+                        </div>
+                        <p class="todo-title">
+                            Development &amp; Wiget placement
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel">
+            <header class="panel-heading">
+                Em Teste
+                <span class="tools pull-right">
+                    <a class="fa fa-chevron-down" href="javascript:;"></a>
+                    <a class="fa fa-times" href="javascript:;"></a>
+                </span>
+            </header>
+            <div class="panel-body">
+                <ul class="to-do-list ui-sortable" id="sortable-todo">
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check">
+                            <label for="todo-check"></label>
+                        </div>
+                        <p class="todo-title">
+                            Dashboard Design &amp; Wiget placement
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check1">
+                            <label for="todo-check1"></label>
+                        </div>
+                        <p class="todo-title">
+                            Wireframe prepare for new design
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check2">
+                            <label for="todo-check2"></label>
+                        </div>
+                        <p class="todo-title">
+                            UI perfection testing for Mega Section
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check3">
+                            <label for="todo-check3"></label>
+                        </div>
+                        <p class="todo-title">
+                            Wiget &amp; Design placement
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check4">
+                            <label for="todo-check4"></label>
+                        </div>
+                        <p class="todo-title">
+                            Development &amp; Wiget placement
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel">
+            <header class="panel-heading">
+                Done
+                <span class="tools pull-right">
+                    <a class="fa fa-chevron-down" href="javascript:;"></a>
+                    <a class="fa fa-times" href="javascript:;"></a>
+                </span>
+            </header>
+            <div class="panel-body">
+                <ul class="to-do-list ui-sortable" id="sortable-todo">
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check">
+                            <label for="todo-check"></label>
+                        </div>
+                        <p class="todo-title">
+                            Dashboard Design &amp; Wiget placement
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check1">
+                            <label for="todo-check1"></label>
+                        </div>
+                        <p class="todo-title">
+                            Wireframe prepare for new design
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check2">
+                            <label for="todo-check2"></label>
+                        </div>
+                        <p class="todo-title">
+                            UI perfection testing for Mega Section
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check3">
+                            <label for="todo-check3"></label>
+                        </div>
+                        <p class="todo-title">
+                            Wiget &amp; Design placement
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="drag-marker">
+                            <i></i>
+                        </span>
+                        <div class="todo-check pull-left">
+                            <input type="checkbox" value="None" id="todo-check4">
+                            <label for="todo-check4"></label>
+                        </div>
+                        <p class="todo-title">
+                            Development &amp; Wiget placement
+                        </p>
+                        <div class="todo-actionlist pull-right clearfix">
+
+                            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -195,6 +195,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BacklogController.cs" />
     <Compile Include="Controllers\EquipeController.cs" />
+    <Compile Include="Controllers\QuadrotarefasController.cs" />
     <Compile Include="Controllers\ReleaseBacklogController.cs" />
     <Compile Include="Controllers\TestUnidadeController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
@@ -823,6 +824,8 @@
     <Content Include="Views\Equipe\Create.cshtml" />
     <Content Include="Views\ReleaseBacklog\Menu.cshtml" />
     <Content Include="Views\ReleaseBacklog\Index.cshtml" />
+    <Content Include="Views\Quadrotarefas\Index.cshtml" />
+    <Content Include="Views\Quadrotarefas\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
