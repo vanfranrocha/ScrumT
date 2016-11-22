@@ -36,7 +36,14 @@
                         <li>
                             <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
                                 <i class="fa fa-tasks"></i>
-                                <span class="badge">8</span>
+                                <span class="badge">
+                                @{int i = 0;
+                                    foreach (var item in ViewBag.Teste)
+                                    {
+                                        i = i + 1;
+                                        
+                                    }
+                                } @i</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-head pull-right">
                                 <h5 class="title">Progresso Testes Unidade</h5>

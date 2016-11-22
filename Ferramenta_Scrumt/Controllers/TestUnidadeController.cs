@@ -1,9 +1,7 @@
 ﻿using Ferramenta_Scrumt.MODEL;
 using Ferramenta_Scrumt.REPOSITORIO;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Ferramenta_Scrumt.Controllers
@@ -23,12 +21,12 @@ namespace Ferramenta_Scrumt.Controllers
         {
             TesteUnidadeList = _TesteRep.Lista(new TesteUnidadeMapper());
             Session["Lista"] = TesteUnidadeList;
+            TesteUnidadeList = _TesteRep.Listatest(new TesteUnidadeMapper());
+            ViewBag.Teste = new SelectList(TesteUnidadeList, "Status", "Historia");
         }
         public ActionResult Index()
         {
             CarregaLista();
-            TesteUnidadeList = _TesteRep.Listatest(new TesteUnidadeMapper());
-            ViewBag.Teste = new SelectList(TesteUnidadeList, "Status", "Historia");
             return View(TesteUnidadeList);
         }
         [HttpPost]
@@ -44,6 +42,7 @@ namespace Ferramenta_Scrumt.Controllers
             ViewBag.Nome = new SelectList(UserList, "ID", "Nome");
             ProductList = _ProductRep.Lista(new ProductBacklogMapper());
             ViewBag.Historia = new SelectList(ProductList, "ID", "Historia");
+            CarregaLista();
 
             ViewBag.Status = new List<SelectListItem>
             {
