@@ -119,7 +119,14 @@
                         <li>
                             <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-user"></i>
-                                @Session["nomeUsuarioLogado"].ToString()
+                                @if (@Session["nomeUsuarioLogado"] == null)
+                                {
+                                    
+                                }
+                                @if (@Session["nomeUsuarioLogado"] != null)
+                                {
+                                    @Session["nomeUsuarioLogado"].ToString()
+                                }
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-usermenu pull-right">

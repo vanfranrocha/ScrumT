@@ -15,7 +15,14 @@
                 <div class="media-body">
                     <h4>
                         <a href="#">
-                            @Session["nomeUsuarioLogado"].ToString()
+                            @if(@Session["nomeUsuarioLogado"] == null)
+                            {
+                                Response.Redirect("~/Login/LogOff");
+                            }
+                            @if (@Session["nomeUsuarioLogado"] != null)
+                            {
+                                @Session["nomeUsuarioLogado"].ToString()
+                            }
                         </a>
                     </h4>
                     <span>"Hello There..."</span>
