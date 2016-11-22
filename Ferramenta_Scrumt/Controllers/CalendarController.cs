@@ -23,7 +23,6 @@ namespace Ferramenta_Scrumt.Controllers
         public JsonResult GetDados()
         {
             RBacklogList = _RBacklogRep.Lista(new ReleaseBacklogMapper());
-            
             return Json(RBacklogList, JsonRequestBehavior.AllowGet);
         }
 

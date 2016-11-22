@@ -1,9 +1,3 @@
-var dateString = "\/Date(1479607200000)\/".substr(6);
-var currentTime = new Date(parseInt(dateString));
-var month = currentTime.getMonth() + 1;
-var day = currentTime.getDate();
-var year = currentTime.getFullYear();
-var date = day + "/" + month + "/" + year;
 
 var Script = function () {
 
@@ -71,6 +65,7 @@ var Script = function () {
             }
 
         },
+
         events: [
             {
                 title: 'Teste',
