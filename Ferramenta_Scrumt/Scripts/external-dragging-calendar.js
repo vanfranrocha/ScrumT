@@ -1,3 +1,10 @@
+var dateString = "\/Date(1479607200000)\/".substr(6);
+var currentTime = new Date(parseInt(dateString));
+var month = currentTime.getMonth() + 1;
+var day = currentTime.getDate();
+var year = currentTime.getFullYear();
+var date = day + "/" + month + "/" + year;
+
 var Script = function () {
 
 
@@ -66,48 +73,30 @@ var Script = function () {
         },
         events: [
             {
-                title: 'All Day Event',
-                start: new Date(y, m, 1)
+                title: 'Teste',
+                start: new Date(2016, 10, 1)
             },
             {
-                title: 'Long Event',
-                start: new Date(y, m, d-5),
-                end: new Date(y, m, d-2)
-            },
-            {
-                id: 999,
-                title: 'Repeating Event',
-                start: new Date(y, m, d-3, 16, 0),
-                allDay: false
+                title: 'Teste2',
+                start: new Date(y, m, 5),
             },
             {
                 id: 999,
-                title: 'Repeating Event',
-                start: new Date(y, m, d+4, 16, 0),
-                allDay: false
+                title: 'Teste3',
+                start: new Date(y, m, 25),
             },
             {
-                title: 'Meeting',
-                start: new Date(y, m, d, 10, 30),
-                allDay: false
+                id: 999,
+                title: 'Teste4',
+                start: new Date(y, m, 4),
             },
             {
-                title: 'Lunch',
-                start: new Date(y, m, d, 12, 0),
-                end: new Date(y, m, d, 14, 0),
-                allDay: false
+                title: 'Teste5',
+                start: new Date(y, m, 20),
             },
             {
-                title: 'Birthday Party',
-                start: new Date(y, m, d+1, 19, 0),
-                end: new Date(y, m, d+1, 22, 30),
-                allDay: false
-            },
-            {
-                title: 'Click for Google',
-                start: new Date(y, m, 28),
-                end: new Date(y, m, 29),
-                url: 'http://google.com/'
+                title: 'Teste6',
+                start: new Date(y, m, 16),
             }
         ]
     });

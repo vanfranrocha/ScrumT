@@ -28,7 +28,7 @@
     </div>
     <div class="col-md-2 col-xs-8">
         <p>
-            @Html.ActionLink("Adicionar Historia", "Create", 0, new { @class = "btn btn-primary" })
+            <button class="btn btn-info" onclick="location.href='@Url.Action("Index", "ReleaseBacklog")'" type="button">Release Backlog</button>
         </p>
     </div>
 </div>

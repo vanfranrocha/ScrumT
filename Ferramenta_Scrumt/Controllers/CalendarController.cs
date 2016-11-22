@@ -11,6 +11,8 @@ namespace Ferramenta_Scrumt.Controllers
         // GET: Calendar
         List<TesteUnidade> TestList;
         TesteUnidadeRepositorio _TestRep = new TesteUnidadeRepositorio();
+        List<ReleaseBacklog> RBacklogList;
+        ReleaseBacklogRepositorio _RBacklogRep = new ReleaseBacklogRepositorio();
 
         public ActionResult Index()
         {
@@ -18,5 +20,14 @@ namespace Ferramenta_Scrumt.Controllers
             ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
             return View();
         }
+        public JsonResult GetDados()
+        {
+            RBacklogList = _RBacklogRep.Lista(new ReleaseBacklogMapper());
+            
+            return Json(RBacklogList, JsonRequestBehavior.AllowGet);
+        }
+
+
+        
     }
 }

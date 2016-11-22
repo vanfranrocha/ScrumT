@@ -1,4 +1,5 @@
 ﻿using Ferramenta_Scrumt.MODEL;
+using System;
 using System.Data;
 
 namespace Ferramenta_Scrumt.REPOSITORIO
@@ -13,6 +14,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
             relback.ID_Membro = (int)Record["ID_Membro"];
             relback.ID_Pbacklog = (int)Record["ID_PBacklog"];
             relback.Nome_Membro = (string)Record["Nome"];
+            relback.Estimativa_inicio = (DateTime)Record["Estimativa_Inicio"];
             relback.Situacao_Quadro = (string)Record["Situacao_QuadroTarefas"];
             relback.Historia = (string)Record["Historia"];
             return relback;

@@ -11,7 +11,7 @@
         <li>
             <a href="#">Home</a>
         </li>
-        <li class="active">  Calendário  </li>
+        <li class="active">Calendário</li>
     </ul>
 </div>
 <!-- page heading end-->
@@ -31,3 +31,14 @@
     <!-- page end-->
 
 </div>
+<script>
+    var data = $.getJSON("GetDados", function (Date) { console.log(Date) });
+    var dateString = data.creditrequest[0].EstimativaInicio.substr(6);
+    var currentTime = new Date(parseInt(dateString));
+    var month = currentTime.getMonth() + 1;
+    var day = currentTime.getDate();
+    var year = currentTime.getFullYear();
+    var date = day + "/" + month + "/" + year;
+
+    $.getJSON("GetDados", function (Date) { console.log(Date) });
+</script>
