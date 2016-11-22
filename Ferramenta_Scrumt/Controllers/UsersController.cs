@@ -22,12 +22,12 @@ namespace Ferramenta_Scrumt.Controllers
 
             UsersList = _UsersRep.Lista(new UsersMapper());
             Session["Lista"] = UsersList;
+            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
+            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
         }
         public ActionResult Index()
         {
             CarregaLista();
-            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
-            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
             return View(UsersList);
         }
         [HttpPost]
@@ -35,6 +35,7 @@ namespace Ferramenta_Scrumt.Controllers
         {
             _UsersRep.ADD(E);
             Session["Lista"] = UsersList;
+            CarregaLista();
             return RedirectToAction("Index");
         }
         

@@ -20,14 +20,14 @@ namespace Ferramenta_Scrumt.Controllers
         {
             PBacklogList = _PBacklogRep.Lista(new ProductBacklogMapper());
             Session["Lista"] = PBacklogList;
+            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
+            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
+
         }
 
         public ActionResult Index()
         {
             CarregaLista();
-            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
-            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
-
             return View(PBacklogList);
         }
         [HttpGet]

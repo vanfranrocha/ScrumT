@@ -23,12 +23,12 @@ namespace Ferramenta_Scrumt.Controllers
 
             ProjetoList = _ProjetoRep.Lista(new ProjetoMapper(),Equipes);
             Session["Lista"] = ProjetoList;
+            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
+            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
         }
         public ActionResult Index()
         {
             CarregaLista();
-            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
-            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
             return View(ProjetoList);
         }
         public ActionResult Create()

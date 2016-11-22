@@ -18,12 +18,12 @@ namespace Ferramenta_Scrumt.Controllers
         {
             RBacklogList = _RBacklogRep.Lista(new ReleaseBacklogMapper());
             Session["Lista"] = RBacklogList;
+            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
+            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
         }
         public ActionResult Index()
         {
             CarregaLista();
-            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
-            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
             return View(RBacklogList);
         }
     }
