@@ -22,7 +22,7 @@ namespace Ferramenta_Scrumt.Controllers
             TesteUnidadeList = _TesteRep.Lista(new TesteUnidadeMapper());
             Session["Lista"] = TesteUnidadeList;
             TesteUnidadeList = _TesteRep.Listatest(new TesteUnidadeMapper());
-            ViewBag.Teste = new SelectList(TesteUnidadeList, "Status", "Historia");
+            ViewBag.tes = new MultiSelectList(TesteUnidadeList, "Status", "Historia", "Classe");
         }
         public ActionResult Index()
         {

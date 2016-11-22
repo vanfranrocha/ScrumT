@@ -20,6 +20,8 @@ namespace Ferramenta_Scrumt.Controllers
         {
             QtarefasList = _QtarefasRep.Listaquadro(new QuadrotarefasMapper(), "Select [Product_Backlog].[Historia],[Projeto].[Descricao],[Product_Release].[ID_PBacklog],[Situacao_Quadrotarefas] from Product_Release Inner Join Product_Backlog on Product_Release.ID_PBacklog = Product_Backlog.ID_PBacklog Inner Join Projeto on Product_Backlog.ID_Projeto = Projeto.ID_Projeto");
             Session["Lista"] = QtarefasList;
+            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
+            ViewBag.tes = new MultiSelectList(TestList, "Status", "Historia", "Classe");
         }
         public ActionResult Index()
         {
@@ -27,8 +29,6 @@ namespace Ferramenta_Scrumt.Controllers
             List<Equipe> Equipes = (List<Equipe>)Session["Equipes"];
             ProjetoList = _ProjetoRep.Lista(new ProjetoMapper(),Equipes);
             ViewBag.Projeto = new SelectList(ProjetoList, "ID", "Descricao");
-            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
-            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
             return View(QtarefasList);
         }
     }

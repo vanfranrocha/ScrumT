@@ -17,7 +17,7 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Index()
         {
             TestList = _TestRep.Listatest(new TesteUnidadeMapper());
-            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
+            ViewBag.tes = new MultiSelectList(TestList, "Status", "Historia", "Classe");
             return View();
         }
         public JsonResult GetDados()

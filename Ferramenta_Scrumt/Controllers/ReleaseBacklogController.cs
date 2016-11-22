@@ -19,7 +19,7 @@ namespace Ferramenta_Scrumt.Controllers
             RBacklogList = _RBacklogRep.Lista(new ReleaseBacklogMapper());
             Session["Lista"] = RBacklogList;
             TestList = _TestRep.Listatest(new TesteUnidadeMapper());
-            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
+            ViewBag.tes = new MultiSelectList(TestList, "Status", "Historia", "Classe");
         }
         public ActionResult Index()
         {

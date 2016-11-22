@@ -25,9 +25,9 @@ namespace Ferramenta_Scrumt.Controllers
         {
             CarregaLista();
             PBacklogList = _PBacklogRep.Listahist(new ProductBacklogMapper());
-            ViewBag.Historia = new SelectList(PBacklogList, "Importancia", "Historia");
+            ViewBag.Historia = new MultiSelectList(PBacklogList, "Importancia", "Historia", "Nome_Projeto");
             TestList = _TestRep.Listatest(new TesteUnidadeMapper());
-            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
+            ViewBag.tes = new MultiSelectList(TestList, "Status", "Historia","Classe");
 
             return View(HomeList);
         }

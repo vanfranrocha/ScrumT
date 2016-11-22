@@ -36,9 +36,10 @@
                         <li>
                             <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
                                 <i class="fa fa-tasks"></i>
+
                                 <span class="badge">
                                 @{int i = 0;
-                                    foreach (var item in ViewBag.Teste)
+                                    foreach (var item in ViewBag.tes)
                                     {
                                         i = i + 1;
                                         
@@ -48,12 +49,12 @@
                             <div class="dropdown-menu dropdown-menu-head pull-right">
                                 <h5 class="title">Progresso Testes Unidade</h5>
                                 <ul class="dropdown-list user-list">
-                                @foreach (var item in ViewBag.Teste)
+                                @foreach (var item in ViewBag.tes)
                                 {
                                     <li class="new">
                                         <a href="#">
                                             <div class="task-info">
-                                                <div>@item.Text</div>
+                                                <a>@item.Text</a><em class="small"> Classe: @item.Group.Name</em>
                                             </div>
                                             <div class="progress progress-striped active progress-sm">
                                                 @if (item.Value == "33")
@@ -75,6 +76,7 @@
                                                     </div>
                                                 }
                                             </div>
+                                      
                                         </a>
                                     </li>
                                     }

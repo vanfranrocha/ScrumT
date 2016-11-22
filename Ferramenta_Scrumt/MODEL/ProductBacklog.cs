@@ -1,9 +1,6 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace Ferramenta_Scrumt.MODEL
+﻿namespace Ferramenta_Scrumt.MODEL
 {
-    
+
     public class ProductBacklog
     {
         public ProductBacklog()
