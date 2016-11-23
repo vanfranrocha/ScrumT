@@ -33,6 +33,7 @@ namespace Ferramenta_Scrumt.Controllers
         }
         public ActionResult Create()
         {
+            CarregaLista();
             UsersList = _UsersRep.Lista(new UsersMapper());
             ViewBag.Nome_Membro = new SelectList(UsersList, "ID", "Nome");
             return View();

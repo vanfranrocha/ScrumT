@@ -31,10 +31,10 @@
                         <section class="panel">
                             <header class="panel-heading custom-tab">
                                 <ul class="nav nav-tabs">
-                                    <li class="active">
-                                        <a href="#home2" data-toggle="tab">Projeto</a>
-                                    </li>
                                     <li class="">
+                                        <a href="~/Projeto/Edit" data-toggle="tab">Projeto</a>
+                                    </li>
+                                    <li class="active">
                                         <a href="#about2" data-toggle="tab">Membros</a>
                                 </ul>
                             </header>
@@ -42,26 +42,32 @@
                                 <div class="tab-content">
                                     <div class="tab-pane " id="home2">
                                         <div class="panel-body">
+
                                         </div>
                                     </div>
                                     <div class="tab-pane active" id="about2">
-                                        <div class="col-sm-9 icheck ">
-                                            <div class="minimal single-row">
-                                                <div class="checkbox ">
-                                                    @Html.LabelFor(model => model.Membro, htmlAttributes: new { @class = "control-label col-md-2" })
-                                                    @Html.CheckBox("Membro", new SelectList(ViewBag.Membro, "Value", "Text"))
-                                                    @Html.ValidationMessageFor(model => model.Membro, "", new { @class = "text-danger" })
-                                                </div>
-                                            </div>
+                                        <div class="container">
+                                            <br>
+                                            @Html.DropDownList("ID", new SelectList(ViewBag.Projeto, "Text", "Value"))
+                                            @Html.DropDownList("Descricao", new SelectList(ViewBag.Projeto, "Value", "Text"))
+                                            <h4>
+                                                Equipe
+                                            </h4>
+                                            @Html.DropDownList("Nome_Membro", new SelectList(ViewBag.Nome_Membro, "Value", "Text"), htmlAttributes: new { @id = "pre-selected-options", multiple = "multiple" })
+                                            <br>
                                         </div>
+                                        <hr>
+
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Adicionar" class="btn btn-primary" />
+                                    @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-danger" })
+                                </div>
                             </div>
+
                         </section>
-                        <div class="form-group">
-                            <input type="submit" value="Adicionar" class="btn btn-primary" />
-                            @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-danger" })
-                        </div>
+
                     </section>
                 </div>
             </div>

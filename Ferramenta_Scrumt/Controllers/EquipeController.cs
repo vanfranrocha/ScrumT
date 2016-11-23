@@ -18,16 +18,21 @@ namespace Ferramenta_Scrumt.Controllers
         UsersRepositorio _UsersRep = new UsersRepositorio();
         List<TesteUnidade> TestList;
         TesteUnidadeRepositorio _TestRep = new TesteUnidadeRepositorio();
+        List<Projeto> ProjList;
+        ProjetoRepositorio _ProjRep = new ProjetoRepositorio();
+
+
         private void CarregaLista()
         {
             EquiList = _EquiRep.Lista(new EquipeMapper());
             Session["Lista"] = EquiList;
+            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
+            ViewBag.tes = new MultiSelectList(TestList, "Status", "Historia", "Classe");
         }
         public ActionResult Index()
         {
             CarregaLista();
-            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
-            ViewBag.tes = new MultiSelectList(TestList, "Status", "Historia", "Classe");
+
             return View(EquiList);
         }
         [HttpPost]
@@ -41,8 +46,11 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Create()
         {
             CarregaLista();
+            ProjList = _ProjRep.ListaProj(new ProjetoMapper(), "Select top 1 ID_Projeto,Descricao, Data_Inicio, Data_Fim from Projeto order by ID_Projeto desc");
+            ViewBag.Projeto = new SelectList(ProjList, "ID", "Descricao");
+
             UsersList = _UsersRep.Lista(new UsersMapper());
-            ViewBag.Membro = new SelectList(UsersList, "ID", "Nome");
+            ViewBag.Nome_Membro = new SelectList(UsersList, "ID", "Nome");
             return View();
         }
 

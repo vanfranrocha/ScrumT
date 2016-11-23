@@ -18,6 +18,7 @@ namespace Ferramenta_Scrumt.MODEL
         public string Membro { get; set; }
         public int IDUser { get; set; }
         [Display(Name = "Projeto")]
+        public string Projeto { get; set; }
         public int IDProjeto { get; set; }
     }
 }

@@ -15,7 +15,12 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             return mapper.MapFromSource(DB.GetByID("SP_PROJETO_BYID", ID));
         }
-
+        public List<Projeto> ListaProj(ISQLMapper<Projeto> mapper, string SQL)
+        {
+            SqlParameter[] Param = new SqlParameter[]
+            { };
+            return mapper.MapAllFromSource(DB.ListaSQL(Param, SQL).Tables[0]);
+        }
         public List<Projeto> Lista(ISQLMapper<Projeto> mapper)
         {
             SqlParameter[] Param = new SqlParameter[]

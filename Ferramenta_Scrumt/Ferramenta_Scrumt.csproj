@@ -214,6 +214,7 @@
     <Compile Include="MODEL\Quadro_tarefas.cs" />
     <Compile Include="MODEL\ReleaseBacklog.cs" />
     <Compile Include="MODEL\TesteUnidade.cs" />
+    <Compile Include="MODEL\TestIntegracao.cs" />
     <Compile Include="MODEL\Users.cs" />
     <Compile Include="MODEL\Funcao.cs" />
     <Compile Include="MODEL\ProductBacklog.cs" />
