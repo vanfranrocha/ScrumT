@@ -4999,16 +4999,16 @@ ul.iconic-list li a:hover, ul.iconic-list li.active a {
 }
 
 .states-info .red-bg {
-    background: #FC8675;
+    background: #dd4b39 !important;
 }
 .states-info .blue-bg {
-    background: #5AB6DF;
+    background: #00c0ef !important;
 }
 .states-info .green-bg {
-    background: #65CEA7;
+    background: #00a65a !important;
 }
 .states-info .yellow-bg {
-    background: #EBC85E;
+    background: #f39c12 !important;
 }
 
 .states-info i {
