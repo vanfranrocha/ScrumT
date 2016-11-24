@@ -407,6 +407,7 @@
     <Content Include="Scripts\bootstrap-datepicker\less\datepicker.less" />
     <Content Include="Scripts\bootstrap-daterangepicker\README.md" />
     <Content Include="Scripts\bootstrap-datetimepicker\less\datetimepicker.less" />
+    <Content Include="Scripts\crisp.js" />
     <Content Include="Scripts\easypiechart\easypiechart-init.js" />
     <Content Include="Scripts\easypiechart\easypiechart.js" />
     <Content Include="Scripts\easypiechart\jquery.easypiechart.js" />

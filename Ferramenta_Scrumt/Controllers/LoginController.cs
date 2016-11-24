@@ -12,12 +12,16 @@ namespace Ferramenta_Scrumt.Controllers
         List<Users> LogList;
         EquipeRepositorio _EqRep = new EquipeRepositorio();
         LoginRepositorio _LogRep = new LoginRepositorio();
-
+        List<TesteUnidade> TestList;
+        TesteUnidadeRepositorio _TestRep = new TesteUnidadeRepositorio();
 
         private void CarregaLista()
         {
             LogList = _LogRep.Lista(new LoginMapper());
             Session["Lista"] = LogList;
+            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
+            ViewBag.tes = new MultiSelectList(TestList, "Status", "Historia", "Classe");
+
         }
         [HttpGet]
         public ActionResult Login()
@@ -56,6 +60,7 @@ namespace Ferramenta_Scrumt.Controllers
         }
         public new ActionResult Profile()
         {
+            CarregaLista();
             return View();
         }
     }

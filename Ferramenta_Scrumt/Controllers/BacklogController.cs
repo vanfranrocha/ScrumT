@@ -21,7 +21,7 @@ namespace Ferramenta_Scrumt.Controllers
             PBacklogList = _PBacklogRep.Lista(new ProductBacklogMapper());
             Session["Lista"] = PBacklogList;
             TestList = _TestRep.Listatest(new TesteUnidadeMapper());
-            ViewBag.Teste = new SelectList(TestList, "Status", "Historia");
+            ViewBag.tes = new MultiSelectList(TestList, "Status", "Historia", "Classe");
 
         }
 
