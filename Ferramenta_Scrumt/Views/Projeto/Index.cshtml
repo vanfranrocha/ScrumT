@@ -9,7 +9,7 @@
     <h3>
         Projetos
     </h3>
-    <div class="col-md-10 col-xs-8">
+    <div class="col-md-10 col-xs-6">
         <ul class="breadcrumb">
             <li>
                 <a href="#">Home</a>
@@ -20,7 +20,7 @@
             <li class="active">Projeto</li>
         </ul>
     </div>
-    <div class="col-md-2 col-xs-8">
+    <div class="col-md-2 col-xs-4">
         <p>
             @Html.ActionLink("Adicionar Projeto", "Create", 0, new { @class = "btn btn-primary" })
         </p>
@@ -28,7 +28,7 @@
 </div>
 <div class="wrapper">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-xs-12">
             <section class="panel">
                 <header class="panel-heading">
                     Projetos Cadastrados
@@ -41,13 +41,13 @@
                         <thead>
                             <tr>
                                 <th>
-                                    <div class="col-md-3 col-xs-8">
+                                    <div class="col-md-3 col-xs-3">
                                         @Html.DisplayNameFor(model => model.Descricao)
                                     </div>
-                                    <div class="col-md-3 col-xs-8">
+                                    <div class="col-md-3 col-xs-4">
                                         @Html.DisplayNameFor(model => model.Data_Inicio)
                                     </div>
-                                    <div class="col-md-3 col-xs-8">
+                                    <div class="col-md-3 col-xs-3">
                                         @Html.DisplayNameFor(model => model.Data_Fim)
                                     </div>
                                 </th>
@@ -58,22 +58,19 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <div class="col-md-3 col-xs-8">
+                                        <div class="col-md-3 col-xs-3">
                                             <b class="hidden-md hidden-lg">
-                                                @Html.DisplayNameFor(model => model.Descricao)
                                             </b>@Html.DisplayFor(modelItem => item.Descricao)
                                         </div>
-                                        <div class="col-md-3 col-xs-8">
+                                        <div class="col-md-3 col-xs-4">
                                             <b class="hidden-md hidden-lg">
-                                                @Html.DisplayNameFor(model => model.Data_Inicio)
                                             </b>@Html.DisplayFor(modelItem => item.Data_Inicio)
                                         </div>
-                                        <div class="col-md-3 col-xs-8">
+                                        <div class="col-md-3 col-xs-3">
                                             <b class="hidden-md hidden-lg">
-                                                @Html.DisplayNameFor(model => model.Data_Fim)
                                             </b>@Html.DisplayFor(modelItem => item.Data_Fim)
                                         </div>
-                                        <div class="col-md-3 col-xs-8">
+                                        <div class="col-md-3 col-xs-12">
 
                                             @Html.ActionLink("Editar", "Edit", new { id = item.ID }, new { @class = "btn btn-success" })
                                             @Html.ActionLink("Detalhes", "Details", new { id = item.ID }, new { @class = "btn btn-info" })
