@@ -34,67 +34,29 @@ var Script = function () {
     var m = date.getMonth();
     var y = date.getFullYear();
 
-    $('#calendar').fullCalendar({
-        header: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'month,basicWeek,basicDay'
-        },
-        editable: true,
-        droppable: true, // this allows things to be dropped onto the calendar !!!
-        drop: function(date, allDay) { // this function is called when something is dropped
+   
 
-            // retrieve the dropped element's stored Event Object
-            var originalEventObject = $(this).data('eventObject');
+    $.ajax({
+        url: "/Calendar/GetDados",
+        type: "POST",
 
-            // we need to copy it, so that multiple events don't have a reference to the same object
-            var copiedEventObject = $.extend({}, originalEventObject);
+        dataType: "json",
+        cache: false,
+        success: function (result) {
+            var eventosCalendario = result;
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,basicWeek,basicDay'
+                },
+                navLinks: true, // can click day/week names to navigate views
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                events: eventosCalendario
 
-            // assign it the date that was reported
-            copiedEventObject.start = date;
-            copiedEventObject.allDay = allDay;
-
-            // render the event on the calendar
-            // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
-            $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
-
-            // is the "remove after drop" checkbox checked?
-            if ($('#drop-remove').is(':checked')) {
-                // if so, remove the element from the "Draggable Events" list
-                $(this).remove();
-            }
-
-        },
-
-        events: [
-            {
-                title: 'Teste',
-                start: new Date(2016, 10, 1)
-            },
-            {
-                title: 'Teste2',
-                start: new Date(y, m, 5),
-            },
-            {
-                id: 999,
-                title: 'Teste3',
-                start: new Date(y, m, 25),
-            },
-            {
-                id: 999,
-                title: 'Teste4',
-                start: new Date(y, m, 4),
-            },
-            {
-                title: 'Teste5',
-                start: new Date(y, m, 20),
-            },
-            {
-                title: 'Teste6',
-                start: new Date(y, m, 16),
-            }
-        ]
+            });
+        }
     });
-
 
 }();

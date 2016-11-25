@@ -31,16 +31,3 @@
     <!-- page end-->
 
 </div>
-<script>
-    $.getJSON("GetDados", function (Date) {
-        var historia = [];
-        $.each(Date, function (key , value) {
-            $.each(value, function (key, value) {
-                if (key == 'Historia') {
-                    historia.push(value);
-                }
-            })
-        })
-        console.log(Date)
-    });
-</script>
