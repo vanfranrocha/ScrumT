@@ -14,7 +14,8 @@ namespace Ferramenta_Scrumt.MODEL
         public int ID_Pbacklog { get; set; }
         public string Nome_Membro { get; set; }
         public int ID_Membro { get; set; }
-        public string Estimativa_inicio { get; set; }
+        public DateTime Estimativa_inicio { get; set; }
+        public DateTime Estimativa_fim { get; set; }
         public string Situacao_Quadro { get; set; }
 
     }

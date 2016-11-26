@@ -12,6 +12,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
 
             cald.title = (string)Record["Historia"];
             cald.start = Convert.ToString(Record["Estimativa_Inicio"]);
+            cald.end = Convert.ToString(Record["Estimativa_Fim"]);
             return cald;
         }
     }

@@ -19,7 +19,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             SqlParameter[] Param = new SqlParameter[]
             { };
-            string SQL = "Select [ID_ProductRelease],[Product_Backlog].[ID_PBacklog], [Product_Backlog].Historia,[Users].[Nome],[ID_Membro],[Estimativa_Inicio],[Situacao_QuadroTarefas] from Product_Release Inner Join Users on Product_Release.ID_Membro = Users.ID_Equipe Inner Join Product_Backlog on Product_Release.ID_PBacklog = Product_Backlog.ID_PBacklog";
+            string SQL = "Select [ID_ProductRelease],[Product_Backlog].[ID_PBacklog], [Product_Backlog].Historia,[Users].[Nome],[ID_Membro],[Estimativa_Inicio],[Estimativa_Fim],[Situacao_QuadroTarefas] from Product_Release Inner Join Users on Product_Release.ID_Membro = Users.ID_Equipe Inner Join Product_Backlog on Product_Release.ID_PBacklog = Product_Backlog.ID_PBacklog";
             return mapper.MapAllFromSource(DB.ListaSQL(Param, SQL).Tables[0]);
         }
         public void ADD(ReleaseBacklog Item)

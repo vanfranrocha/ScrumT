@@ -13,5 +13,6 @@ namespace Ferramenta_Scrumt.MODEL
         }
         public string title { get; set; }
         public string start { get; set; }
+        public string end { get; set; }
     }
 }

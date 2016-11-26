@@ -31,7 +31,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             SqlParameter[] Param = new SqlParameter[]
            { };
-            string SQL = "Select Historia, Left(Estimativa_Inicio,10) As Estimativa_Inicio from Product_Release Inner Join Product_Backlog on Product_Backlog.ID_PBacklog = Product_Release.ID_PBacklog";
+            string SQL = "Select Historia, Left(Estimativa_Inicio,10) As Estimativa_Inicio, Left(Estimativa_Fim,10) As Estimativa_Fim from Product_Release Inner Join Product_Backlog on Product_Backlog.ID_PBacklog = Product_Release.ID_PBacklog";
             return mapper.MapAllFromSource(DB.ListaSQL(Param, SQL).Tables[0]);
         }
 
