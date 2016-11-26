@@ -13,6 +13,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
             qtarefas.Historia = (string)Record["Historia"];
             qtarefas.Projeto = (string)Record["Descricao"];
             qtarefas.Situacao = (string)Record["Situacao_Quadrotarefas"];
+            qtarefas.Importancia = (string)Record["Importancia"];
             return qtarefas;
         }
     }

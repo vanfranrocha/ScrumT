@@ -18,7 +18,7 @@ namespace Ferramenta_Scrumt.Controllers
 
         private void CarregaLista()
         {
-            QtarefasList = _QtarefasRep.Listaquadro(new QuadrotarefasMapper(), "Select [Product_Backlog].[Historia],[Projeto].[Descricao],[Product_Release].[ID_PBacklog],[Situacao_Quadrotarefas] from Product_Release Inner Join Product_Backlog on Product_Release.ID_PBacklog = Product_Backlog.ID_PBacklog Inner Join Projeto on Product_Backlog.ID_Projeto = Projeto.ID_Projeto group by Historia,Descricao, Product_Backlog.ID_PBacklog, Product_Release.ID_PBacklog, Situacao_QuadroTarefas");
+            QtarefasList = _QtarefasRep.Listaquadro(new QuadrotarefasMapper(), "Select [Product_Backlog].[Historia],[Projeto].[Descricao],[Product_Release].[ID_PBacklog],[Situacao_Quadrotarefas], [Product_Backlog].[Importancia] from Product_Release Inner Join Product_Backlog on Product_Release.ID_PBacklog = Product_Backlog.ID_PBacklog Inner Join Projeto on Product_Backlog.ID_Projeto = Projeto.ID_Projeto group by Historia,Descricao, Product_Backlog.ID_PBacklog, Product_Release.ID_PBacklog, Situacao_QuadroTarefas, Importancia");
             Session["Lista"] = QtarefasList;
             TestList = _TestRep.Listatest(new TesteUnidadeMapper());
             ViewBag.tes = new MultiSelectList(TestList, "Status", "Historia", "Classe");

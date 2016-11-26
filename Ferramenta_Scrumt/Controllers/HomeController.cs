@@ -18,7 +18,6 @@ namespace Ferramenta_Scrumt.Controllers
         private void CarregaLista()
         {
             
-            List<Equipe> Equipes = (List<Equipe>)Session["Equipes"];
             PBacklogList = _PBacklogRep.Listahist(new ProductBacklogMapper());
             ViewBag.Historia = new MultiSelectList(PBacklogList, "Importancia", "Historia", "Nome_Projeto");
             TestList = _TestRep.Listatest(new TesteUnidadeMapper());

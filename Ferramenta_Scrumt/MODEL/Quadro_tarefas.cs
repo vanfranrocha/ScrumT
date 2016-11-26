@@ -10,5 +10,6 @@
         public string Projeto { get; set; }
         public string Historia { get; set; }
         public string Situacao { get; set; }
+        public string Importancia { get; set; }
     }
 }
