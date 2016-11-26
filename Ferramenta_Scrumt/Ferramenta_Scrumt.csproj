@@ -807,16 +807,12 @@
     <Content Include="Scripts\vendors\twitter\index.php" />
     <Content Include="Scripts\vendors\twitter\lib\tmhOAuth.php" />
     <Content Include="Scripts\vendors\twitter\lib\tmhUtilities.php" />
-    <Content Include="Views\Home\Menu.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
-    <Content Include="Views\Users\Menu.cshtml" />
     <Content Include="Views\Users\Create.cshtml" />
     <Content Include="Views\Projeto\Index.cshtml" />
-    <Content Include="Views\Projeto\Menu.cshtml" />
     <Content Include="Views\Sprints\Index.cshtml" />
     <Content Include="Views\Sprints\Menu.cshtml" />
     <Content Include="Views\Shared\_LayoutLogin.cshtml" />
-    <Content Include="Views\Backlog\Menu.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Shared\Menu.cshtml" />
     <Content Include="Views\Users\Details.cshtml" />
@@ -826,7 +822,6 @@
     <Content Include="Views\Registration\Create.cshtml" />
     <Content Include="Views\TestUnidade\Index.cshtml" />
     <Content Include="Views\TestUnidade\Create.cshtml" />
-    <Content Include="Views\TestUnidade\Menu.cshtml" />
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Login\Profile.cshtml" />
     <Content Include="Views\Login\Menu.cshtml" />
@@ -839,13 +834,10 @@
     <Content Include="Views\Backlog\Details.cshtml" />
     <Content Include="Views\Backlog\Delete.cshtml" />
     <Content Include="Views\Equipe\Create.cshtml" />
-    <Content Include="Views\ReleaseBacklog\Menu.cshtml" />
     <Content Include="Views\ReleaseBacklog\Index.cshtml" />
-    <Content Include="Views\Quadrotarefas\Menu.cshtml" />
     <Content Include="Views\Quadrotarefas\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Calendar\Index.cshtml" />
-    <Content Include="Views\Calendar\Menu.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>

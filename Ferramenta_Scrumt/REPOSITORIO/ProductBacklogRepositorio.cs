@@ -40,6 +40,14 @@ namespace Ferramenta_Scrumt.REPOSITORIO
             return mapper.MapAllFromSource(DB.ListaSQL(Param, SQL).Tables[0]);
 
         }
+        public List<ProductBacklog> Listahist(ISQLMapper<ProductBacklog> mapper, List<Equipe> EquipeLista)
+        {
+            List<int> Projetos = new List<int>();
+            foreach (Equipe E in EquipeLista)
+                Projetos.Add(E.IDProjeto);
+
+            return Listahist(new ProductBacklogMapper()).Where(X => Projetos.Contains(X.Projeto)).ToList();
+        }
         public void ADD(ProductBacklog Item)
         {
             SqlParameter ID = new SqlParameter("@ID_PBacklog", SqlDbType.Int);

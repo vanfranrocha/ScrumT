@@ -17,18 +17,19 @@ namespace Ferramenta_Scrumt.Controllers
 
         private void CarregaLista()
         {
+            
+            List<Equipe> Equipes = (List<Equipe>)Session["Equipes"];
+            PBacklogList = _PBacklogRep.Listahist(new ProductBacklogMapper());
+            ViewBag.Historia = new MultiSelectList(PBacklogList, "Importancia", "Historia", "Nome_Projeto");
+            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
+            ViewBag.tes = new MultiSelectList(TestList, "Status", "Historia", "Classe");
+
             HomeList = _HomeRep.Listaqt(new HomeMapper(), "Select (Select count(ID_TestUnidade)  from Teste_Unidade) as 'totaltestes', (Select count(ID_Projeto) from Projeto) as 'totalprojeto', (Select count(ID_PBacklog) from Product_Backlog) as 'totalhistorias'");
             Session["Lista"] = HomeList;
-
         }
         public ActionResult Index()
         {
             CarregaLista();
-            PBacklogList = _PBacklogRep.Listahist(new ProductBacklogMapper());
-            ViewBag.Historia = new MultiSelectList(PBacklogList, "Importancia", "Historia", "Nome_Projeto");
-            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
-            ViewBag.tes = new MultiSelectList(TestList, "Status", "Historia","Classe");
-
             return View(HomeList);
         }
 

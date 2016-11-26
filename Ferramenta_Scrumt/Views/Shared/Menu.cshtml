@@ -1,11 +1,10 @@
-﻿
-<div class="left-side sticky-left-side">
+﻿<div class="left-side sticky-left-side">
     <!--logo and iconic logo start-->
     <div class="logo">
-        <a href="index.html"><img src="images/logo.png" alt=""></a>
+        <a href="index.html"><img src="~/images/logo.png" alt=""></a>
     </div>
     <div class="logo-icon text-center">
-        <a href="index.html"><img src="images/logo_icon.png" alt=""></a>
+        <a href="index.html"><img src="~/images/logo_icon.png" alt=""></a>
     </div>
     <!--logo and iconic logo end-->
     <div class="left-side-inner">
@@ -14,7 +13,18 @@
             <div class="media logged-user">
                 
                 <div class="media-body">
-                    <h4><a href="#"></a></h4>
+                    <h4>
+                        <a href="#">
+                            @if(@Session["nomeUsuarioLogado"] == null)
+                            {
+                                Response.Redirect("~/Login/LogOff");
+                            }
+                            @if (@Session["nomeUsuarioLogado"] != null)
+                            {
+                                @Session["nomeUsuarioLogado"].ToString()
+                            }
+                        </a>
+                    </h4>
                     <span>"Hello There..."</span>
                 </div>
             </div>
@@ -40,25 +50,21 @@
                 <a href=""><i class="fa fa-book"></i> <span>Backlogs</span></a>
                 <ul class="sub-menu-list">
                     <li><a href="/Backlog/Index"> Product Backlog</a></li>
-                    <li><a href="#"> Release Backlog</a></li>
+                    <li><a href="/ReleaseBacklog/Index"> Release Backlog</a></li>
+                    <li><a href="/Quadrotarefas/Index"> Quadro de Tarefas</a></li>
                 </ul>
             </li>
             <li class="menu-list">
                 <a href=""><i class="fa fa-cogs"></i> <span>Testes</span></a>
                 <ul class="sub-menu-list">
-                    <li><a href="#"> Unidade</a></li>
+                    <li><a href="/TestUnidade/Index"> Unidade</a></li>
                     <li><a href="#"> Sistema</a></li>
                     <li><a href="#"> Integração</a></li>
                     <li><a href="#"> Aceitação</a></li>
                 </ul>
             </li>
 
-            <li>
-                <a href="/Sprints/Index"><i class="fa fa-file-text-o"></i> <span>Sprints</span></a>
-                <ul class="sub-menu-list">
-                    <li><a href="#"> Sprints</a></li>
-                    <li><a href="#"> Quadro de Tarefas</a></li>
-                </ul>
+            <li><a href="/Calendar/Index"><i class="fa fa-file-text-o"></i> <span>Calendário</span></a>
             </li>
 
             <li class="menu-list">
