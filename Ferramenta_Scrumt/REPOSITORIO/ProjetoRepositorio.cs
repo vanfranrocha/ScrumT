@@ -32,8 +32,9 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             List<int> Projetos = new List<int>();
             foreach (Equipe E in EquipeLista)
+            {
                 Projetos.Add(E.IDProjeto);
-
+            }
             return Lista(new ProjetoMapper() ).Where(X => Projetos.Contains(X.ID)).ToList();
         }
         public void ADD(Projeto Item)

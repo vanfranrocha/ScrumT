@@ -3,6 +3,7 @@ using Ferramenta_Scrumt.MODEL;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 
 namespace Ferramenta_Scrumt.REPOSITORIO
 {
@@ -22,6 +23,14 @@ namespace Ferramenta_Scrumt.REPOSITORIO
             string SQL = "SELECT [ID_PBacklog],[Historia],Projeto.[Descricao],Product_Backlog.[ID_Projeto],[Aceito],[Importancia] FROM Product_Backlog Inner Join Projeto on Product_Backlog.ID_Projeto = Projeto.ID_Projeto";
             return mapper.MapAllFromSource(DB.ListaSQL(Param, SQL).Tables[0]);
 
+        }
+        public List<ProductBacklog> Lista(ISQLMapper<ProductBacklog> mapper, List<Equipe> EquipeLista)
+        {
+            List<int> Projetos = new List<int>();
+            foreach (Equipe E in EquipeLista)
+                Projetos.Add(E.IDProjeto);
+
+            return Lista(new ProductBacklogMapper()).Where(X => Projetos.Contains(X.Projeto)).ToList();
         }
         public List<ProductBacklog> Listahist(ISQLMapper<ProductBacklog> mapper)
         {
