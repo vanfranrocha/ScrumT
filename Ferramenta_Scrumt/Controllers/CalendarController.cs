@@ -13,11 +13,15 @@ namespace Ferramenta_Scrumt.Controllers
         TesteUnidadeRepositorio _TestRep = new TesteUnidadeRepositorio();
         List<Calendar> CalendarList;
         CalendarRepositorio _CalendarRep = new CalendarRepositorio();
+        List<TestIntegracao> TestIntList;
+        TesteIntegracaoRepositorio _TestIntRep = new TesteIntegracaoRepositorio();
 
         public ActionResult Index()
         {
             TestList = _TestRep.Listatest(new TesteUnidadeMapper());
             ViewBag.tes = new MultiSelectList(TestList, "Status", "Historia", "Classe");
+            TestIntList = _TestIntRep.Listatest(new TesteIntegracaoMapper());
+            ViewBag.testint = new MultiSelectList(TestIntList, "Status", "Historia", "Versao");
             return View();
         }
         public JsonResult GetDados()

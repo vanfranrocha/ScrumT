@@ -205,7 +205,6 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProjetoController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
-    <Compile Include="Controllers\SprintsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -20,7 +20,8 @@ namespace Ferramenta_Scrumt.Controllers
         TesteUnidadeRepositorio _TestRep = new TesteUnidadeRepositorio();
         List<Projeto> ProjList;
         ProjetoRepositorio _ProjRep = new ProjetoRepositorio();
-
+        List<TestIntegracao> TestIntList;
+        TesteIntegracaoRepositorio _TestIntRep = new TesteIntegracaoRepositorio();
 
         private void CarregaLista()
         {
@@ -28,6 +29,8 @@ namespace Ferramenta_Scrumt.Controllers
             Session["Lista"] = EquiList;
             TestList = _TestRep.Listatest(new TesteUnidadeMapper());
             ViewBag.tes = new MultiSelectList(TestList, "Status", "Historia", "Classe");
+            TestIntList = _TestIntRep.Listatest(new TesteIntegracaoMapper());
+            ViewBag.testint = new MultiSelectList(TestIntList, "Status", "Historia", "Versao");
         }
         public ActionResult Index()
         {
