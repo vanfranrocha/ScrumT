@@ -46,12 +46,13 @@ namespace Ferramenta_Scrumt.REPOSITORIO
             {
                 new SqlParameter("@ID_Membro",Item.ID_Membro),
                 new SqlParameter("@ID_PBacklog",Item.ID_Pbacklog),
-                new SqlParameter("@Situacao_Quadrotarefas",Item.Situacao_Quadro),
-                new SqlParameter("@Estimativa_Inicio",Item.Estimativa_inicio),
+                new SqlParameter("@Situacao",Item.Situacao_Quadro),
+                new SqlParameter("@Estimativai",Item.Estimativa_inicio),
+                new SqlParameter("@Estimativaf",Item.Estimativa_fim),
                 new SqlParameter("@ID",Item.ID)
             };
 
-            DB.ExecSP("SP_PROJETO_UPDATE", Param);
+            DB.ExecSP("SP_RBACKLOG_UPDATE", Param);
         }
 
         public void Delete(ReleaseBacklog Item)
@@ -61,7 +62,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
                 new SqlParameter("@ID",Item.ID)
             };
 
-            DB.ExecSP("SP_PROJETO_DELETE", Param);
+            DB.ExecSP("SP_RBACKLOG_DELETE", Param);
 
         }
 

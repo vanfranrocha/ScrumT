@@ -10,7 +10,7 @@
     <h3>
         Product Backlog
     </h3>
-    <div class="col-md-10 col-xs-8">
+    <div class="col-md-10 col-xs-6">
         <ul class="breadcrumb">
             <li>
                 <a href="#">Home</a>
@@ -21,7 +21,7 @@
             <li class="active">Product Backlog</li>
         </ul>
     </div>
-    <div class="col-md-2 col-xs-8">
+    <div class="col-md-2 col-xs-4">
         <p>
             @Html.ActionLink("Adicionar Historia", "Create", 0, new { @class = "btn btn-primary" })
         </p>
@@ -29,7 +29,7 @@
 </div>
 <div class="wrapper">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-xs-12">
             <section class="panel">
                 <header class="panel-heading">
                     Historias Cadastradas
@@ -42,10 +42,10 @@
                         <thead>
                             <tr>
                                 <th>
-                                    <div class="col-md-3 col-xs-8">
+                                    <div class="col-md-3 col-xs-3">
                                         @Html.DisplayNameFor(model => model.Historia)
                                     </div>
-                                    <div class="col-md-2 col-xs-8">
+                                    <div class="col-md-2 col-xs-5">
                                         @Html.DisplayNameFor(model => model.Nome_Projeto)
                                     </div>
                                     <div class="col-md-2 col-xs-8" style="text-align:center">
@@ -63,19 +63,16 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <div class="col-md-3 col-xs-8">
+                                        <div class="col-md-3 col-xs-3">
                                             <b class="hidden-md hidden-lg">
-                                                @Html.DisplayNameFor(model => model.Historia)
                                             </b>@Html.DisplayFor(modelItem => item.Historia)
                                         </div>
-                                        <div class="col-md-2 col-xs-8">
+                                        <div class="col-md-2 col-xs-5">
                                             <b class="hidden-md hidden-lg">
-                                                @Html.DisplayNameFor(model => model.Nome_Projeto)
                                             </b>@Html.DisplayFor(modelItem => item.Nome_Projeto)
                                         </div>
                                         <div class="col-md-2 col-xs-8" style="text-align:center">
                                             <b class="hidden-md hidden-lg">
-                                                @Html.DisplayNameFor(model => model.Importancia)
                                             </b>
                                             @if (item.Importancia == "Baixa")
                                             {
@@ -98,7 +95,6 @@
                                         
                                         <div class="col-md-2 col-xs-8" style="text-align: center">
                                             <b class="hidden-md hidden-lg">
-                                                @Html.DisplayNameFor(model => model.Aceito)
                                             </b>@Html.DisplayFor(modelItem => item.Aceito)
                                         </div>
                                         <div class="col-md-3 col-xs-8">
