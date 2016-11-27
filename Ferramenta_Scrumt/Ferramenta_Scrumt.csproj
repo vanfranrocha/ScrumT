@@ -843,6 +843,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\TesteIntegracao\Index.cshtml" />
     <Content Include="Views\ReleaseBacklog\Edit.cshtml" />
+    <Content Include="Views\TesteIntegracao\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

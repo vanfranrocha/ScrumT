@@ -2,6 +2,7 @@
 using Ferramenta_Scrumt.MODEL;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace Ferramenta_Scrumt.REPOSITORIO
@@ -12,7 +13,22 @@ namespace Ferramenta_Scrumt.REPOSITORIO
 
         public void ADD(TestIntegracao Item)
         {
-            throw new NotImplementedException();
+            SqlParameter ID = new SqlParameter("@ID_TestIntegracao", SqlDbType.Int);
+            ID.Direction = ParameterDirection.Output;
+
+            SqlParameter[] Param = new SqlParameter[]
+            {
+                new SqlParameter("@ID_Backlog",Item.ID_Backlog),
+                new SqlParameter("@ID_Membro",Item.ID_Membro),
+                new SqlParameter("@DataTeste",Item.Data_Teste),
+                new SqlParameter("@Erros",Item.Erros),
+                new SqlParameter("@Relatorio",Item.Rel_Log),
+                new SqlParameter("@Versao",Item.Versao),
+                new SqlParameter("@Status",Item.Status),
+                ID
+            };
+
+            DB.ExecSP("SP_TESTEINTEGRACAO_INCLUIR", Param);
         }
 
         public void Delete(TestIntegracao Item)
