@@ -17,6 +17,6 @@ namespace Ferramenta_Scrumt.MODEL
         public string Membro { get; set; }
         public string Rel_Log { get; set; }
         public string Erros { get; set; }
-        public string Done { get; set; }
+        public string Status { get; set; }
     }
 }
