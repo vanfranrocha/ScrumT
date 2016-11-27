@@ -28,7 +28,7 @@ namespace Ferramenta_Scrumt.Controllers
             ViewBag.testint = new MultiSelectList(TestIntList, "Status", "Historia", "Versao");
 
 
-            HomeList = _HomeRep.Listaqt(new HomeMapper(), "Select (Select count(ID_TestUnidade)  from Teste_Unidade) as 'totaltestes', (Select count(ID_Projeto) from Projeto) as 'totalprojeto', (Select count(ID_PBacklog) from Product_Backlog) as 'totalhistorias'");
+            HomeList = _HomeRep.Listaqt(new HomeMapper(), "Select (select ((select count(ID_TesteIntegracao) from Teste_Integracao) + (select count(ID_TestUnidade) from Teste_Unidade)) from Teste_Integracao) as 'totaltestes', (Select count(ID_Projeto) from Projeto) as 'totalprojeto', (Select count(ID_PBacklog) from Product_Backlog) as 'totalhistorias'");
             Session["Lista"] = HomeList;
         }
         public ActionResult Index()
