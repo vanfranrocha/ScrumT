@@ -198,6 +198,7 @@
     <Compile Include="Controllers\EquipeController.cs" />
     <Compile Include="Controllers\QuadrotarefasController.cs" />
     <Compile Include="Controllers\ReleaseBacklogController.cs" />
+    <Compile Include="Controllers\TesteIntegracaoController.cs" />
     <Compile Include="Controllers\TestUnidadeController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -235,6 +236,8 @@
     <Compile Include="REPOSITORIO\QuadrotarefasRepositorio.cs" />
     <Compile Include="REPOSITORIO\ReleaseBacklogMapper.cs" />
     <Compile Include="REPOSITORIO\ReleaseBacklogRepositorio.cs" />
+    <Compile Include="REPOSITORIO\TesteIntegracaoMapper.cs" />
+    <Compile Include="REPOSITORIO\TesteIntegracaoRepositorio.cs" />
     <Compile Include="REPOSITORIO\TesteUnidadeMapper.cs" />
     <Compile Include="REPOSITORIO\TesteUnidadeRepositorio.cs" />
     <Compile Include="REPOSITORIO\UsersMapper.cs" />
@@ -839,6 +842,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Calendar\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\TesteIntegracao\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

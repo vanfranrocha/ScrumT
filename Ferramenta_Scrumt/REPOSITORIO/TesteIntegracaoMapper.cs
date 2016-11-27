@@ -10,7 +10,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             TestIntegracao testint = new TestIntegracao();
 
-            testint.ID = (int)Record["ID_TestUnidade"];
+            testint.ID = (int)Record["ID_TesteIntegracao"];
             testint.Historia = (string)Record["Historia"];
             testint.ID_Backlog = (int)Record["ID_PBacklog"];
             testint.Membro = (string)Record["Nome"];

@@ -3,8 +3,6 @@ using Ferramenta_Scrumt.MODEL;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 
 namespace Ferramenta_Scrumt.REPOSITORIO
 {
@@ -31,14 +29,14 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             SqlParameter[] Param = new SqlParameter[]
             { };
-            string SQL = "Select [ID_TesteIntegracao],[Data_Teste],[Versao_Testada],[Teste_Integracao].ID_PBacklog,Product_Backlog.Historia,Relatorio_Log,Erros, Teste_Integracao.Status, users.Nome  from Teste_Integracao Inner Join Product_Backlog on Teste_Integracao.ID_PBacklog = Product_Backlog.ID_PBacklog Inner Join Users on Teste_Integracao.ID_Membro = Users.ID_Equipe ";
+            string SQL = "Select [ID_TesteIntegracao],[Data_Teste],[Versao_Testada],[Teste_Integracao].ID_PBacklog,Product_Backlog.Historia,Relatorio_Log,Erros, Teste_Integracao.Status, ID_Membro,users.Nome  from Teste_Integracao Inner Join Product_Backlog on Teste_Integracao.ID_PBacklog = Product_Backlog.ID_PBacklog Inner Join Users on Teste_Integracao.ID_Membro = Users.ID_Equipe ";
             return mapper.MapAllFromSource(DB.ListaSQL(Param, SQL).Tables[0]);
         }
         public List<TesteUnidade> Listatest(ISQLMapper<TesteUnidade> mapper)
         {
             SqlParameter[] Param = new SqlParameter[]
             { };
-            string SQL = "Select top 4 Product_Backlog.Historia, Teste_Unidade.Status,Users.[Nome], Teste_Unidade.ID_Backlog, Teste_Unidade.ID_Membro, Teste_Unidade.ID_TestUnidade, Teste_Unidade.Classe from Teste_Unidade Inner Join Product_Backlog on Teste_Unidade.ID_Backlog = Product_Backlog.ID_PBacklog Inner Join Users on Teste_Unidade.ID_Membro = Users.ID_Equipe";
+            string SQL = "";
             return mapper.MapAllFromSource(DB.ListaSQL(Param, SQL).Tables[0]);
         }
         public void Update(TestIntegracao Item)
