@@ -30,7 +30,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
             SqlParameter[] Param = new SqlParameter[]
             {
                 new SqlParameter("@IDMembro",Item.ID_Membro),
-                new SqlParameter("@ID_Pbacklog",Item.ID_Pbacklog),
+                new SqlParameter("@IDPbacklog",Item.ID_Pbacklog),
                 new SqlParameter("@Situacao",Item.Situacao_Quadro),
                 new SqlParameter("@Estimativai",Item.Estimativa_inicio),
                 new SqlParameter("@Estimativaf",Item.Estimativa_fim),
