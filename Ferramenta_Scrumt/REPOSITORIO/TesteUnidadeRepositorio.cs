@@ -66,7 +66,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             SqlParameter[] Param = new SqlParameter[]
             {
-                new SqlParameter("@ID",Item.ID)
+                new SqlParameter("@ID_TestUnidade",Item.ID)
             };
 
             DB.ExecSP("SP_TESTEUNIDADE_DELETE", Param);

@@ -1,7 +1,7 @@
-﻿@model Ferramenta_Scrumt.MODEL.ReleaseBacklog
+﻿@model Ferramenta_Scrumt.MODEL.TesteUnidade
 
 @{
-    ViewBag.Title = "Deletar Release";
+    ViewBag.Title = "Deletar Teste de Unidade";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -14,9 +14,9 @@
             <a href="/Home/Index">Home</a>
         </li>
         <li>
-            <a href="/Backlog/Index">Backlog</a>
+            <a href="/TestUnidade/Index">Teste Unidade</a>
         </li>
-        <li class="active">Deletar Release</li>
+        <li class="active">Deletar Teste Undiade</li>
     </ul>
 
 </div>
@@ -29,7 +29,6 @@
                         <h3>Deseja Realmente Excluir este Registro?</h3>
                         <div>
                             <hr />
-
                             <dl class="dl-horizontal">
                                 <dt>
                                     @Html.DisplayNameFor(model => model.ID)
@@ -46,32 +45,25 @@
                                     @Html.DisplayFor(model => model.Historia)
                                 </dd>
                                 <dt>
-                                    @Html.DisplayNameFor(model => model.Nome_Membro)
+                                    @Html.DisplayNameFor(model => model.Membro)
                                 </dt>
 
                                 <dd>
-                                    @Html.DisplayFor(model => model.Nome_Membro)
+                                    @Html.DisplayFor(model => model.Membro)
                                 </dd>
                                 <dt>
-                                    @Html.DisplayNameFor(model => model.Estimativa_inicio)
+                                    @Html.DisplayNameFor(model => model.Classe)
                                 </dt>
 
                                 <dd>
-                                    @Html.DisplayFor(model => model.Estimativa_inicio)
+                                    @Html.DisplayFor(model => model.Classe)
                                 </dd>
                                 <dt>
-                                    @Html.DisplayNameFor(model => model.Estimativa_fim)
+                                    @Html.DisplayNameFor(model => model.Status)
                                 </dt>
 
                                 <dd>
-                                    @Html.DisplayFor(model => model.Estimativa_fim)
-                                </dd>
-                                <dt>
-                                    @Html.DisplayNameFor(model => model.Situacao_Quadro)
-                                </dt>
-
-                                <dd>
-                                    @Html.DisplayFor(model => model.Situacao_Quadro)
+                                    @Html.DisplayFor(model => model.Status)
                                 </dd>
                             </dl>
                             @using (Html.BeginForm())
