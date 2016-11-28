@@ -24,7 +24,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         }
         public void ADD(ReleaseBacklog Item)
         {
-            SqlParameter ID = new SqlParameter("@ID_ProductRelease", SqlDbType.Int);
+            SqlParameter ID = new SqlParameter("@ID_RBacklog", SqlDbType.Int);
             ID.Direction = ParameterDirection.Output;
 
             SqlParameter[] Param = new SqlParameter[]
