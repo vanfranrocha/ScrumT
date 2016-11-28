@@ -1,0 +1,75 @@
+﻿@model Ferramenta_Scrumt.MODEL.ReleaseBacklog
+
+@{
+    ViewBag.Title = "Detalhes da Relese";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-heading">
+    <h3>
+        Release Backlog
+    </h3>
+    <div class="col-md-10 col-xs-8">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Backlog</a>
+            </li>
+            <li class="#">Release Backlog</li>
+            <li class="active">Detalhes da Release</li>
+        </ul>
+    </div>
+
+</div>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-sm-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    <h4>Detalhes da História @Html.DisplayFor(model => model.Historia, new { htmlAttributes = new { @class = "form-control" } })</h4>
+                    <hr />
+                    <div class="panel-body">
+                        <div class="form-group">
+                            @Html.DisplayNameFor(model => model.Historia)
+                        </div>
+                        <div class="form-group" style="font-weight:200">
+                            @Html.DisplayFor(model => model.Historia, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                        <div class="form-group">
+                            @Html.DisplayNameFor(model => model.Nome_Membro)
+                        </div>
+                        <div class="form-group" style="font-weight:200">
+                            @Html.DisplayFor(model => model.Nome_Membro, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                        <div class="form-group">
+                            @Html.DisplayNameFor(model => model.Estimativa_inicio)
+                        </div>
+                        <div class="form-group" style="font-weight:200">
+                            @Html.DisplayFor(model => model.Estimativa_inicio, new { htmlAttributes = new { @class = "form-control" } })
+
+                        </div>
+                        <div class="form-group">
+                            @Html.DisplayNameFor(model => model.Estimativa_fim)
+                        </div>
+                        <div class="form-group" style="font-weight:200">
+                            @Html.DisplayFor(model => model.Estimativa_fim, new { htmlAttributes = new { @class = "form-control"} })
+
+                        </div>
+                        <div class="form-group">
+                            @Html.DisplayNameFor(model => model.Situacao_Quadro)
+                        </div>
+                        <div class="form-group" style="font-weight:200">
+                            @Html.DisplayFor(model => model.Situacao_Quadro, new { htmlAttributes = new { @class = "form-control" } })
+
+                        </div>
+                    </div>
+                </header>
+            </section>
+            @Html.ActionLink("Editar", "Edit", new { id = Model.ID }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-danger" })
+        </div>
+
+    </div>
+</div>
