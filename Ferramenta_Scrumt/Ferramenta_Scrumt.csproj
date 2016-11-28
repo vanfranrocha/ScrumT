@@ -845,6 +845,7 @@
     <Content Include="Views\ReleaseBacklog\Edit.cshtml" />
     <Content Include="Views\TesteIntegracao\Create.cshtml" />
     <Content Include="Views\ReleaseBacklog\Create.cshtml" />
+    <Content Include="Views\ReleaseBacklog\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

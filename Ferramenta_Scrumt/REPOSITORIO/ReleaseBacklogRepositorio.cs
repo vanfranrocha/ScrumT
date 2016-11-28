@@ -60,7 +60,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             SqlParameter[] Param = new SqlParameter[]
             {
-                new SqlParameter("@ID",Item.ID)
+                new SqlParameter("@ID_RBacklog",Item.ID)
             };
 
             DB.ExecSP("SP_RBACKLOG_DELETE", Param);
