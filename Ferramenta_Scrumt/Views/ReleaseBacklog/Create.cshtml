@@ -1,21 +1,22 @@
 ﻿@model Ferramenta_Scrumt.MODEL.ReleaseBacklog
 
 @{
-    ViewBag.Title = "Editar Release Backlog";
+    ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <div class="page-heading">
     <h3>
-        Equipe
+        Release Backlog
     </h3>
     <ul class="breadcrumb">
         <li>
             <a href="/Home/Index">Home</a>
         </li>
         <li>
-            <a href="/ReleaseBacklog/Index">Release Backlog</a>
+            <a href="/Backlog/Index">Backlog</a>
         </li>
-        <li class="active">Editar Release</li>
+        <li class="active">Adicionar Release</li>
     </ul>
 
 </div>
@@ -28,7 +29,7 @@
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            Editar Historia
+                            Adicionar Release
                         </header>
                         <div class="panel-body">
                             <form role="form">
@@ -59,17 +60,14 @@
                                     @Html.ValidationMessageFor(model => model.Situacao_Quadro, "", new { @class = "text-danger" })
                                 </div>
                             </form>
-
                             <div class="form-group">
-                                <input type="submit" formmethod="post" value="Salvar" class="btn btn-success" />
+                                <input type="submit" value="Adicionar" class="btn btn-primary" />
                                 @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-danger" })
                             </div>
-
                         </div>
                     </section>
                 </div>
             </div>
         </section>
-
     }
 </body>

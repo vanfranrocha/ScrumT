@@ -40,6 +40,10 @@ namespace Ferramenta_Scrumt.Controllers
         {
             CarregaLista();
             List<Equipe> Equipes = (List<Equipe>)Session["Equipes"];
+            UserList = _UserRep.Lista(new UsersMapper());
+            ViewBag.Nome = new SelectList(UserList, "ID", "Nome");
+            ProductList = _ProductRep.Lista(new ProductBacklogMapper(), Equipes);
+            ViewBag.Historia = new SelectList(ProductList, "ID", "Historia");
 
             ViewBag.Situacao = new List<SelectListItem>
             {
