@@ -86,14 +86,14 @@ namespace Ferramenta_Scrumt.Controllers
             ProjetoList = _ProjetoRep.Lista(new ProjetoMapper(), Equipes);
             ViewBag.Descricao = new SelectList(ProjetoList, "ID", "Descricao");
 
-            ViewBag.Importancia = new List<SelectListItem>
+            ViewBag.Importanciaa = new List<SelectListItem>
             {
                 new SelectListItem{Text = "Baixa", Value = "Baixa"},
                 new SelectListItem{Text = "Média", Value = "Média"},
                 new SelectListItem{Text = "Alta", Value = "Alta"}
             };
 
-            ViewBag.Aceito = new List<SelectListItem> {
+            ViewBag.Aceitoo = new List<SelectListItem> {
                  new SelectListItem { Text = "Não", Value = "Não"},
                  new SelectListItem { Text = "Sim", Value = "Sim"}
              };

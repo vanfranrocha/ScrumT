@@ -52,11 +52,11 @@ namespace Ferramenta_Scrumt.REPOSITORIO
 
             SqlParameter[] Param = new SqlParameter[]
             {
-               new SqlParameter("@ID_Backlog",Item.ID_Backlog),
+                new SqlParameter("@ID_Backlog",Item.ID_Backlog),
                 new SqlParameter("@ID_Membro",Item.ID_Membro),
                 new SqlParameter("@Classe",Item.Classe),
                 new SqlParameter("@Status",Item.Status),
-                new SqlParameter("@ID_TestUnidade",Item.ID)
+                
             };
 
             DB.ExecSP("SP_TESTEUNIDADE_UPDATE", Param);

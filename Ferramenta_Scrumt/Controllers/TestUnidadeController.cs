@@ -72,8 +72,22 @@ namespace Ferramenta_Scrumt.Controllers
         public ActionResult Edit(int id)
         {
             CarregaLista();
+            UserList = _UserRep.Lista(new UsersMapper());
+            ViewBag.Nome = new SelectList(UserList, "ID", "Nome");
+            List<Equipe> Equipes = (List<Equipe>)Session["Equipes"];
+            ProductList = _ProductRep.Lista(new ProductBacklogMapper(), Equipes);
+            ViewBag.Historia = new SelectList(ProductList, "ID", "Historia");
+            CarregaLista();
+
+            ViewBag.Statusu = new List<SelectListItem>
+            {
+                new SelectListItem{Text = "33", Value = "33"},
+                new SelectListItem{Text = "66", Value = "66"},
+                new SelectListItem{Text = "100", Value = "100"}
+            };
             //passando uma model P
             TesteUnidade T = TesteUnidadeList.Where(X => X.ID == id).First();
+            
             CarregaLista();
             return View(T);
         }
