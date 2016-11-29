@@ -267,6 +267,7 @@
     <Content Include="Content\style-responsive.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\table-responsive.css" />
+    <Content Include="Content\timeline.css" />
     <Content Include="Content\vendors\slider.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

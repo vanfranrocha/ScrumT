@@ -10,22 +10,22 @@
     <div class="row states-info">
         @foreach (var item in Model)
         {
-                <div class="col-md-3">
-                    <div class="panel blue-bg">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-xs-4">
-                                    <i class="fa fa-copy"></i>
-                                </div>
-                                <div class="col-xs-8">
-                                    <span class="state-title"> Projetos em Execução </span>
-                                    <h4>@Html.DisplayFor(modelItem => item.totalprojeto)</h4>
-                                </div>
+            <div class="col-md-4">
+                <div class="panel blue-bg">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <i class="fa fa-copy"></i>
+                            </div>
+                            <div class="col-xs-8">
+                                <span class="state-title"> Projetos em Execução </span>
+                                <h4>@Html.DisplayFor(modelItem => item.totalprojeto)</h4>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+            </div>
+                <div class="col-md-4">
                     <div class="panel green-bg">
                         <div class="panel-body">
                             <div class="row">
@@ -40,22 +40,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="panel yellow-bg">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-xs-4">
-                                    <i class="fa fa-cogs"></i>
-                                </div>
-                                <div class="col-xs-8">
-                                    <span class="state-title">  Testes Realizados  </span>
-                                    <h4>6</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="panel red-bg">
                         <div class="panel-body">
                             <div class="row">
@@ -78,24 +63,24 @@
                 Histórias
                 <span class="label label-info">Importância</span>
                 <span class="tools pull-right">
-                    
+
                     <a href="javascript:;" class="fa fa-chevron-down"></a>
                     <a href="javascript:;" class="fa fa-times"></a>
                 </span>
-                
+
             </header>
             <div class="panel-body">
-                
+
                 <ul class="goal-progress">
                     @foreach (var item in ViewBag.Historia)
                     {
-                    <li>
+                        <li>
 
-                        <div class="details">
-                            <div class="title">
-                                <a href="#"> @item.Group.Name</a><em class="small"> História: @item.Text</em>
-</div>
-                            
+                            <div class="details">
+                                <div class="title">
+                                    <a href="#"> @item.Group.Name</a><em class="small"> História: @item.Text</em>
+                                </div>
+
                                 @if (item.Value == "Alta")
                                 {
                                     <span class="label label-danger">Alta</span>
@@ -108,14 +93,89 @@
                                 {
                                     <span class="label label-success">Baixa</span>
                                 }
-                            
-                        </div>
-                    </li>
+
+                            </div>
+                        </li>
                     }
                 </ul>
                 <div class="text-center"><a href="#">Ver todas as Histórias</a></div>
             </div>
         </div>
     </div>
-</div>
-<!--body wrapper end-->
+    <div class="col-md-12">
+        <div class="panel">
+            <header class="panel-heading">
+                Testes
+                <span class="label label-danger">Sequência de Testes</span>
+                <span class="tools pull-right">
+
+                    <a href="javascript:;" class="fa fa-chevron-down"></a>
+                    <a href="javascript:;" class="fa fa-times"></a>
+                </span>
+
+            </header>
+            <div class="panel-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10">
+
+                            <ul class="timeline timeline-horizontal">
+                                <li class="timeline-item">
+                                    <div class="timeline-badge primary"><i class="glyphicon glyphicon-check"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Teste de Unidade</h4>
+                                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> ScrumT</small></p>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Os testes de unidade são realizados em nível de componente e classe verificando cada parte do código.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Teste de Integração</h4>
+                                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> ScrumT</small></p>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>O teste de integração verifica o comportamento dos componentes rodando em conjunto</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-badge danger"><i class="glyphicon glyphicon-check"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Teste de Sistema</h4>
+                                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>ScrumT</small></p>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>O foco deste teste são as funcionalidades e para documentação que será registrado</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-badge warning"><i class="glyphicon glyphicon-check"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Teste de Aceitação</h4>
+                                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>ScrumT</small></p>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Antes da entrega é necessário que haja a verificação e validação dos componentes desenvolvidos pelos Stakeholders de uso final</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+        </div>
+        <!--body wrapper end-->
+        <link href="~/Content/timeline.css" rel="stylesheet">

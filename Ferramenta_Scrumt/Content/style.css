@@ -1096,7 +1096,7 @@ footer.sticky-footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 9999;
 }
 
 .container footer {
