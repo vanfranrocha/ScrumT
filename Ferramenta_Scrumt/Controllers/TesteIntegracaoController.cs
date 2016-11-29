@@ -90,5 +90,17 @@ namespace Ferramenta_Scrumt.Controllers
             return RedirectToAction("Index");
 
         }
+        public ActionResult Delete(int id)
+        {
+            CarregaLista();
+            return View(TesteIntegracaoList.Where(X => X.ID == id).First());
+        }
+        [HttpPost]
+        public ActionResult Delete(TesteUnidade T)
+        {
+            CarregaLista();
+            _TesteRep.Delete(TesteIntegracaoList.Where(X => X.ID == T.ID).First());
+            return RedirectToAction("Index");
+        }
     }
 }

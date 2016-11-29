@@ -1,22 +1,22 @@
-﻿@model Ferramenta_Scrumt.MODEL.TesteUnidade
+﻿@model Ferramenta_Scrumt.MODEL.TestIntegracao
 
 @{
-    ViewBag.Title = "Deletar Teste de Unidade";
+    ViewBag.Title = "Deletar Teste de Integração";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="page-heading">
     <h3>
-        Teste de Unidade
+        Teste de Integração
     </h3>
     <ul class="breadcrumb">
         <li>
             <a href="/Home/Index">Home</a>
         </li>
         <li>
-            <a href="/TestUnidade/Index">Teste Unidade</a>
+            <a href="/TestUnidade/Index">Teste Integração</a>
         </li>
-        <li class="active">Deletar Teste Unidade</li>
+        <li class="active">Deletar Teste Integração</li>
     </ul>
 
 </div>
@@ -52,11 +52,32 @@
                                     @Html.DisplayFor(model => model.Membro)
                                 </dd>
                                 <dt>
-                                    @Html.DisplayNameFor(model => model.Classe)
+                                    @Html.DisplayNameFor(model => model.Data_Teste)
                                 </dt>
 
                                 <dd>
-                                    @Html.DisplayFor(model => model.Classe)
+                                    @Html.DisplayFor(model => model.Data_Teste)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Versao)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Versao)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Erros)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Erros)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Rel_Log)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Rel_Log)
                                 </dd>
                                 <dt>
                                     @Html.DisplayNameFor(model => model.Status)

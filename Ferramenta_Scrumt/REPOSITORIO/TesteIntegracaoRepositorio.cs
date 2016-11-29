@@ -33,7 +33,12 @@ namespace Ferramenta_Scrumt.REPOSITORIO
 
         public void Delete(TestIntegracao Item)
         {
-            throw new NotImplementedException();
+            SqlParameter[] Param = new SqlParameter[]
+            {
+                new SqlParameter("@ID_TestIntegracao",Item.ID)
+            };
+
+            DB.ExecSP("SP_TESTEINTEGRACAO_DELETE", Param);
         }
 
         public TestIntegracao FindByID(int ID, ISQLMapper<TestIntegracao> mapper)

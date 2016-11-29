@@ -850,6 +850,7 @@
     <Content Include="Views\TestUnidade\Edit.cshtml" />
     <Content Include="Views\TestUnidade\Delete.cshtml" />
     <Content Include="Views\TesteIntegracao\Edit.cshtml" />
+    <Content Include="Views\TesteIntegracao\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
