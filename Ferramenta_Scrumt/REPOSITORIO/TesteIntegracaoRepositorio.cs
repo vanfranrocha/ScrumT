@@ -57,7 +57,19 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         }
         public void Update(TestIntegracao Item)
         {
-            throw new NotImplementedException();
+            SqlParameter[] Param = new SqlParameter[]
+            {
+                new SqlParameter("@ID_Backlog",Item.ID_Backlog),
+                new SqlParameter("@ID_Membro",Item.ID_Membro),
+                new SqlParameter("@Data",Item.Data_Teste),
+                new SqlParameter("@Erros",Item.Erros),
+                new SqlParameter("@Relatorio",Item.Rel_Log),
+                new SqlParameter("@Versao",Item.Versao),
+                new SqlParameter("@Status",Item.Status),
+                new SqlParameter("@ID_TestIntegracao",Item.ID)
+            };
+
+            DB.ExecSP("SP_TESTEINTEGRACAO_UPDATE", Param);
         }
     }
 }
