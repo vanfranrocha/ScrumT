@@ -214,6 +214,7 @@
     <Compile Include="MODEL\Home.cs" />
     <Compile Include="MODEL\Quadro_tarefas.cs" />
     <Compile Include="MODEL\ReleaseBacklog.cs" />
+    <Compile Include="MODEL\TesteSistema.cs" />
     <Compile Include="MODEL\TesteUnidade.cs" />
     <Compile Include="MODEL\TestIntegracao.cs" />
     <Compile Include="MODEL\Users.cs" />
@@ -237,6 +238,8 @@
     <Compile Include="REPOSITORIO\ReleaseBacklogRepositorio.cs" />
     <Compile Include="REPOSITORIO\TesteIntegracaoMapper.cs" />
     <Compile Include="REPOSITORIO\TesteIntegracaoRepositorio.cs" />
+    <Compile Include="REPOSITORIO\TesteSistemaMapper.cs" />
+    <Compile Include="REPOSITORIO\TesteSistemaRepositorio.cs" />
     <Compile Include="REPOSITORIO\TesteUnidadeMapper.cs" />
     <Compile Include="REPOSITORIO\TesteUnidadeRepositorio.cs" />
     <Compile Include="REPOSITORIO\UsersMapper.cs" />

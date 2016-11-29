@@ -36,12 +36,12 @@
                                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                                 <div class="form-group col-md-6">
                                     @Html.LabelFor(model => model.ID_Backlog,"História", htmlAttributes: new { @class = "control-label col-md-2" })
-                                    @Html.DropDownList("Historia", (SelectList)ViewBag.Historia, "Selecione uma História", htmlAttributes: new { @class = "form-control" })
+                                    @Html.DropDownList("ID_Backlog", (SelectList)ViewBag.Historia, "Selecione uma História", htmlAttributes: new { @class = "form-control" })
                                     @Html.ValidationMessageFor(model => model.ID_Backlog, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="form-group col-md-6">
                                     @Html.LabelFor(model => model.ID_Membro,"Membro", htmlAttributes: new { @class = "control-label col-md-2" })
-                                    @Html.DropDownList("Nome", (SelectList)ViewBag.Nome, "Selecione um Membro", htmlAttributes: new { @class = "form-control" })
+                                    @Html.DropDownList("ID_Membro", (SelectList)ViewBag.Nome, "Selecione um Membro", htmlAttributes: new { @class = "form-control" })
                                     @Html.ValidationMessageFor(model => model.ID_Membro, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="form-group col-md-6">
