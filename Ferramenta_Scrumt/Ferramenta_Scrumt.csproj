@@ -198,6 +198,7 @@
     <Compile Include="Controllers\EquipeController.cs" />
     <Compile Include="Controllers\QuadrotarefasController.cs" />
     <Compile Include="Controllers\ReleaseBacklogController.cs" />
+    <Compile Include="Controllers\TesteAceitacaoController.cs" />
     <Compile Include="Controllers\TesteIntegracaoController.cs" />
     <Compile Include="Controllers\TesteSistemaController.cs" />
     <Compile Include="Controllers\TestUnidadeController.cs" />
@@ -863,6 +864,7 @@
     <Content Include="Views\TesteSistema\Create.cshtml" />
     <Content Include="Views\TesteSistema\Edit.cshtml" />
     <Content Include="Views\TesteSistema\Delete.cshtml" />
+    <Content Include="Views\TesteAceitacao\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

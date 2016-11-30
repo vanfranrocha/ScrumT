@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Ferramenta_Scrumt.MODEL.TesteAceitacao>
+
+@{
+    ViewBag.Title = "Teste de Aceitação";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="page-heading">
+    <h3>
+        Teste de Aceitação
+    </h3>
+    <div class="col-md-10 col-xs-8">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Testes</a>
+            </li>
+            <li class="active">Aceitação</li>
+        </ul>
+    </div>
+    <div class="col-md-2 col-xs-8">
+        <p>
+            @Html.ActionLink("Adicionar Teste", "Create", 0, new { @class = "btn btn-primary" })
+        </p>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-sm-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Testes Cadastrados
+                    <span class="tools pull-right">
+                        <a href="javascript:;" class="fa fa-chevron-down"></a>
+                    </span>
+                </header>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="col-md-2 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Membro)
+                                    </div>
+                                    <div class="col-md-2 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Data)
+                                    </div>
+                                    <div class="col-md-3 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Stakeholders)
+                                    </div>
+                                    <div class="col-md-2 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Massa_Dados)
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        @foreach (var item in Model)
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                            </b>@Html.DisplayFor(modelItem => item.Membro)
+                                        </div>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                            </b>@Html.DisplayFor(modelItem => item.Data)
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                            </b>@Html.DisplayFor(modelItem => item.Stakeholders)
+                                        </div>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                            </b>@Html.DisplayFor(modelItem => item.Massa_Dados)
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+
+                                            @Html.ActionLink("Editar", "Edit", new { id = item.ID }, new { @class = "btn btn-success" })
+                                            @Html.ActionLink("Detalhes", "Details", new { id = item.ID }, new { @class = "btn btn-info" })
+                                            @Html.ActionLink("Deletar", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
