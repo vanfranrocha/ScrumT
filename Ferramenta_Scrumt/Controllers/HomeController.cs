@@ -31,7 +31,7 @@ namespace Ferramenta_Scrumt.Controllers
             TestSisList = _TestSisRep.Listatest(new TesteSistemaMapper());
             ViewBag.testsis = new MultiSelectList(TestSisList, "Status", "Falhas", "Versao");
 
-            HomeList = _HomeRep.Listaqt(new HomeMapper(), "Select (select top 1 ((select count(ID_TesteIntegracao) from Teste_Integracao) + (select count(ID_TestUnidade) from Teste_Unidade)) from Teste_Integracao) as 'totaltestes', (Select count(ID_Projeto) from Projeto) as 'totalprojeto', (Select count(ID_PBacklog) from Product_Backlog) as 'totalhistorias'");
+            HomeList = _HomeRep.Listaqt(new HomeMapper(), "Select (select top 1 ((select count(ID_TesteIntegracao) from Teste_Integracao) + (select count(ID_TestUnidade) from Teste_Unidade)+ (select count(ID_TesteSistema) from Teste_Sistema)) from Teste_Integracao) as 'totaltestes', (Select count(ID_Projeto) from Projeto) as 'totalprojeto', (Select count(ID_PBacklog) from Product_Backlog) as 'totalhistorias'");
             Session["Lista"] = HomeList;
         }
         public ActionResult Index()
