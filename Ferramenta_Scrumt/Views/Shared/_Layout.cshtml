@@ -190,6 +190,38 @@
                             </div>
                         </li>
                         <li>
+                            <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                                <i class="fa fa-group"></i>
+                                <span class="badge">
+                                    @{int a = 0;
+                                        foreach (var item in ViewBag.testacei)
+                                        {
+                                            a = a + 1;
+
+                                        }
+                                    } @a
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-head pull-right">
+                                <h5 class="title">Notificações Testes de Aceitação</h5>
+                                <ul class="dropdown-list normal-list">
+                                @foreach (var item in ViewBag.testacei)
+                                {
+                                    <li class="new">
+                                        <a href="">
+                                            <span class="label label-danger" style="margin-top:10px"><i class="fa fa-check"></i></span>
+                                            Stakeholders: @item.Value
+                                            <span class="name">Responsável: @item.Text  </span>
+                                            <br>
+                                            <em class="small">Data: @item.Group.Name</em>
+                                        </a>
+                                    </li>
+                                }
+                                    <li class="new"><a href="~/TesteAceitacao/Index">Todos os Testes de Aceitação</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
                             <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-user"></i>
                                 @if (@Session["nomeUsuarioLogado"] == null)
@@ -209,6 +241,7 @@
                             </ul>
 
                         </li>
+                        
                     </ul>
                 </div>
                 <!--notification menu end -->

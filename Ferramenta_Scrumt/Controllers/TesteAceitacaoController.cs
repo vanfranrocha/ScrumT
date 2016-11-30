@@ -1,9 +1,6 @@
 ﻿using Ferramenta_Scrumt.MODEL;
 using Ferramenta_Scrumt.REPOSITORIO;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Ferramenta_Scrumt.Controllers
@@ -12,7 +9,6 @@ namespace Ferramenta_Scrumt.Controllers
     public class TesteAceitacaoController : Controller
     {
         List<TesteUnidade> TesteUnidadeList;
-        List<ProductBacklog> ProductList;
         List<Users> UserList;
         TesteUnidadeRepositorio _TesteRep = new TesteUnidadeRepositorio();
         ProductBacklogRepositorio _ProductRep = new ProductBacklogRepositorio();
