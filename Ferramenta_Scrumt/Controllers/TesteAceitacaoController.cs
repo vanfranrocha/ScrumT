@@ -31,6 +31,8 @@ namespace Ferramenta_Scrumt.Controllers
             ViewBag.testint = new MultiSelectList(TestIntList, "Status", "Historia", "Versao");
             TestSisList = _TestSisRep.Listatest(new TesteSistemaMapper());
             ViewBag.testsis = new MultiSelectList(TestSisList, "Status", "Falhas", "Versao");
+            TestAceiList = _TestAceiRep.Listatest(new TesteAceitacaoMapper());
+            ViewBag.testacei = new MultiSelectList(TestAceiList, "Membro", "Stakeholders", "Data");
 
         }
         public ActionResult Index()
