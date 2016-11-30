@@ -13,14 +13,14 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             TesteSistema testsis = new TesteSistema();
 
-            testsis.ID = (int)Record["ID_TesteIntegracao"];
+            testsis.ID = (int)Record["ID_TesteSistema"];
             testsis.Membro = (string)Record["Nome"];
             testsis.ID_Membro = (int)Record["ID_Membro"];
             testsis.Data_Teste = (DateTime)Record["Data_Teste"];
             testsis.Versao = (string)Record["Versao_Testada"];
             testsis.Relatorio = (string)Record["Relatorio_Log"];
             testsis.Massa_Dados = (string)Record["Massa_Dados"];
-            testsis.Falhas = (string)Record["Falhas"];
+            testsis.Falhas = (string)Record["Falhas_Encontradas"];
             testsis.Status = (string)Record["Status"];
             return testsis;
         }

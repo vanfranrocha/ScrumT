@@ -54,7 +54,7 @@
                                     <li class="new">
                                         <a href="#">
                                             <div class="task-info">
-                                                <a>@item.Text</a><em class="small"> Classe: @item.Group.Name</em>
+                                                <a>História: @item.Text</a> - <em class="small"> Classe: @item.Group.Name</em>
                                             </div>
                                             <div class="progress progress-striped active progress-sm">
                                                 @if (item.Value == "33")
@@ -107,7 +107,7 @@
                                         <li class="new">
                                             <a href="#">
                                                 <div class="task-info">
-                                                    <a>@item2.Text</a><em class="small"> Versão Testada: @item2.Group.Name</em>
+                                                    <a>História: @item2.Text</a> - <em class="small"> Versão Testada: @item2.Group.Name</em>
                                                 </div>
                                                 <div class="progress progress-striped active progress-sm">
                                                     @if (item2.Value == "33")
@@ -134,6 +134,58 @@
                                         </li>
                                     }
                                     <li class="new"><a href="~/TesteIntegracao/Index">Testes Cadastrados</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                                <i class="fa fa-list-alt"></i>
+
+                                <span class="badge">
+                                    @{int s = 0;
+                                        foreach (var item in ViewBag.testsis)
+                                        {
+                                            s = s + 1;
+
+                                        }
+                                    } @s
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-head pull-right">
+                                <h5 class="title">Progresso Testes de Sistema</h5>
+                                <ul class="dropdown-list user-list">
+                                    @foreach (var item in ViewBag.testsis)
+                                    {
+                                        <li class="new">
+                                            <a href="#">
+                                                <div class="task-info">
+                                                    <a>Falhas: @item.Text</a> - <em class="small"> Versao: @item.Group.Name</em>
+                                                </div>
+                                                <div class="progress progress-striped active progress-sm">
+                                                    @if (item.Value == "33")
+                                                    {
+                                                        <div style="width: 33%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-danger">
+                                                            <span class="">33%</span>
+                                                        </div>
+                                                    }
+                                                    @if (item.Value == "66")
+                                                    {
+                                                        <div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
+                                                            <span class="">66%</span>
+                                                        </div>
+                                                    }
+                                                    @if (item.Value == "100")
+                                                    {
+                                                        <div style="width: 100%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-success">
+                                                            <span class="">100%</span>
+                                                        </div>
+                                                    }
+                                                </div>
+
+                                            </a>
+                                        </li>
+                                    }
+                                    <li class="new"><a href="~/TesteSistema/Index">Testes Cadastrados</a></li>
                                 </ul>
                             </div>
                         </li>

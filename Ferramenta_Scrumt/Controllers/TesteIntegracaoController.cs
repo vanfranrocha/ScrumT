@@ -19,6 +19,8 @@ namespace Ferramenta_Scrumt.Controllers
         TesteUnidadeRepositorio _TesteUnRep = new TesteUnidadeRepositorio();
         ProductBacklogRepositorio _ProductRep = new ProductBacklogRepositorio();
         UsersRepositorio _UserRep = new UsersRepositorio();
+        List<TesteSistema> TestSisList;
+        TesteSistemaRepositorio _TestSisRep = new TesteSistemaRepositorio();
 
         private void CarregaLista()
         {
@@ -28,6 +30,8 @@ namespace Ferramenta_Scrumt.Controllers
             ViewBag.tes = new MultiSelectList(TesteUnidadeList, "Status", "Historia", "Classe");
             TesteIntegracaoList = _TesteRep.Listatest(new TesteIntegracaoMapper());
             ViewBag.testint = new MultiSelectList(TesteIntegracaoList, "Status", "Historia", "Versao");
+            TestSisList = _TestSisRep.Listatest(new TesteSistemaMapper());
+            ViewBag.testsis = new MultiSelectList(TestSisList, "Status", "Falhas", "Versao");
         }
         public ActionResult Index()
         {
