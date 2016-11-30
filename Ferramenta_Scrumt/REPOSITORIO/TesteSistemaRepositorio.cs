@@ -64,13 +64,14 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             SqlParameter[] Param = new SqlParameter[]
             {
-               new SqlParameter("@Falhas",Item.Falhas),
+                new SqlParameter("@Falhas",Item.Falhas),
                 new SqlParameter("@Relatorio",Item.Relatorio),
                 new SqlParameter("@Versao",Item.Versao),
+                new SqlParameter("@Massa",Item.Massa_Dados),
                 new SqlParameter("@ID_Membro",Item.ID_Membro),
-                new SqlParameter("@Data_Teste",Item.Data_Teste),
+                new SqlParameter("@Data",Item.Data_Teste),
                 new SqlParameter("@Status",Item.Status),
-
+                new SqlParameter("@ID_TesteSistema",Item.ID),
             };
 
             DB.ExecSP("SP_TESTESISTEMA_UPDATE", Param);
