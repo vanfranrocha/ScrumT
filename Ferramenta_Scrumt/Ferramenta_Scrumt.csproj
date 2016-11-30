@@ -199,6 +199,7 @@
     <Compile Include="Controllers\QuadrotarefasController.cs" />
     <Compile Include="Controllers\ReleaseBacklogController.cs" />
     <Compile Include="Controllers\TesteIntegracaoController.cs" />
+    <Compile Include="Controllers\TesteSistemaController.cs" />
     <Compile Include="Controllers\TestUnidadeController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -855,6 +856,7 @@
     <Content Include="Views\TestUnidade\Delete.cshtml" />
     <Content Include="Views\TesteIntegracao\Edit.cshtml" />
     <Content Include="Views\TesteIntegracao\Delete.cshtml" />
+    <Content Include="Views\TesteSistema\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
