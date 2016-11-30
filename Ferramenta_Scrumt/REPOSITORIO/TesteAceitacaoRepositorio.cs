@@ -2,6 +2,7 @@
 using Ferramenta_Scrumt.MODEL;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -14,7 +15,20 @@ namespace Ferramenta_Scrumt.REPOSITORIO
 
         public void ADD(TesteAceitacao Item)
         {
-            throw new NotImplementedException();
+            SqlParameter ID = new SqlParameter("@ID_TesteAceitacao", SqlDbType.Int);
+            ID.Direction = ParameterDirection.Output;
+
+            SqlParameter[] Param = new SqlParameter[]
+            {
+                new SqlParameter("@ID_Membro",Item.ID_Membro),
+                new SqlParameter("@Data",Item.Data),
+                new SqlParameter("@Stakeholders",Item.Stakeholders),
+                new SqlParameter("@Massa",Item.Massa_Dados),
+                new SqlParameter("@Relatorio",Item.Relatorio_F),
+                ID
+            };
+
+            DB.ExecSP("SP_TESTEACEITACAO_INCLUIR", Param);
         }
 
         public void Delete(TesteAceitacao Item)

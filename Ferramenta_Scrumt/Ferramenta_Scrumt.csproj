@@ -865,6 +865,7 @@
     <Content Include="Views\TesteSistema\Edit.cshtml" />
     <Content Include="Views\TesteSistema\Delete.cshtml" />
     <Content Include="Views\TesteAceitacao\Index.cshtml" />
+    <Content Include="Views\TesteAceitacao\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

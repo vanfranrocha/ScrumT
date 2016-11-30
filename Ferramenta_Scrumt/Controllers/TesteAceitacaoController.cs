@@ -40,5 +40,21 @@ namespace Ferramenta_Scrumt.Controllers
             CarregaLista();
             return View(TestAceiList);
         }
+        [HttpPost]
+        public ActionResult Create(TesteAceitacao T)
+        {
+            _TestAceiRep.ADD(T);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Create()
+        {
+            UserList = _UserRep.Lista(new UsersMapper());
+            ViewBag.Nome = new SelectList(UserList, "ID", "Nome");
+            List<Equipe> Equipes = (List<Equipe>)Session["Equipes"];
+
+            CarregaLista();
+            return View();
+        }
     }
 }
