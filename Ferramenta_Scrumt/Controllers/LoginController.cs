@@ -14,6 +14,12 @@ namespace Ferramenta_Scrumt.Controllers
         LoginRepositorio _LogRep = new LoginRepositorio();
         List<TesteUnidade> TestList;
         TesteUnidadeRepositorio _TestRep = new TesteUnidadeRepositorio();
+        List<TestIntegracao> TestIntList;
+        TesteIntegracaoRepositorio _TestIntRep = new TesteIntegracaoRepositorio();
+        List<TesteSistema> TestSisList;
+        TesteSistemaRepositorio _TestSisRep = new TesteSistemaRepositorio();
+        List<TesteAceitacao> TestAceiList;
+        TesteAceitacaoRepositorio _TestAceiRep = new TesteAceitacaoRepositorio();
 
         private void CarregaLista()
         {
@@ -21,6 +27,12 @@ namespace Ferramenta_Scrumt.Controllers
             Session["Lista"] = LogList;
             TestList = _TestRep.Listatest(new TesteUnidadeMapper());
             ViewBag.tes = new MultiSelectList(TestList, "Status", "Historia", "Classe");
+            TestIntList = _TestIntRep.Listatest(new TesteIntegracaoMapper());
+            ViewBag.testint = new MultiSelectList(TestIntList, "Status", "Historia", "Versao");
+            TestSisList = _TestSisRep.Listatest(new TesteSistemaMapper());
+            ViewBag.testsis = new MultiSelectList(TestSisList, "Status", "Falhas", "Versao");
+            TestAceiList = _TestAceiRep.Listatest(new TesteAceitacaoMapper());
+            ViewBag.testacei = new MultiSelectList(TestAceiList, "Membro", "Stakeholders", "Data");
 
         }
         [HttpGet]
