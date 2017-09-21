@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -226,6 +227,11 @@
     <Compile Include="MODEL\ProductBacklog.cs" />
     <Compile Include="MODEL\Projeto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="REPOSITORIO\CalendarMapper.cs" />
     <Compile Include="REPOSITORIO\CalendarRepositorio.cs" />
     <Compile Include="REPOSITORIO\EquipeMapper.cs" />
@@ -606,6 +612,10 @@
     <Content Include="Scripts\iCheck\skins\square\_all.css" />
     <Content Include="Scripts\iCheck\zepto.icheck.js" />
     <Content Include="Scripts\iCheck\zepto.icheck.min.js" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />

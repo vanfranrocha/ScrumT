@@ -80,3 +80,4 @@ c:\users\vanessa_rocha\documents\visual studio 2015\Projects\Ferramenta_Scrumt\F
 c:\users\vanessa_rocha\documents\visual studio 2015\Projects\Ferramenta_Scrumt\Ferramenta_Scrumt\obj\Debug\Ferramenta_Scrumt.dll
 c:\users\vanessa_rocha\documents\visual studio 2015\Projects\Ferramenta_Scrumt\Ferramenta_Scrumt\obj\Debug\Ferramenta_Scrumt.pdb
 C:\Users\Vanessa_Rocha\Documents\Visual Studio 2015\Projects\Ferramenta_Scrumt\Ferramenta_Scrumt\obj\Debug\Ferramenta_Scrumt.csprojResolveAssemblyReference.cache
+C:\Users\Vanessa_Rocha\Documents\Visual Studio 2015\Projects\Ferramenta_Scrumt\Ferramenta_Scrumt\obj\Debug\Ferramenta_Scrumt.csproj.CoreCompileInputs.cache
