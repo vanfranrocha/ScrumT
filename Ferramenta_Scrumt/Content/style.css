@@ -11,12 +11,12 @@ Author: ThemeBucket
 @import url('custom-ico-fonts.css');
 
 body {
-    background: #1b4e65;
     font-family: 'Open Sans', sans-serif;
     color: #7a7676;
     line-height: 20px;
     overflow-x: hidden;
     font-size: 14px;
+    background: #eff0f4;
 }
 
 input, select, textarea {
@@ -852,6 +852,7 @@ h5.left-nav-title {
 
 .sticky-header .left-side {
     /*top: 50px;*/
+    background: #1b4e65;
 }
 
 .sticky-header .header-section {
@@ -902,7 +903,7 @@ h5.left-nav-title {
 .main-content {
     margin-left: 240px;
     background: #eff0f4;
-    min-height: 1600px;
+    min-height: 100%;
 }
 
 .page-heading {
