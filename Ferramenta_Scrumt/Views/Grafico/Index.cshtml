@@ -1,0 +1,36 @@
+﻿@model Ferramenta_Scrumt.MODEL.Grafico
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="page-heading">
+    <h3>
+        Gráfico
+    </h3>
+    <ul class="breadcrumb">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li class="active">Gráfico</li>
+    </ul>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Bar Chart
+                <span class="tools pull-right">
+                    <a href="javascript:;" class="fa fa-chevron-down"></a>
+                    <a href="javascript:;" class="fa fa-times"></a>
+                </span>
+            </header>
+            <div class="panel-body">
+                <div class="chartJS">
+                    <canvas id="bar-chart-js" height="250" width="800"></canvas>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+

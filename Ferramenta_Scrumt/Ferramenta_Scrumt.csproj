@@ -198,6 +198,7 @@
     <Compile Include="Controllers\CalendarController.cs" />
     <Compile Include="Controllers\EquipeController.cs" />
     <Compile Include="Controllers\FluxoController.cs" />
+    <Compile Include="Controllers\GraficoController.cs" />
     <Compile Include="Controllers\QuadrotarefasController.cs" />
     <Compile Include="Controllers\ReleaseBacklogController.cs" />
     <Compile Include="Controllers\TesteAceitacaoController.cs" />
@@ -213,6 +214,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="INFRA\DBUtil.cs" />
+    <Compile Include="MODEL\Grafico .cs" />
     <Compile Include="MODEL\Calendar.cs" />
     <Compile Include="MODEL\Equipe.cs" />
     <Compile Include="MODEL\Home.cs" />
@@ -232,7 +234,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="REPOSITORIO\GraficoMapper .cs" />
     <Compile Include="REPOSITORIO\CalendarMapper.cs" />
+    <Compile Include="REPOSITORIO\GraficoRepositorio.cs" />
     <Compile Include="REPOSITORIO\CalendarRepositorio.cs" />
     <Compile Include="REPOSITORIO\EquipeMapper.cs" />
     <Compile Include="REPOSITORIO\EquipeRepositorio.cs" />
@@ -428,11 +432,15 @@
     <Content Include="Scripts\bootstrap-datepicker\less\datepicker.less" />
     <Content Include="Scripts\bootstrap-daterangepicker\README.md" />
     <Content Include="Scripts\bootstrap-datetimepicker\less\datetimepicker.less" />
+    <Content Include="Scripts\Chart.js" />
+    <Content Include="Scripts\Chart.min.js" />
+    <Content Include="Scripts\chartjs.init.js" />
     <Content Include="Scripts\crisp.js" />
     <Content Include="Scripts\easypiechart\easypiechart-init.js" />
     <Content Include="Scripts\easypiechart\easypiechart.js" />
     <Content Include="Scripts\easypiechart\jquery.easypiechart.js" />
     <Content Include="Scripts\easypiechart\jquery.easypiechart.min.js" />
+    <Content Include="Scripts\chartcod.js" />
     <Content Include="Scripts\external-dragging-calendar.js" />
     <Content Include="Scripts\flot-chart\API.md" />
     <Content Include="Scripts\flot-chart\build.log" />
@@ -878,6 +886,7 @@
     <Content Include="Views\TesteAceitacao\Index.cshtml" />
     <Content Include="Views\TesteAceitacao\Create.cshtml" />
     <Content Include="Views\Fluxo\Index.cshtml" />
+    <Content Include="Views\Grafico\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

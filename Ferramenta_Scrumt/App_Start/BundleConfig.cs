@@ -41,7 +41,9 @@ namespace Ferramenta_Scrumt
                       "~/Scripts/fullcalendar/fullcalendar.min.js",
                       "~/Scripts/external-dragging-calendar.js",
                       "~/Scripts/flot-chart/jquery.flot.time.js",
-                      "~/Scripts/main-chart.js",
+                      "~/Scripts/Chart.js",
+                      "~/Scripts/Chart.min.js",
+                      "~/Scripts/chartjs.init.js",
                       "~/Scripts/scripts.js"                     
                        ));
 
