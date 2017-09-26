@@ -196,7 +196,7 @@ hr {
 }
 
 .sticky-left-side .custom-nav {
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .left-side-collapsed .sticky-left-side {
@@ -204,8 +204,8 @@ hr {
 }
 
 .logo {
-    padding-top: 5px;
-    height: 50px;
+    padding-top: 10px;
+    height: 60px;
 }
 
 .logo a {
@@ -290,12 +290,12 @@ hr {
     margin-bottom: 10px;
 }
 
-.custom-nav > li > a {
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-}
+    .custom-nav > li > a {
+        color: #585757;
+        padding: 12px 20px;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+    }
 
 .custom-nav > li > a:hover,
 .custom-nav > li > a:active {
@@ -544,7 +544,7 @@ h5.left-nav-title {
 -----------------------------*/
 
 .header-section {
-    background: #fff;
+    background: #31bc96;
     border-bottom: 1px solid #eff0f4;
 }
 
@@ -556,13 +556,11 @@ h5.left-nav-title {
 
 .toggle-btn {
     width: 52px;
-    height: 50px;
     font-size: 20px;
-    padding: 15px;
+    padding: 20px;
     cursor: pointer;
     float: left;
     color: #212121;
-    border-right: 1px solid #e7e7e7;
     -moz-transition: all 0.2s ease-out 0s;
     -webkit-transition: all 0.2s ease-out 0s;
     transition: all 0.2s ease-out 0s;
@@ -607,18 +605,19 @@ h5.left-nav-title {
 }
 
 .notification-menu > li > a > i {
-    margin-top: 6px;
+    margin-top: 10px;
 }
 
-.notification-menu .dropdown-toggle {
-    padding: 12px 10px;
-    border-color: #fff;
-    background: #fff;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    border: none;
-}
+    .notification-menu .dropdown-toggle {
+        padding: 12px 10px;
+        border-color: #fff;
+        background: #31bc96;
+        color: #fff;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        border: none;
+    }
 
 .notification-menu .dropdown-toggle:hover,
 .notification-menu .dropdown-toggle:focus,
@@ -707,17 +706,17 @@ h5.left-nav-title {
     min-width: 300px;
 }
 
-.notification-menu .info-number {
-    padding: 12px 15px;
-    height: 50px;
-    font-size: 16px;
-    background: #fff;
-    color: #333;
-    border-color: #fff;
-    -moz-transition: all 0.2s ease-out 0s;
-    -webkit-transition: all 0.2s ease-out 0s;
-    transition: all 0.2s ease-out 0s;
-}
+    .notification-menu .info-number {
+        padding: 12px 15px;
+        height: 60px;
+        font-size: 16px;
+        background: #31bc96;
+        color: #fff;
+        border-color: #fff;
+        -moz-transition: all 0.2s ease-out 0s;
+        -webkit-transition: all 0.2s ease-out 0s;
+        transition: all 0.2s ease-out 0s;
+    }
 
 .notification-menu .dropdown-menu-usermenu {
     background: #65cea7;
@@ -846,13 +845,12 @@ h5.left-nav-title {
     left: 0;
     width: 240px;
     z-index: 100;
-    background: rgba(0,0,0,.075);
-
+    background: #31bc96;
 }
 
 .sticky-header .left-side {
     /*top: 50px;*/
-    background: #1b4e65;
+    background: rgba(230, 231, 234, 0.58);
 }
 
 .sticky-header .header-section {
