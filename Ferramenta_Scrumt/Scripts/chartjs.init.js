@@ -34,6 +34,23 @@
             options.animation = true;
         }
 
+
+        var barChartData = {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [
+                {
+                    fillColor: "#2a323f",
+                    strokeColor: "#2a323f",
+                    data: [65, 59, 90, 81, 56, 55, 40]
+                },
+                {
+                    fillColor: "#6dc5a3",
+                    strokeColor: "#6dc5a3",
+                    data: [28, 48, 40, 19, 96, 27, 100]
+                }
+            ]
+
+        }
         $.ajax({
             url: "/Grafico/GetDados",
             type: "POST",
@@ -41,27 +58,20 @@
             dataType: "json",
             cache: false,
             success: function (result) {
-
-                var eventosgrafico = result;
-                var barChartData = {
-                    labels: ["Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho", "Julho", "Agosto","Setembro", "Outubro", "Novembro", "Dezembro"],
+                var eventosgrafico = result
+                barChartData = {
+                    labels: ["January", "February", "March", "April", "May", "June", "July"],
                     datasets: [
                         {
                             fillColor: "#2a323f",
                             strokeColor: "#2a323f",
-                            data: eventosgrafico
-                        },
-                        {
-                            fillColor: "#6dc5a3",
-                            strokeColor: "#6dc5a3",
-                            data: eventosgrafico
+                            data: [1, 2, 3, 19, 96, 27, 100]
                         }
                     ]
 
                 }
             }
         });
-        
 
         var myLine = new Chart(document.getElementById("bar-chart-js").getContext("2d")).Bar(barChartData);
 

@@ -560,7 +560,7 @@ h5.left-nav-title {
     padding: 20px;
     cursor: pointer;
     float: left;
-    color: #212121;
+    color: #fff;
     -moz-transition: all 0.2s ease-out 0s;
     -webkit-transition: all 0.2s ease-out 0s;
     transition: all 0.2s ease-out 0s;
@@ -834,7 +834,18 @@ h5.left-nav-title {
     right: 4px;
     top: 10px;
 }
-
+.info-number .badge2 {
+    background: #f39c12;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 13px;
+    padding: 2px 5px;
+    position: absolute;
+    right: 4px;
+    top: 10px;
+}
 /* ------------------------------
         STICKY HEADER
 ---------------------------------*/
@@ -845,7 +856,7 @@ h5.left-nav-title {
     left: 0;
     width: 240px;
     z-index: 100;
-    background: #31bc96;
+    background: #2aad89;
 }
 
 .sticky-header .left-side {
