@@ -33,10 +33,8 @@
         } else {
             options.animation = true;
         }
-
-
         var barChartData = {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            labels: ["Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho", "Julho"],
             datasets: [
                 {
                     fillColor: "#2a323f",
@@ -51,29 +49,33 @@
             ]
 
         }
-        $.ajax({
+
+        var myLine = new Chart(document.getElementById("bar-chart-js").getContext("2d")).Bar(barChartData);
+        /*$.ajax({
             url: "/Grafico/GetDados",
             type: "POST",
 
             dataType: "json",
             cache: false,
             success: function (result) {
-                var eventosgrafico = result
+                var eventosgrafico = parseInt(result);
                 barChartData = {
-                    labels: ["January", "February", "March", "April", "May", "June", "July"],
+                    labels: ["Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
                     datasets: [
                         {
                             fillColor: "#2a323f",
                             strokeColor: "#2a323f",
-                            data: [1, 2, 3, 19, 96, 27, 100]
+                            data: [eventosgrafico]
                         }
                     ]
 
                 }
+                var myLine = new Chart(document.getElementById("bar-chart-js").getContext("2d")).Bar(barChartData);
             }
+            
         });
 
-        var myLine = new Chart(document.getElementById("bar-chart-js").getContext("2d")).Bar(barChartData);
+        
 
 
         var Linedata = {
@@ -106,25 +108,6 @@
         var myLineChart = new Chart(document.getElementById("line-chart-js").getContext("2d")).Line(Linedata);
 
 
-        var pieData = [
-            {
-                value: 30,
-                color:"#2a323f"
-            },
-            {
-                value : 50,
-                color : "#5f728f"
-            },
-            {
-                value : 100,
-                color : "#6dc5a3"
-            }
-
-        ];
-
-        var myPie = new Chart(document.getElementById("pie-chart-js").getContext("2d")).Pie(pieData);
-
-
 
         var donutData = [
             {
@@ -150,6 +133,7 @@
 
         ]
         var myDonut = new Chart(document.getElementById("donut-chart-js").getContext("2d")).Doughnut(donutData);
+        */
     }
 
 

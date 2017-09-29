@@ -4,8 +4,9 @@
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
-    background-color: #353F4F;
+    background-color: #e2e4e6;
     text-decoration: none;
+    border-left-color: #31bc96;
 }
 
 .panel {

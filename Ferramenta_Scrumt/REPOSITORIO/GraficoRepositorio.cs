@@ -3,8 +3,6 @@ using Ferramenta_Scrumt.MODEL;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 
 namespace Ferramenta_Scrumt.REPOSITORIO
 {
@@ -31,7 +29,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
         {
             SqlParameter[] Param = new SqlParameter[]
            { };
-            string SQL = "select  [1] AS Janeiro, [2] AS Fevereiro,  [3] AS Marco,  [4] AS Abril,  [5] AS Maio,  [6] AS Junho,  [7] AS Julho,  [8] AS Agosto,  [9] AS Setembro,  [10] AS Outubro,  [11] AS Novembro,   [12] AS Dezembro from (SELECT MONTH(Estimativa_Inicio) AS month, [ID_ProductRelease] FROM Product_Release) AS t PIVOT (COUNT([ID_ProductRelease]) FOR month IN([1], [2], [3], [4], [5],[6],[7],[8],[9],[10],[11],[12]))p";
+            string SQL = "Select Count(Teste_Aceitacao.ID_TesteAceitacao) As data, 'Teste de Aceitação' As label from Teste_Aceitacao Union  All Select Count(Teste_Integracao.ID_TesteIntegracao) As data, 'Teste de Integração' As label from Teste_Integracao Union All Select Count(Teste_Unidade.ID_TestUnidade) As data, 'Teste de Unidade' As label from Teste_Unidade Union All  Select Count(Teste_Sistema.ID_TesteSistema) As data, 'Teste de Sistema' As label from Teste_Sistema";
             return mapper.MapAllFromSource(DB.ListaSQL(Param, SQL).Tables[0]);
         }
         public void Update(Grafico Item)

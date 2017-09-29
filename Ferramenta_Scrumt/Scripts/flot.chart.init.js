@@ -78,8 +78,6 @@ $(function() {
             },
             xaxis: {
                 mode: "time"
-
-
             },
             yaxes: [{
                 /* First y axis */
@@ -180,43 +178,42 @@ $(function() {
         $.plot($("#pie-chart #pie-chartContainer"), data, options);
     });
 
-    $(function() {
-        var data = [{
-            label: "Premium Member",
-            data: 40
-        }, {
-            label: "Gold Member",
-            data: 20
-        }, {
-            label: "Platinum Member",
-            data: 10
-        }, {
-            label: "Silver Member",
-            data: 30
-        }];
-        var options = {
-            series: {
-                pie: {
-                    show: true,
-                    innerRadius: 0.5,
+    $.ajax({
+        url: "/Grafico/GetDados",
+        type: "POST",
+
+        dataType: "json",
+        cache: false,
+        success: function (result) {
+        var eventosGrafico2 = result;
+            $(function() {
+                var data = eventosGrafico2;
+            var options = {
+                series: {
+                    pie: {
+                        show: true,
+                        innerRadius: 0.5,
+                        show: true
+                    }
+                },
+                legend: {
                     show: true
+                },
+                grid: {
+                    hoverable: true,
+                    clickable: true
+                },
+                colors: ["#00a65a", "#f39c12", "#3c8dbc","#f56954"],
+                tooltip: true,
+                tooltipOpts: {
+                    defaultTheme: false
                 }
-            },
-            legend: {
-                show: true
-            },
-            grid: {
-                hoverable: true,
-                clickable: true
-            },
-            colors: ["#869cb3", "#6dc5a3", "#778a9f","#FF6C60"],
-            tooltip: true,
-            tooltipOpts: {
-                defaultTheme: false
-            }
-        };
-        $.plot($("#pie-chart-donut #pie-donutContainer"), data, options);
+            };
+            $.plot($("#pie-chart-donut #pie-donutContainer"), data, options);
+            });
+        }
     });
+
 
     $(function() {
         var data24Hours = [

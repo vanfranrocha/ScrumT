@@ -11,7 +11,6 @@ namespace Ferramenta_Scrumt.Controllers
         // GET: Fluxo
         
         List<TesteUnidade> TesteUnidadeList;
-        List<Users> UserList;
         TesteUnidadeRepositorio _TesteRep = new TesteUnidadeRepositorio();
         ProductBacklogRepositorio _ProductRep = new ProductBacklogRepositorio();
         UsersRepositorio _UserRep = new UsersRepositorio();

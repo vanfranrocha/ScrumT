@@ -38,5 +38,6 @@ namespace Ferramenta_Scrumt.Controllers
             GraficoList = _GraficoRep.Lista(new GraficoMapper());
             return Json(GraficoList, JsonRequestBehavior.AllowGet);
         }
+
     }
 }

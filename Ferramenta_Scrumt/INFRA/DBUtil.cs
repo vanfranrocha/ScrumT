@@ -108,7 +108,6 @@ namespace Ferramenta_Scrumt.INFRA
             catch (Exception err)
             {
                 return false;
-
             }
             finally
             {

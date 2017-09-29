@@ -42,6 +42,7 @@ namespace Ferramenta_Scrumt
                       "~/Scripts/external-dragging-calendar.js",
                       "~/Scripts/flot-chart/jquery.flot.time.js",
                       "~/Scripts/Chart.js",
+                      "~/Scripts/flot.chart.init.js",
                       "~/Scripts/Chart.min.js",
                       "~/Scripts/chartjs.init.js",
                       "~/Scripts/scripts.js"                     

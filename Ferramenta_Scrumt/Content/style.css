@@ -290,29 +290,31 @@ hr {
     margin-bottom: 10px;
 }
 
-    .custom-nav > li > a {
-        color: #585757;
-        padding: 12px 20px;
-        border-radius: 0;
-        -webkit-border-radius: 0;
-    }
-
-.custom-nav > li > a:hover,
-.custom-nav > li > a:active {
-    background-color: #353f4f;
-    color: #65cea7;
+.custom-nav > li > a {
+    color: #585757;
+    padding: 12px 20px;
     border-radius: 0;
     -webkit-border-radius: 0;
 }
 
+    .custom-nav > li > a:hover,
+    .custom-nav > li > a:active {
+        border-left-color: #31bc96;
+        color: #65cea7;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+    }
+
 .custom-nav > li.menu-list > a {
     background: transparent url(../images/plus-white.png) no-repeat 93% center;
+    border-left: 3px solid transparent;
 }
 
-.custom-nav > li.menu-list > a:hover {
-    background-color: #353f4f;
-    background-image: url(../images/plus.png);
-}
+    .custom-nav > li.menu-list > a:hover {
+        background-color: #e2e4e6;
+        border-left-color: #31bc96;
+        background-image: url(../images/plus.png);
+    }
 
 .custom-nav > li.nav-active > a {
     background-color: #353f4f;
