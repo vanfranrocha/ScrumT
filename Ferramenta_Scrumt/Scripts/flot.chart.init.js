@@ -206,6 +206,8 @@ $(function() {
                 colors: ["#00a65a", "#f39c12", "#3c8dbc","#f56954"],
                 tooltip: true,
                 tooltipOpts: {
+                    cssClass: "flotTip",
+                    content: "%s: %p.0%",
                     defaultTheme: false
                 }
             };
