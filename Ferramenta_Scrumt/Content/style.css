@@ -204,7 +204,7 @@ hr {
 }
 
 .logo {
-    padding-top: 10px;
+    padding-top: 0px;
     height: 60px;
 }
 
@@ -330,12 +330,14 @@ hr {
     background-image: url(../images/minus.png);
 }
 
-.custom-nav > li.active > a,
-.custom-nav > li.active > a:hover,
-.custom-nav > li.active > a:focus {
-    background-color: #353f4f;
-    color: #65cea7;
-}
+    .custom-nav > li.active > a,
+    .custom-nav > li.active > a:hover,
+    .custom-nav > li.active > a:focus {
+        background-color: transparent;
+        border-left-color: #31bc96;
+        border-left: 3px solid transparent;
+        color: #65cea7;
+    }
 
 .custom-nav > li.menu-list.active > a {
     background-image: url(../images/plus.png);
@@ -546,7 +548,7 @@ h5.left-nav-title {
 -----------------------------*/
 
 .header-section {
-    background: #31bc96;
+    background: linear-gradient(to right,#2aad89 0,#7cc89c 100%);
     border-bottom: 1px solid #eff0f4;
 }
 
@@ -611,9 +613,9 @@ h5.left-nav-title {
 }
 
     .notification-menu .dropdown-toggle {
-        padding: 12px 10px;
+        padding: 16px 10px;
         border-color: #fff;
-        background: #31bc96;
+        background: transparent;
         color: #fff;
         -moz-border-radius: 0;
         -webkit-border-radius: 0;
@@ -712,7 +714,7 @@ h5.left-nav-title {
         padding: 12px 15px;
         height: 60px;
         font-size: 16px;
-        background: #31bc96;
+        background: transparent;
         color: #fff;
         border-color: #fff;
         -moz-transition: all 0.2s ease-out 0s;

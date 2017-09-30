@@ -192,10 +192,10 @@ $(function() {
                 series: {
                     pie: {
                         show: true,
-                        innerRadius: 0.5,
-                        show: true
+                        innerRadius: 0.5
                     }
                 },
+
                 legend: {
                     show: true
                 },

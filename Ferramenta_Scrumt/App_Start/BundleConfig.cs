@@ -26,8 +26,6 @@ namespace Ferramenta_Scrumt
                       "~/Scripts/bootstrap.min.js",
                       "~/Scripts/modernizr.min.js",
                       "~/Scripts/jquery.nicescroll.js",
-                      "~/Scripts/easypiechart/jquery.easypiechart.js",
-                      "~/Scripts/easypiechart/easypiechart-init.js.js",
                       "~/Scripts/sparkline/jquery.sparkline.js",
                       "~/Scripts/sparkline/sparkline-init.js",
                       "~/Scripts/iCheck/jquery.icheck.js",
@@ -41,10 +39,7 @@ namespace Ferramenta_Scrumt
                       "~/Scripts/fullcalendar/fullcalendar.min.js",
                       "~/Scripts/external-dragging-calendar.js",
                       "~/Scripts/flot-chart/jquery.flot.time.js",
-                      "~/Scripts/Chart.js",
                       "~/Scripts/flot.chart.init.js",
-                      "~/Scripts/Chart.min.js",
-                      "~/Scripts/chartjs.init.js",
                       "~/Scripts/scripts.js"                     
                        ));
 

@@ -12,6 +12,7 @@ namespace Ferramenta_Scrumt.Controllers
         List<TesteUnidade> TestList;
         TesteUnidadeRepositorio _TestRep = new TesteUnidadeRepositorio();
         List<Calendar> CalendarList;
+        List<Calendar> CalendarList2;
         CalendarRepositorio _CalendarRep = new CalendarRepositorio();
         List<TestIntegracao> TestIntList;
         TesteIntegracaoRepositorio _TestIntRep = new TesteIntegracaoRepositorio();
@@ -30,7 +31,8 @@ namespace Ferramenta_Scrumt.Controllers
             ViewBag.testsis = new MultiSelectList(TestSisList, "Status", "Falhas", "Versao");
             TestAceiList = _TestAceiRep.Listatest(new TesteAceitacaoMapper());
             ViewBag.testacei = new MultiSelectList(TestAceiList, "Membro", "Stakeholders", "Data");
-
+            CalendarList2 = _CalendarRep.Lista(new CalendarMapper());
+            ViewBag.qtdhistoriasc = new MultiSelectList(CalendarList2, "Historia");
             return View();
         }
         public JsonResult GetDados()
