@@ -203,7 +203,7 @@ $(function() {
                     hoverable: true,
                     clickable: true
                 },
-                colors: ["#00a65a", "#f39c12", "#3c8dbc","#f56954"],
+                colors: ["#2aad89", "#f39c12", "#353f4f","#f56954"],
                 tooltip: true,
                 tooltipOpts: {
                     cssClass: "flotTip",
