@@ -1,0 +1,70 @@
+﻿@model Ferramenta_Scrumt.MODEL.TesteUnidade
+
+@{
+    ViewBag.Title = "Adicionar Teste";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-heading">
+    <h3>
+        Testes de Unidade
+    </h3>
+    <ul class="breadcrumb">
+        <li>
+            <a href="/Home/Index">Home</a>
+        </li>
+        <li>
+            <a href="/TestUnidade/Index">Teste de Unidade</a>
+        </li>
+        <li class="active">Adicionar Teste de Unidade</li>
+    </ul>
+
+</div>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Adicionar Teste de Unidade
+                        </header>
+                        <div class="panel-body">
+                            <form role="form">
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group col-md-6">
+                                    @Html.LabelFor(model => model.ID_Backlog,"História", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.DropDownList("ID_Backlog", (SelectList)ViewBag.Historia, "Selecione uma História", htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.ID_Backlog, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group col-md-6">
+                                    @Html.LabelFor(model => model.ID_Membro,"Membro", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.DropDownList("ID_Membro", (SelectList)ViewBag.Nome, "Selecione um Membro", htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.ID_Membro, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group col-md-6">
+                                    @Html.LabelFor(model => model.Classe, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.EditorFor(model => model.Classe, "", new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Classe, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group col-md-6">
+                                    @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.DropDownList("Status", new SelectList(ViewBag.Status, "Value", "Text"), "Defina o Status", htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                                </div>
+                            </form>
+                            <div class="form-group">
+                                <input type="submit" value="Adicionar" class="btn btn-primary" />
+                                @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-danger" })
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    }
+
+</body>
+

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Default-Web.config Connection String" description="Default A Cadeia de Conexão usada em web.config pelo aplicativo para acessar o banco de dados." defaultValue="Data Source=den1.mssql2.gear.host;Database=scrumt;Initial Catalog=scrumt;User ID=scrumtt;Password=Ld5E-87Z5-q6; " tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Vanessa_Rocha\\Documents\\Visual\ Studio\ 2015\\Projects\\Ferramenta_Scrumt\\Ferramenta_Scrumt\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Default']/@connectionString" />
+  </parameter>
+</parameters>

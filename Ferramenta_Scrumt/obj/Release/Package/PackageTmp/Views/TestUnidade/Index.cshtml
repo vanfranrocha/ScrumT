@@ -1,0 +1,119 @@
+﻿@model IEnumerable<Ferramenta_Scrumt.MODEL.TesteUnidade>
+
+@{
+    ViewBag.Title = "Testes de Unidade";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-heading">
+    <h3>
+        Testes de Unidade
+    </h3>
+    <div class="col-md-10 col-xs-8">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Testes</a>
+            </li>
+            <li class="active">Unidade</li>
+        </ul>
+    </div>
+    <div class="col-md-2 col-xs-8">
+        <p>
+            @Html.ActionLink("Adicionar Teste", "Create", 0, new { @class = "btn btn-primary" })
+        </p>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-sm-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Testes Cadastrados
+                    <span class="tools pull-right">
+                        <a href="javascript:;" class="fa fa-chevron-down"></a>
+                    </span>
+                </header>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="col-md-2 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Historia)
+                                    </div>
+                                    <div class="col-md-2 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Membro)
+                                    </div>
+                                    <div class="col-md-2 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Classe)
+                                    </div>
+                                    <div class="col-md-3 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Status)
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        @foreach (var item in Model)
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Historia)
+                                            </b>@Html.DisplayFor(modelItem => item.Historia)
+                                        </div>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Membro)
+                                            </b>@Html.DisplayFor(modelItem => item.Membro)
+                                        </div>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Classe)
+                                            </b>@Html.DisplayFor(modelItem => item.Classe)
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Status)
+                                            </b>
+                                            <div class="progress progress-striped">
+                                                @if (item.Status == "33")
+                                                {
+                                                    <div style="width: @Html.DisplayFor(modelItem => item.Status)%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-danger">
+                                                        <span class="">@Html.DisplayFor(modelItem => item.Status)%</span>
+                                                    </div>
+                                                }
+                                               @if (item.Status == "66")
+                                               {
+                                                <div style="width: @Html.DisplayFor(modelItem => item.Status)%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
+                                                    <span class="">@Html.DisplayFor(modelItem => item.Status)%</span>
+                                                </div>
+                                               }
+                                               @if (item.Status == "100"){
+                                                <div style="width: @Html.DisplayFor(modelItem => item.Status)%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-success">
+                                                    <span class="">@Html.DisplayFor(modelItem => item.Status)%</span>
+                                                </div>
+                                               }
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+
+                                            @Html.ActionLink("Editar", "Edit", new { id = item.ID }, new { @class = "btn btn-success" })
+                                            @Html.ActionLink("Detalhes", "Details", new { id = item.ID }, new { @class = "btn btn-info" })
+                                            @Html.ActionLink("Deletar", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

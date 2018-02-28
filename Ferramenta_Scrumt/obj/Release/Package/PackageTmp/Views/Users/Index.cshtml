@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Ferramenta_Scrumt.MODEL.Users>
+
+@{
+    ViewBag.Title = "Equipe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="page-heading">
+    <h3>
+        Equipe
+    </h3>
+    <div class="col-md-10 col-xs-8">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Cadastros</a>
+            </li>
+            <li class="active">Equipe</li>
+        </ul>
+    </div>
+    <div class="col-md-2 col-xs-8">
+        <p>
+            @Html.ActionLink("Adicionar Membro", "Create", 0, new { @class = "btn btn-primary" })
+        </p>
+    </div>
+    <hr>
+</div>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-sm-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Membros Cadastrados
+                    <span class="tools pull-right">
+                        <a href="javascript:;" class="fa fa-chevron-down"></a>
+                    </span>
+                </header>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="col-md-3 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Nome)
+                                    </div>
+                                    <div class="col-md-3 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Email)
+                                    </div>
+                                    <div class="col-md-3 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Funcao)
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        @foreach (var item in Model)
+                        {
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="col-md-3 col-xs-8">
+                                        <b class="hidden-md hidden-lg">
+                                            @Html.DisplayNameFor(model => model.Nome)
+                                        </b>@Html.DisplayFor(modelItem => item.Nome)
+                                    </div>
+                                    <div class="col-md-3 col-xs-8">
+                                        <b class="hidden-md hidden-lg">
+                                            @Html.DisplayNameFor(model => model.Email)
+                                        </b>@Html.DisplayFor(modelItem => item.Email)
+                                    </div>
+                                    <div class="col-md-3 col-xs-8">
+                                        <b class="hidden-md hidden-lg">
+                                            @Html.DisplayNameFor(model => model.Funcao)
+                                        </b>@Html.DisplayFor(modelItem => item.Nome_Funcao)
+                                    </div>
+                                    <div class="col-md-3 col-xs-8">
+
+                                        @Html.ActionLink("Editar", "Edit", new { id = item.ID }, new { @class = "btn btn-success" })
+                                        @Html.ActionLink("Detalhes", "Details", new { id = item.ID }, new { @class = "btn btn-info" })
+                                        @Html.ActionLink("Deletar", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        }
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+

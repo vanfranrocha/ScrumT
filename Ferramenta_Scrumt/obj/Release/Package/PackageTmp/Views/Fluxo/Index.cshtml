@@ -1,0 +1,182 @@
+﻿
+@{
+    ViewBag.Title = "Ajuda - Fluxo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-sm-12">
+    <div class="timeline">
+        <article class="timeline-item alt">
+            <div class="text-right">
+                <div class="time-show first">
+                    <a href="#" class="btn btn-primary">Scrum Master</a>
+                </div>
+            </div>
+        </article>
+        <article class="timeline-item alt">
+            <div class="timeline-desk">
+                <div class="panel">
+                    <div class="panel-body">
+                        <span class="arrow-alt"></span>
+                        <span class="timeline-icon"></span>
+                        <span class="timeline-date">08:25 am</span>
+                        <h1 class="red">1 - Cadastrar Equipe</h1>
+                        <p>O Scrum Master deve cadastrar a Equipe que vai participar dos projetos <a href="/Users/Index">Cadastrar Equipe</a></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="timeline-item ">
+            <div class="timeline-desk">
+                <div class="panel">
+                    <div class="panel-body">
+                        <span class="arrow"></span>
+                        <span class="timeline-icon"></span>
+                        <span class="timeline-date">10:00 am</span>
+                        <h1 class="green">2 - Cadastrar Projetos</h1>
+                        <p>O Scrum Master deve cadastrar os projetos, bem como os usuários que irão ter acesso aos projetos <a href="/Projeto/Index">Cadastrar Projeto</a></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="timeline-item alt">
+            <div class="timeline-desk">
+                <div class="panel">
+                    <div class="panel-body">
+                        <span class="arrow-alt"></span>
+                        <span class="timeline-icon"></span>
+                        <span class="timeline-date">11:35 am</span>
+                        <h1 class="blue">3 - Release Backlog</h1>
+                        <p>O Scrum Master deve verificar as histórias cadastradas e gerenciá-las no quadro de tarefas - <a href="/ReleaseBacklog/Index">Gerenciar Releases</a></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="timeline-item">
+            <div class="timeline-desk">
+                <div class="panel">
+                    <div class="panel-body">
+                        <span class="arrow"></span>
+                        <span class="timeline-icon"></span>
+                        <span class="timeline-date">3:20 pm</span>
+                        <h1 class="purple">4 - Testes</h1>
+                        <p>Os testes são visualizados e gerenciados pelo Scrum Master <br /> <a href="/TestUnidade/Index">Teste de Unidade</a> <br /> <a href="/TesteIntegracao/Index">Teste Integração</a><br /> <a href="/TesteSistema/Index">Teste Sistema</a><br /> <a href="/TesteAceitacao/Index">Teste de Aceitacao</a></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="timeline-item alt">
+            <div class="timeline-desk">
+                <div class="panel">
+                    <div class="panel-body">
+                        <span class="arrow-alt"></span>
+                        <span class="timeline-icon"></span>
+                        <span class="timeline-date">07:49 pm</span>
+                        <h1 class="light-green">5 Calendário</h1>
+                        <p>Verificar no Calendário quando devem ser iniciadas as histórias cadastradas - <a href="/Calendario/Index">Ver Calendário</a></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="timeline-item alt">
+            <div class="text-right">
+                <div class="time-show">
+                    <a href="#" class="btn btn-primary">Product Owner</a>
+                </div>
+            </div>
+        </article>
+        <article class="timeline-item alt">
+            <div class="timeline-desk">
+                <div class="panel">
+                    <div class="panel-body">
+                        <span class="arrow-alt"></span>
+                        <span class="timeline-icon"></span>
+                        <span class="timeline-date">3:20 pm</span>
+                        <h1 class="yellow">1 - Cadastrar histórias</h1>
+                        <p>O Product Owner ou dono do Produto é quem cadastra as histórias do projeto definindo-as como não aceitas - <a href="/Backlog/Index">Cadastrar Histórias</a></p>
+
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="timeline-item">
+            <div class="timeline-desk">
+                <div class="panel">
+                    <div class="panel-body">
+                        <span class="arrow"></span>
+                        <span class="timeline-icon"></span>
+                        <span class="timeline-date">07:49 pm</span>
+                        <h1 class="">2 - Verificar as histórias</h1>
+                        <p>Verificar as histórias que não foram aceitas e melhorá-las - <a href="/Backlog/Index">Histórias</a></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="timeline-item alt">
+            <div class="text-right">
+                <div class="time-show">
+                    <a href="#" class="btn btn-primary">Equipe</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="timeline-item alt">
+            <div class="timeline-desk">
+                <div class="panel">
+                    <div class="panel-body">
+                        <span class="arrow-alt"></span>
+                        <span class="timeline-icon"></span>
+                        <span class="timeline-date">07:49 pm</span>
+                        <h1 class="">1 - Verifica Histórias</h1>
+                        <p>Verificar as histórias para aceitá-las no desenvolvimento ou não - <a href="/Backlog/Index">Histórias</a></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <div class="timeline-desk">
+                <div class="panel">
+                    <div class="panel-body">
+                        <span class="arrow"></span>
+                        <span class="timeline-icon"></span>
+                        <span class="timeline-date">07:49 pm</span>
+                        <h1 class="red">2 - Release Backlog</h1>
+                        <p>O desenvolvedor na Release Backlog define quais histórias irá desenvolver e altera sua situação no quadro de tarefas (A fazer, Em Execução, Em Teste, Done) - <a href="/ReleaseBacklog/Index">Gerenciar Releases</a></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="timeline-item alt">
+            <div class="timeline-desk">
+                <div class="panel">
+                    <div class="panel-body">
+                        <span class="arrow-alt"></span>
+                        <span class="timeline-icon"></span>
+                        <span class="timeline-date">07:49 pm</span>
+                        <h1 class="">3 - Testes</h1>
+                        <p>Quem desenvolve a história é que deve realizar os testes para verificar a conformidade do que foi desenvolvido <br /> <a href="/TestUnidade/Index">Teste de Unidade</a> <br /> <a href="/TesteIntegracao/Index">Teste Integração</a><br /> <a href="/TesteSistema/Index">Teste Sistema</a><br /> <a href="/TesteAceitacao/Index">Teste de Aceitacao</a></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <div class="timeline-desk">
+                <div class="panel">
+                    <div class="panel-body">
+                        <span class="arrow"></span>
+                        <span class="timeline-icon"></span>
+                        <span class="timeline-date">07:49 pm</span>
+                        <h1 class="red">4 - Calendário</h1>
+                        <p>Verificar no Calendário quando devem ser iniciadas as histórias cadastradas - <a href="/Calendario/Index">Ver Calendário</a></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+

@@ -1,0 +1,72 @@
+﻿@model Ferramenta_Scrumt.MODEL.Projeto
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-heading">
+    <h3>
+        Projeto
+    </h3>
+    <ul class="breadcrumb">
+        <li>
+            <a href="/Home/Index">Home</a>
+        </li>
+        <li>
+            <a href="/Users/Index">Projeto</a>
+        </li>
+        <li class="active">Deletar Projeto</li>
+    </ul>
+
+</div>
+
+<body>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        <h3>Deseja Realmente Excluir este Registro?</h3>
+                        <div>
+                            <hr />
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Descricao)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Descricao)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Data_Inicio)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Data_Inicio)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Data_Fim)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Data_Fim)
+                                </dd>
+                            </dl>
+
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div class="form-actions no-color">
+                                    <input type="submit" value="Deletar" class="btn btn-danger" />
+                                    @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-success" })
+                                </div>
+                            }
+                        </div>
+                    </header>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>

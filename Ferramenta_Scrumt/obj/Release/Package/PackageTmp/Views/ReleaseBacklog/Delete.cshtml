@@ -1,0 +1,94 @@
+﻿@model Ferramenta_Scrumt.MODEL.ReleaseBacklog
+
+@{
+    ViewBag.Title = "Deletar Release";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-heading">
+    <h3>
+        Release Backlog
+    </h3>
+    <ul class="breadcrumb">
+        <li>
+            <a href="/Home/Index">Home</a>
+        </li>
+        <li>
+            <a href="/Backlog/Index">Backlog</a>
+        </li>
+        <li class="active">Deletar Release</li>
+    </ul>
+
+</div>
+<body>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        <h3>Deseja Realmente Excluir este Registro?</h3>
+                        <div>
+                            <hr />
+
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.ID)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.ID)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Historia)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Historia)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Nome_Membro)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Nome_Membro)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Estimativa_inicio)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Estimativa_inicio)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Estimativa_fim)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Estimativa_fim)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Situacao_Quadro)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Situacao_Quadro)
+                                </dd>
+                            </dl>
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="form-actions no-color">
+
+                                    <input type="submit" formmethod="post" value="Deletar" class="btn btn-danger" />
+                                    @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-success" })
+                                </div>
+                            }
+                        </div>
+                    </header>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+</body>

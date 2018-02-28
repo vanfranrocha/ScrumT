@@ -1,0 +1,150 @@
+﻿@model IEnumerable<Ferramenta_Scrumt.MODEL.ReleaseBacklog>
+
+@{
+    ViewBag.Title = "Release Backlog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="page-heading">
+    <h3>
+        Release Backlog
+    </h3>
+    <div class="col-md-5 col-xs-8">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Backlog</a>
+            </li>
+            <li class="active">Release Backlog</li>
+        </ul>
+    </div>
+    <div class="col-md-5">
+        <span style="font-weight:bold">Quadro de Tarefas: </span>
+        <a href="#myModal" data-toggle="modal" class="btn btn-xs btn-danger">
+            A Fazer
+        </a>
+        <a href="#myModal" data-toggle="modal" class="btn btn-xs btn-warning">
+            Em Execução
+        </a>
+        <a href="#myModal" data-toggle="modal" class="btn btn-xs btn-success">
+            Em Teste
+        </a>
+        <a href="#myModal" data-toggle="modal" class="btn btn-xs btn-info">
+            Done
+        </a>
+    </div>
+    <div class="col-md-2 col-xs-8">
+        <p>
+            @Html.ActionLink("Adicionar Release", "Create", 0, new { @class = "btn btn-primary" })
+        </p>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-sm-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Releases Cadastradas
+                    <span class="tools pull-right">
+                        <a href="javascript:;" class="fa fa-chevron-down"></a>
+                    </span>
+                </header>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="col-md-2 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Historia)
+                                    </div>
+                                    <div class="col-md-2 col-xs-8">
+                                        @Html.DisplayNameFor(model => model.Nome_Membro)
+                                    </div>
+                                    <div class="col-md-2 col-xs-8" style="text-align:center">
+                                        @Html.DisplayNameFor(model => model.Estimativa_inicio)
+                                    </div>
+
+                                    <div class="col-md-1 col-xs-8" style="text-align:center">
+                                        @Html.DisplayNameFor(model => model.Situacao_Quadro)
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        @foreach (var item in Model)
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Historia)
+                                            </b>@Html.DisplayFor(modelItem => item.Historia)
+                                        </div>
+                                        <div class="col-md-2 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Nome_Membro)
+                                            </b>@Html.DisplayFor(modelItem => item.Nome_Membro)
+                                        </div>
+                                        <div class="col-md-2 col-xs-8" style="text-align: center">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Estimativa_inicio)
+                                            </b>@Html.DisplayFor(modelItem => item.Estimativa_inicio)
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+                                            <b class="hidden-md hidden-lg">
+                                                @Html.DisplayNameFor(model => model.Situacao_Quadro)
+                                            </b>
+                                            <div class="progress progress-striped" style="height: 20px;">
+                                                @if (item.Situacao_Quadro == "A Fazer")
+                                                {
+                                                    <div style="width: 10%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-danger">
+                                                    <span style="margin-left: 5px;">0%</span>
+                                                    </div>
+                                                    
+                                                }
+                                                @if (item.Situacao_Quadro == "Em Execução")
+                                                {
+                                                    <div style="width: 33%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
+                                                     <span style="margin-left: 5px;">33%</span>   
+                                                    </div>
+                                                    
+                                                }
+                                                @if (item.Situacao_Quadro == "Em Teste")
+                                                {
+                                                    <div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-success">
+                                                        <span style="margin-left: 5px;">66%</span> 
+                                                    </div>
+                                                    
+                                                }
+                                                @if (item.Situacao_Quadro == "Done")
+                                                {
+                                                    <div style="width: 100%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-info">
+                                                        <span style="margin-left: 5px;">100%</span> 
+                                                    </div>
+                                                    
+                                                }
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 col-xs-8">
+
+                                            @Html.ActionLink("Editar", "Edit", new { id = item.ID }, new { @class = "btn btn-success" })
+                                            @Html.ActionLink("Detalhes", "Details", new { id = item.ID }, new { @class = "btn btn-info" })
+                                            @Html.ActionLink("Deletar", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+

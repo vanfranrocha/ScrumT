@@ -1,0 +1,69 @@
+﻿@model Ferramenta_Scrumt.MODEL.Projeto
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-heading">
+    <h3>
+        Equipe
+    </h3>
+    <ul class="breadcrumb">
+        <li>
+            <a href="/Home/Index">Home</a>
+        </li>
+        <li>
+            <a href="/Users/Index">Projeto</a>
+        </li>
+        <li class="active">Editar Projeto</li>
+    </ul>
+
+</div>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Editar Membro
+                        </header>
+                        <div class="panel-body">
+                            <form role="form">
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.ID, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.DisplayFor(model => model.ID, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.ID, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Descricao, "Descrição do Projeto", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.EditorFor(model => model.Descricao, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Data_Inicio, "Data Início", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.EditorFor(model => model.Data_Inicio, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Data_Inicio, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Data_Fim,"Data Fim", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.EditorFor(model => model.Data_Fim, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Data_Fim, "", new { @class = "text-danger" })
+                                </div>
+                            </form>
+                            <div class="form-group">
+                                <input type="submit" value="Salvar" class="btn btn-success" />
+                                @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-danger" })
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    }
+
+</body>

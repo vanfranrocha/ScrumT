@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\Vanessa_Rocha\Documents\Visual Studio 2015\Projects\Ferramenta_Scrumt\Ferramenta_Scrumt\obj\Release\Package\PackageTmp" />
+  <setAcl path="C:\Users\Vanessa_Rocha\Documents\Visual Studio 2015\Projects\Ferramenta_Scrumt\Ferramenta_Scrumt\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\Vanessa_Rocha\Documents\Visual Studio 2015\Projects\Ferramenta_Scrumt\Ferramenta_Scrumt\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

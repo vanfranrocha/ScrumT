@@ -12,14 +12,14 @@ namespace Ferramenta_Scrumt.REPOSITORIO
 
         public Users FindByID(int ID, ISQLMapper<Users> mapper)
         {
-            return mapper.MapFromSource(DB.GetByID("SP_EQUIPE_BYID", ID));
+            return mapper.MapFromSource(DB.GetByID("SP_USERS_BYID", ID));
         }
 
         public List<Users> Lista(ISQLMapper<Users> mapper)
         {
             SqlParameter[] Param = new SqlParameter[]
             { };
-            string SQL = "select * from Equipe";
+            string SQL = "select * from Users";
             return mapper.MapAllFromSource(DB.ListaSQL(Param, SQL).Tables[0]);
         }
 
@@ -32,12 +32,11 @@ namespace Ferramenta_Scrumt.REPOSITORIO
             {
                 new SqlParameter("@Nome",Item.Nome),
                 new SqlParameter("@Email",Item.Email),
-                new SqlParameter("@ID_Funcao",Item.Funcao),
                 new SqlParameter("@Senha",Item.Senha),
                 ID
             };
 
-            DB.ExecSP("SP_EQUIPE_INCLUIR", Param);
+            DB.ExecSP("SP_USERS_INCLUIR", Param);
         }
 
         public void Update(Users Item)
@@ -48,10 +47,10 @@ namespace Ferramenta_Scrumt.REPOSITORIO
                 new SqlParameter("@Nome",Item.Nome),
                 new SqlParameter("@Email",Item.Email),
                 new SqlParameter("@ID_Funcao",Item.Funcao),
-                new SqlParameter("@ID",Item.ID)
+                new SqlParameter("@ID_Equipe",Item.ID)
             };
 
-            DB.ExecSP("SP_EQUIPE_UPDATE", Param);
+            DB.ExecSP("SP_USERS_UPDATE", Param);
         }
 
         public void Delete(Users Item)
@@ -61,7 +60,7 @@ namespace Ferramenta_Scrumt.REPOSITORIO
                 new SqlParameter("@ID",Item.ID)
             };
 
-            DB.ExecSP("SP_EQUIPE_DELETE", Param);
+            DB.ExecSP("SP_USERS_DELETE", Param);
 
         }
 

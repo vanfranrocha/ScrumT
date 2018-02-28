@@ -1,0 +1,70 @@
+﻿@model Ferramenta_Scrumt.MODEL.Users
+
+@{
+    ViewBag.Title = "Detalhes Equipe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="page-heading">
+    <h3>
+        Equipe
+    </h3>
+    <div class="col-md-10 col-xs-8">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Cadastros</a>
+            </li>
+            <li class="#">Equipe</li>
+            <li class="active">Detalhes</li>
+        </ul>
+    </div>
+
+</div>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-sm-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    <h4>Detalhes do Usuário @Html.DisplayFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })</h4>
+                    <hr />
+                    <div class="panel-body">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ID, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.DisplayFor(model => model.ID, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Nome, "Nome: ", new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.DisplayFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                         </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, "Email: ", new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.DisplayFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Funcao,"Função: ", new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.DisplayFor(model => model.Nome_Funcao, new { htmlAttributes = new { @class = "form-control" } })
+
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Senha, "Senha: ", new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.DisplayFor(model => model.Senha, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+
+                        </div>
+            </header>
+            </section>
+            @Html.ActionLink("Editar", "Edit", new { id = Model.ID }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-danger" })
+        </div>
+
+        </div>
+</div>
+        

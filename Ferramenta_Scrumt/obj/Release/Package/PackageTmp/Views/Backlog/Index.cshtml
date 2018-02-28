@@ -1,0 +1,118 @@
+﻿@model IEnumerable<Ferramenta_Scrumt.MODEL.ProductBacklog>
+
+@{
+    ViewBag.Title = "Product Backlog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="page-heading">
+    <h3>
+        Product Backlog
+    </h3>
+    <div class="col-md-10 col-xs-6">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Backlog</a>
+            </li>
+            <li class="active">Product Backlog</li>
+        </ul>
+    </div>
+    <div class="col-md-2 col-xs-4">
+        <p>
+            @Html.ActionLink("Adicionar Historia", "Create", 0, new { @class = "btn btn-primary" })
+        </p>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-xs-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Historias Cadastradas
+                    <span class="tools pull-right">
+                        <a href="javascript:;" class="fa fa-chevron-down"></a>
+                    </span>
+                </header>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="col-md-3 col-xs-3">
+                                        @Html.DisplayNameFor(model => model.Historia)
+                                    </div>
+                                    <div class="col-md-2 col-xs-5">
+                                        @Html.DisplayNameFor(model => model.Nome_Projeto)
+                                    </div>
+                                    <div class="col-md-2 col-xs-8" style="text-align:center">
+                                        @Html.DisplayNameFor(model => model.Importancia)
+                                    </div>
+                                    
+                                    <div class="col-md-2 col-xs-8" style="text-align:center">
+                                        @Html.DisplayNameFor(model => model.Aceito)
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        @foreach (var item in Model)
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col-md-3 col-xs-3">
+                                            <b class="hidden-md hidden-lg">
+                                            </b>@Html.DisplayFor(modelItem => item.Historia)
+                                        </div>
+                                        <div class="col-md-2 col-xs-5">
+                                            <b class="hidden-md hidden-lg">
+                                            </b>@Html.DisplayFor(modelItem => item.Nome_Projeto)
+                                        </div>
+                                        <div class="col-md-2 col-xs-8" style="text-align:center">
+                                            <b class="hidden-md hidden-lg">
+                                            </b>
+                                            @if (item.Importancia == "Baixa")
+                                            {
+                                                <a href="#myModal"  data-toggle="modal" class="btn btn-xs btn-success">
+                                                @Html.DisplayFor(modelItem => item.Importancia)</a>
+                                            }
+                                            @if (item.Importancia == "Média")
+                                            {
+                                                <a href="#myModal" data-toggle="modal" class="btn btn-xs btn-warning">
+                                                    @Html.DisplayFor(modelItem => item.Importancia)
+                                                </a>
+                                            }
+                                            @if (item.Importancia == "Alta")
+                                            {
+                                                <a href="#myModal" data-toggle="modal" class="btn btn-xs btn-danger">
+                                                    @Html.DisplayFor(modelItem => item.Importancia)
+                                                </a>
+                                            }
+                                        </div>
+                                        
+                                        <div class="col-md-2 col-xs-8" style="text-align: center">
+                                            <b class="hidden-md hidden-lg">
+                                            </b>@Html.DisplayFor(modelItem => item.Aceito)
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+
+                                            @Html.ActionLink("Editar", "Edit", new { id = item.ID }, new { @class = "btn btn-success" })
+                                            @Html.ActionLink("Detalhes", "Details", new { id = item.ID }, new { @class = "btn btn-info" })
+                                            @Html.ActionLink("Deletar", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+

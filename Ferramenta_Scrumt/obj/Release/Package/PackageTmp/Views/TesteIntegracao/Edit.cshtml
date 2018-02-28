@@ -1,0 +1,86 @@
+﻿@model Ferramenta_Scrumt.MODEL.TestIntegracao
+
+@{
+    ViewBag.Title = "Editar Teste de Integração";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="page-heading">
+    <h3>
+        Teste de Integração
+    </h3>
+    <ul class="breadcrumb">
+        <li>
+            <a href="/Home/Index">Home</a>
+        </li>
+        <li>
+            <a href="/Backlog/Index">Testes</a>
+        </li>
+        <li class="active">Editar Teste Integração</li>
+    </ul>
+
+</div>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Editar Teste
+                        </header>
+                        <div class="panel-body">
+                            <form role="form">
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Historia, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.DropDownList("ID_Backlog", (SelectList)ViewBag.Historia, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Historia, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Membro, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.DropDownList("ID_Membro", (SelectList)ViewBag.Nome, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Historia, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Data_Teste, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.EditorFor(model => model.Data_Teste, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Data_Teste, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Versao, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.EditorFor(model => model.Versao, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Versao, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Erros, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.EditorFor(model => model.Erros, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Erros, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Rel_Log, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.EditorFor(model => model.Rel_Log, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Rel_Log, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.DropDownList("Status", new SelectList(ViewBag.Statuss, "Value", "Text"), htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                                </div>
+                            </form>
+
+                            <div class="form-group">
+                                <input type="submit" formmethod="post" value="Salvar" class="btn btn-success" />
+                                @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-danger" })
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+    }
+</body>

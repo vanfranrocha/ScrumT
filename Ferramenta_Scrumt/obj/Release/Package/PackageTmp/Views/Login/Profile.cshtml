@@ -1,0 +1,54 @@
+﻿@model Ferramenta_Scrumt.MODEL.Users
+
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="wrapper">
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel">
+                    <div class="panel-body">
+                        <h1>Profile</h1>
+                        <ul class="p-info">
+                            <li>
+                                <div class="title">Nome:</div>
+                                <div class="desk"> @Session["nomeUsuarioLogado"].ToString()</div>
+                            </li>
+                            <li>
+                                <div class="title">Função:</div>
+                                <div class="desk">@Session["Funcao"].ToString()</div>
+                            </li>
+                            <li>
+                                <div class="title">Email:</div>
+                                <div class="desk">@Session["Email"].ToString()</div>
+                            </li>
+                        </ul>
+                        <br>
+                            <a class="btn btn-post pull-left" href="/Users/Index"> <i class="fa fa-check"></i> Ver Membros Cadastrados</a>
+
+                            <ul class="p-social-link pull-right">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
