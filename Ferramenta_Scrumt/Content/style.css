@@ -283,9 +283,9 @@ hr {
     margin: 5px 0 0 0;
 }
 
-.left-side .logged-user .media-body h4 a {
-    color: #fff;
-}
+    .left-side .logged-user .media-body h4 a {
+        color: #585757;
+    }
 
 .left-side .logged-user .media-body span {
     font-style: italic;
@@ -323,11 +323,11 @@ hr {
         background-image: url(../images/plus.png);
     }
 
-.custom-nav > li.nav-active > a {
-    background-color: #353f4f;
-    background-image: url(../images/minus.png);
-    color: #65cea7;
-}
+    .custom-nav > li.nav-active > a {
+        background-color: #353f4f;
+        background-image: url(../images/minus.png);
+        color: #88c541;
+    }
 
 .custom-nav > li.nav-active > ul{
     display: block;
@@ -384,13 +384,13 @@ hr {
     transition: all 0.2s ease-out 0s;
 }
 
-.custom-nav .sub-menu-list > li > a:hover,
-.custom-nav .sub-menu-list > li > a:active,
-.custom-nav .sub-menu-list > li > a:focus {
-    text-decoration: none;
-    color: #65cea7;
-    background: #2a323f;
-}
+    .custom-nav .sub-menu-list > li > a:hover,
+    .custom-nav .sub-menu-list > li > a:active,
+    .custom-nav .sub-menu-list > li > a:focus {
+        text-decoration: none;
+        color: #88c541;
+        background: #2a323f;
+    }
 
 .custom-nav .sub-menu-list > li .fa {
     font-size: 12px;
@@ -433,12 +433,12 @@ hr {
 }
 
 .left-side-collapsed .left-side-inner {
-    padding: 0;
+    padding: 8px;
 }
 
 h5.left-nav-title {
     margin-left: 10px;
-    color: #fff;
+    color: #88c541;
 }
 
 .left-side-collapsed .custom-nav {
