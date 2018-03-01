@@ -306,8 +306,8 @@ hr {
 
     .custom-nav > li > a:hover,
     .custom-nav > li > a:active {
-        border-left-color: #31bc96;
-        color: #65cea7;
+        border-left-color: #88c541;
+        color: #88c541;
         border-radius: 0;
         -webkit-border-radius: 0;
     }
@@ -319,7 +319,7 @@ hr {
 
     .custom-nav > li.menu-list > a:hover {
         background-color: #e2e4e6;
-        border-left-color: #31bc96;
+        border-left-color: #88c541;
         background-image: url(../images/plus.png);
     }
 
@@ -5019,6 +5019,7 @@ ul.iconic-list li a:hover, ul.iconic-list li.active a {
 
 .states-info {
     color: #fff;
+    padding: 20px;
 }
 
 .states-info .red-bg {
