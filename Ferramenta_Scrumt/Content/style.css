@@ -2118,7 +2118,6 @@ ul.user-states li {
 
 .fc-content .fc-event {
     border-radius: 4px;
-    webkit-border-radius: 4px;
     padding: 4px 6px;
 }
 
@@ -2448,7 +2447,6 @@ table.display tr.even.gradeX, table.display tr.gradeX, tr.even.gradeU td.sorting
 .isotope .isotope-item {
     -webkit-transition-duration: 0.8s;
     -moz-transition-duration: 0.8s;
-    -ms-transition-duration: 0.8s;
     -o-transition-duration: 0.8s;
     transition-duration: 0.8s;
 }
@@ -2456,7 +2454,6 @@ table.display tr.even.gradeX, table.display tr.gradeX, tr.even.gradeU td.sorting
 .isotope {
     -webkit-transition-property: height, width;
     -moz-transition-property: height, width;
-    -ms-transition-property: height, width;
     -o-transition-property: height, width;
     transition-property: height, width;
 }
@@ -2464,7 +2461,6 @@ table.display tr.even.gradeX, table.display tr.gradeX, tr.even.gradeU td.sorting
 .isotope .isotope-item {
     -webkit-transition-property: -webkit-transform, opacity;
     -moz-transition-property: -moz-transform, opacity;
-    -ms-transition-property: -ms-transform, opacity;
     -o-transition-property: -o-transform, opacity;
     transition-property: transform, opacity;
 }
@@ -2476,7 +2472,6 @@ table.display tr.even.gradeX, table.display tr.gradeX, tr.even.gradeU td.sorting
 .isotope .isotope-item.no-transition {
     -webkit-transition-duration: 0s;
     -moz-transition-duration: 0s;
-    -ms-transition-duration: 0s;
     -o-transition-duration: 0s;
     transition-duration: 0s;
 }
@@ -2487,7 +2482,6 @@ table.display tr.even.gradeX, table.display tr.gradeX, tr.even.gradeU td.sorting
 .isotope.infinite-scrolling {
     -webkit-transition: none;
     -moz-transition: none;
-    -ms-transition: none;
     -o-transition: none;
     transition: none;
 }

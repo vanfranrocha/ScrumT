@@ -31,7 +31,7 @@
                     <ul class="notification-menu">
                         <li>
                             <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
-                                <i class="fa fa-minus-square"></i>
+                                <i class="ico-stack"></i>
 
                                 <span class="badge">
                                 @{int i = 0;
@@ -50,7 +50,7 @@
                                     <li class="new">
                                         <a href="#">
                                             <div class="task-info">
-                                                <a>História: @item.Text</a> - <em class="small"> Classe: @item.Group.Name</em>
+                                                <a> História: @item.Text </a> - <em class="small"> Classe: @item.Group.Name</em>
                                             </div>
                                             <div class="progress progress-striped active progress-sm">
                                                 @if (item.Value == "33")
@@ -82,7 +82,7 @@
                         </li>
                         <li>
                             <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
-                                <i class="fa fa-tasks"></i>
+                                <i class="ico-drawer"></i>
 
                                 <span class="badge badge-warning">
                                     @{
@@ -135,7 +135,7 @@
                         </li>
                         <li>
                             <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
-                                <i class="fa fa-list-alt"></i>
+                                <i class="ico-laptop"></i>
 
                                 <span class="badge">
                                     @{int s = 0;
@@ -187,7 +187,7 @@
                         </li>
                         <li>
                             <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
-                                <i class="fa fa-check-circle"></i>
+                                <i class="ico-checkmark"></i>
                                 <span class="badge badge-warning">
                                     @{int a = 0;
                                         foreach (var item in ViewBag.testacei)
@@ -236,15 +236,10 @@
                                         <span>Perfil</span>
                                     </a>
                                 </li>
+                                <li><a href="/Fluxo/Index"><i class="fa fa-question"></i> <span>Ajuda</span></a></li>
                                 <li><a href="/Login/LogOff"><i class="fa fa-sign-out"></i> <span>Sair</span></a></li>
                             </ul>
 
-                        </li>
-                        <li>
-                            <a href="/Fluxo/Index" class="btn btn-default dropdown-toggle">
-                                <i class="fa fa-question"></i>
-                                <span>Ajuda</span>
-                            </a>
                         </li>
                     </ul>
                 </div>
