@@ -907,14 +907,14 @@ h5.left-nav-title {
     background: #fff
 }
 
-.dropdown-menu-head .title {
-    background: #65cea7;
-    color: #fff;
-    padding: 15px;
-    text-transform: uppercase;
-    font-size: 12px;
-    margin: 0;
-}
+    .dropdown-menu-head .title {
+        background: #954699;
+        color: #fff;
+        padding: 15px;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin: 0;
+    }
 
 /*-----------------------------
         MAIN CONTENT
