@@ -1,4 +1,5 @@
-﻿using Ferramenta_Scrumt.MODEL;
+﻿using Ferramenta_Scrumt.FILTERS;
+using Ferramenta_Scrumt.MODEL;
 using Ferramenta_Scrumt.REPOSITORIO;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,35 +8,22 @@ using System.Web.Mvc;
 namespace Ferramenta_Scrumt.Controllers
 {
     [Authorize]
+    [Filterlisttest]
     public class TesteIntegracaoController : Controller
     {
 
         // GET: TesteIntegracao
-        List<TesteUnidade> TesteUnidadeList;
         List<TestIntegracao> TesteIntegracaoList;
         List<ProductBacklog> ProductList;
         List<Users> UserList;
         TesteIntegracaoRepositorio _TesteRep = new TesteIntegracaoRepositorio();
-        TesteUnidadeRepositorio _TesteUnRep = new TesteUnidadeRepositorio();
         ProductBacklogRepositorio _ProductRep = new ProductBacklogRepositorio();
         UsersRepositorio _UserRep = new UsersRepositorio();
-        List<TesteSistema> TestSisList;
-        TesteSistemaRepositorio _TestSisRep = new TesteSistemaRepositorio();
-        List<TesteAceitacao> TestAceiList;
-        TesteAceitacaoRepositorio _TestAceiRep = new TesteAceitacaoRepositorio();
 
         private void CarregaLista()
         {
             TesteIntegracaoList = _TesteRep.Lista(new TesteIntegracaoMapper());
             Session["Lista"] = TesteIntegracaoList;
-            TesteUnidadeList = _TesteUnRep.Listatest(new TesteUnidadeMapper());
-            ViewBag.tes = new MultiSelectList(TesteUnidadeList, "Status", "Historia", "Classe");
-            TesteIntegracaoList = _TesteRep.Listatest(new TesteIntegracaoMapper());
-            ViewBag.testint = new MultiSelectList(TesteIntegracaoList, "Status", "Historia", "Versao");
-            TestSisList = _TestSisRep.Listatest(new TesteSistemaMapper());
-            ViewBag.testsis = new MultiSelectList(TestSisList, "Status", "Falhas", "Versao");
-            TestAceiList = _TestAceiRep.Listatest(new TesteAceitacaoMapper());
-            ViewBag.testacei = new MultiSelectList(TestAceiList, "Membro", "Stakeholders", "Data");
         }
         public ActionResult Index()
         {

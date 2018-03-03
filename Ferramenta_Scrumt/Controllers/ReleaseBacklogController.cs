@@ -1,4 +1,5 @@
-﻿using Ferramenta_Scrumt.MODEL;
+﻿using Ferramenta_Scrumt.FILTERS;
+using Ferramenta_Scrumt.MODEL;
 using Ferramenta_Scrumt.REPOSITORIO;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,36 +8,21 @@ using System.Web.Mvc;
 namespace Ferramenta_Scrumt.Controllers
 {
     [Authorize]
+    [Filterlisttest]
     public class ReleaseBacklogController : Controller
     {
         // GET: ReleaseBacklog
         List<ReleaseBacklog> RBacklogList;
         ReleaseBacklogRepositorio _RBacklogRep = new ReleaseBacklogRepositorio();
-        List<TesteUnidade> TestList;
-        TesteUnidadeRepositorio _TestRep = new TesteUnidadeRepositorio();
-        List<TestIntegracao> TestIntList;
-        TesteIntegracaoRepositorio _TestIntRep = new TesteIntegracaoRepositorio();
         List<ProductBacklog> ProductList;
         ProductBacklogRepositorio _ProductRep = new ProductBacklogRepositorio();
         List<Users> UserList;
         UsersRepositorio _UserRep = new UsersRepositorio();
-        List<TesteSistema> TestSisList;
-        TesteSistemaRepositorio _TestSisRep = new TesteSistemaRepositorio();
-        List<TesteAceitacao> TestAceiList;
-        TesteAceitacaoRepositorio _TestAceiRep = new TesteAceitacaoRepositorio();
 
         private void CarregaLista()
         {
             RBacklogList = _RBacklogRep.Lista(new ReleaseBacklogMapper());
             Session["Lista"] = RBacklogList;
-            TestList = _TestRep.Listatest(new TesteUnidadeMapper());
-            ViewBag.tes = new MultiSelectList(TestList, "Status", "Historia", "Classe");
-            TestIntList = _TestIntRep.Listatest(new TesteIntegracaoMapper());
-            ViewBag.testint = new MultiSelectList(TestIntList, "Status", "Historia", "Versao");
-            TestSisList = _TestSisRep.Listatest(new TesteSistemaMapper());
-            ViewBag.testsis = new MultiSelectList(TestSisList, "Status", "Falhas", "Versao");
-            TestAceiList = _TestAceiRep.Listatest(new TesteAceitacaoMapper());
-            ViewBag.testacei = new MultiSelectList(TestAceiList, "Membro", "Stakeholders", "Data");
         }
         public ActionResult Index()
         {

@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
-namespace APOIO_ITPAC.REPOSITORIO
+namespace LOGIN.REPOSITORIO
 {
     public class LoginRepositorio : ISQLRepository<Users>
     {

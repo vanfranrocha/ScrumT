@@ -3,7 +3,7 @@ using Ferramenta_Scrumt.MODEL;
 using System.Web.Mvc;
 using System.Linq;
 using Ferramenta_Scrumt.REPOSITORIO;
-using APOIO_ITPAC.REPOSITORIO;
+using LOGIN.REPOSITORIO;
 
 namespace Ferramenta_Scrumt.Controllers
 {

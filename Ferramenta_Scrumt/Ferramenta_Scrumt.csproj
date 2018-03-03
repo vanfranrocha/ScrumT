@@ -210,6 +210,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProjetoController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
+    <Compile Include="FILTERS\Filterlisttest.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -727,6 +728,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Layout\" />
+    <Folder Include="Views\ListTestes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

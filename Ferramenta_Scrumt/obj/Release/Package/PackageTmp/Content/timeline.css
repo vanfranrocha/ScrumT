@@ -120,7 +120,6 @@
   display: inline-block;
 }
 .timeline-horizontal:before {
-  height: 3px;
   top: auto;
   bottom: 26px;
   left: 56px;
@@ -132,7 +131,6 @@
   display: table-cell;
   height: 280px;
   width: 20%;
-  min-width: 270px;
   float: none !important;
   padding-left: 0px;
   padding-right: 0px;
