@@ -3,7 +3,7 @@
 
 ScrumT é uma Ferramenta Ágil com a proposta Coexistente de utilização das práticas ágeis do framework Scrum e a metodologia TDD
 
-![ScrumT Logo](https://uploaddeimagens.com.br/imagens/login-logo-png "ScrumT")
+![ScrumT Logo](https://uploaddeimagens.com.br/images/001/314/513/full/login-logo.png "ScrumT")
 
 ##Motivação
 Auxiliar as equipes de desenvolvimento a gerenciar o projeto de desenvolvimento, acompanhando o processo e a codificação.
