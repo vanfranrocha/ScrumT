@@ -31,6 +31,9 @@ Auxiliar as equipes de desenvolvimento a gerenciar o projeto de desenvolvimento,
  - https://www.thinkmind.org/index.php?view=article&articleid=icsea_2016_14_40_10203
  - http://ulbra-to.br/encoinfo/index.php/encoinfo/encoinfo2016/paper/view/343/511
 
+#Servidor de teste
+- http://scrumt.gear.host
+
 #Copyright e Licença
-Copyright 2016.
+Copyright 2018.
 A proposta de utilização de ambas as metodologias foi publicada em uma conferência internacional e um congresso brasileiro, e a ferramenta esta em desenvolvimento, é uma proposta da equipe com a finalidade de contribuir para as equipes de desenvolvimento.
