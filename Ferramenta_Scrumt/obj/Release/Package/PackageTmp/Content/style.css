@@ -225,11 +225,12 @@ hr {
     color: #88C541;
 }
 .logo-icon img{
-    width: 35px;
+    width: 40px;
 }
 .left-side-collapsed .logo-icon {
-    height: 45px;
-    margin-top: -48px;
+    height: 62px;
+    margin-top: -55px;
+    background-color: #88C541;
     display: block !important;
 }
 
