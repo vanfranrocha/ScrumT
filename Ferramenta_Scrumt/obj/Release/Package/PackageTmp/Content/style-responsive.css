@@ -127,10 +127,6 @@
         background:#fff;
     }
 
-    .notification-menu li:nth-child(4) {
-        display: none;
-    }
-
     .left-side .searchform,
     .left-side .logged-user {
         display: block;
