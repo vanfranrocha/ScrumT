@@ -2856,7 +2856,7 @@ div.tagsinput span.tag a {
 
 .lock-wrapper h1 {
     text-align: center;
-    color: #6bc5a4;
+    color: #85CE36;
     font-size: 18px;
     text-transform: uppercase;
     padding: 10px 0 10px;
@@ -2872,7 +2872,7 @@ div.tagsinput span.tag a {
     display: inline-block;
     color: #fff;
     text-align: center;
-    background: #6bc5a4;
+    background: #85CE36;
     top: -25px;
     right: 125px;
     border: 4px solid #fff;
@@ -2888,7 +2888,7 @@ div.tagsinput span.tag a {
 }
 
 .btn-lock {
-    background: #6bc5a4;
+    background: #85CE36;
     color: #fff;
     height: 40px;
     -webkit-transition: all 0.3s;
@@ -2935,7 +2935,7 @@ div.tagsinput span.tag a {
 }
 
 .most-popular {
-    background: #6bc5a4;
+    background: #85CE36;
     color: #fff;
     box-shadow: 0 5px 0 #60b193;
 }
@@ -2951,7 +2951,7 @@ div.tagsinput span.tag a {
 }
 
 .most-popular .pricing-quote, .most-popular ul li i {
-    color: #6bc5a4;
+    color: #85CE36;
 }
 
 .most-popular ul li {
@@ -3071,7 +3071,7 @@ div.tagsinput span.tag a {
 --------------------------------*/
 
 .invoice-title {
-    color: #6bc5a4;
+    color: #85CE36;
     font-size: 48px;
     text-transform: uppercase;
     margin-top: 30px;
@@ -3098,12 +3098,12 @@ div.tagsinput span.tag a {
 }
 
 .inv-col span {
-    color: #6bc5a4;
+    color: #85CE36;
 }
 
 .t-due, .inv-label {
     font-size: 22px;
-    color: #6bc5a4;
+    color: #85CE36;
 }
 
 .inv-label {
@@ -3179,13 +3179,15 @@ div.tagsinput span.tag a {
 ----------------------------*/
 
 .error-page {
-    background: #6bc5a4;
+    background: #fff;
 }
 
 .error-wrapper {
     margin-top: 15%;
 }
-
+.error-wrapper img{
+    width:200px;
+}
 .error-wrapper h2 {
     font-size: 64px;
     color: #fff;
@@ -3213,24 +3215,24 @@ div.tagsinput span.tag a {
     color: #a7ffdf;
 }
 
-.error-wrapper .back-btn {
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 15px 30px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 20px;
-    margin-top: 50px;
+    .error-wrapper .back-btn {
+        background: #85CE36;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 15px 30px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 20px;
+        margin-top: 50px;
+    }
 
-}
-
-.error-wrapper .back-btn:hover {
-    background: #fff;
-    color: #6bc5a4;
-    border-color: #fff;
-}
+        .error-wrapper .back-btn:hover {
+            background: #688ac2;
+            color: #85CE36;
+            border-color: #fff;
+        }
 
 /*---------------------------------
         TIMELINE STYELS
@@ -3539,7 +3541,7 @@ h3.timeline-title {
 }
 
 .p-follow-btn:hover, .btn-post {
-    background: #6bc5a4;
+    background: #85CE36;
     color:#fff
 }
 
@@ -3569,7 +3571,7 @@ ul.p-social-link li a {
 }
 
 ul.p-social-link li a:hover, ul.p-social-link li.active a {
-    color: #6bc5a4;
+    color: #85CE36;
 }
 
 .p-text-area, .p-text-area:focus {
@@ -3586,7 +3588,7 @@ ul.p-social-link li a:hover, ul.p-social-link li.active a {
 }
 
 .p-option li a:hover {
-    background: #6bc5a4;
+    background: #85CE36;
     color: #fff;
 }
 
@@ -3644,7 +3646,7 @@ ul.p-info .desk {
 
 
 .p-states.green-box {
-    background: #6bc5a4;
+    background: #85CE36;
     color: #fff;
     border-radius: 4px;
     -webkit-border-radius: 4px;
