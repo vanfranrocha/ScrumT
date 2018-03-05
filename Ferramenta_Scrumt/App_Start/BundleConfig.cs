@@ -53,6 +53,7 @@ namespace Ferramenta_Scrumt
                       "~/Content/style.css",
                       "~/Content/custom-ico-fonts.css",
                       "~/Content/style-responsive.css",
+                      "~/Content/timeline.css",
                       "~/Scripts/iCheck/skins/minimal/minimal.css",
                       "~/Scripts/iCheck/skins/square/square.css",
                       "~/Scripts/iCheck/skins/minimal/red.css",
