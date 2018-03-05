@@ -669,7 +669,7 @@ h5.left-nav-title {
 }
 
     .notification-menu .dropdown-menu:after {
-        border-bottom: 6px solid #954699;
+        border-bottom: 6px solid #fff;
         border-left: 6px solid transparent;
         border-right: 6px solid transparent;
         content: "";
@@ -909,8 +909,9 @@ h5.left-nav-title {
 }
 
     .dropdown-menu-head .title {
-        background: #954699;
-        color: #fff;
+        border-bottom: 1px solid rgba(0,0,0,.0625) !important;
+        border-top: 1px solid rgba(0,0,0,.0625) !important;
+        color: #828282;
         padding: 15px;
         text-transform: uppercase;
         font-size: 12px;
