@@ -106,6 +106,14 @@
     .wdgt-profile, ul.iconic-list {
         margin-bottom: 20px;
     }
+    .timeline-horizontal .timeline-item {
+        display: table !important;
+        width: 100% !important;
+    }
+    .timeline-horizontal .timeline-item .timeline-panel {
+        bottom: 0px !important;
+        width: 100% !important;
+    }
 }
 
 
