@@ -135,7 +135,10 @@
     .breadcrumb-wrapper {
         display: none;
     }
-
+    .notification-menu .info-number {
+        font-size: 12px !important;
+        margin: 10px 0 15px 0 !important;
+    } 
     .notification-menu .dropdown-menu:after {
         display: none;
     }
