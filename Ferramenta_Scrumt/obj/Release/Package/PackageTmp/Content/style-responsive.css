@@ -137,6 +137,8 @@
     }
     .notification-menu .info-number {
         font-size: 12px !important;
+    }
+    .left-side .logged-user {
         margin: 10px 0 15px 0 !important;
     } 
     .notification-menu .dropdown-menu:after {
