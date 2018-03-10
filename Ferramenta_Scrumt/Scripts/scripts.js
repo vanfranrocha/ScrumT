@@ -58,8 +58,8 @@
          jQuery('.main-content').height(docHeight);
    }
 
-   $("#sortable-todo, #sortable-todo1, #sortable-todo2, #sortable-todo3").sortable({
-       connectWith: ".to-do-list",
+   $(".sortable-todo").sortable({
+       connectWith: ".sortable-todo"
    }).disableSelection();
 
    //  class add mouse hover
