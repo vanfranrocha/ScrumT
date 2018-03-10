@@ -78,22 +78,21 @@
 
                             <div class="details">
                                 <div class="title">
-                                    <a href="#"> @item.Group.Name</a><em class="small"> História: @item.Text</em>
+                                    <a href="#"> @item.Group.Name</a>
+                                    <em class="small"> História: @item.Text</em>
+                                    @if (item.Value == "Alta")
+                                    {
+                                        <span class="label label-danger">Alta</span>
+                                    }
+                                    @if (item.Value == "Média")
+                                    {
+                                        <span class="label label-warning">Média</span>
+                                    }
+                                    @if (item.Value == "Baixa")
+                                    {
+                                        <span class="label label-success">Baixa</span>
+                                    }
                                 </div>
-
-                                @if (item.Value == "Alta")
-                                {
-                                    <span class="label label-danger">Alta</span>
-                                }
-                                @if (item.Value == "Média")
-                                {
-                                    <span class="label label-warning">Média</span>
-                                }
-                                @if (item.Value == "Baixa")
-                                {
-                                    <span class="label label-success">Baixa</span>
-                                }
-
                             </div>
                         </li>
                     }

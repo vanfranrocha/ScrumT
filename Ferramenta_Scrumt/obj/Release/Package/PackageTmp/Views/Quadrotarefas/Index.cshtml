@@ -4,35 +4,24 @@
     ViewBag.Title = "Quadro de Tarefas";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<style>
+    .sortable-todo {
+        list-style-type: none;
+        min-height: 10px;
+    }
+    .sortable-description {
+        border-radius: 3px;
+        color: #7f8b97;
+        line-height: 1.3;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
 <div class="page-heading">
     <h3>
         Quadro de Tarefas
     </h3>
-    <div class="col-md-4 col-xs-8">
-        <ul class="breadcrumb">
-            <li>
-                <a href="~/Home/Index">Home</a>
-            </li>
-            <li>
-                <a href="#">Backlog</a>
-            </li>
-            <li class="active">Quadro de Tarefas</li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <span style="font-weight:bold">Importância: </span>
-        <a href="#myModal" data-toggle="modal" class="btn btn-xs btn-danger">
-            Alta
-        </a>
-        <a href="#myModal" data-toggle="modal" class="btn btn-xs btn-warning">
-            Média
-        </a>
-        <a href="#myModal" data-toggle="modal" class="btn btn-xs btn-success">
-            Baixa
-        </a>
-    </div>
-    <div class="col-md-1 col-xs-8">
+    <div class="col-md-offset-7 col-md-1 col-xs-8">
         <label class="col-lg-2 col-sm-2 control-label">Projeto</label>
     </div>
     <div class="col-md-2 col-xs-8">
@@ -52,7 +41,7 @@
                 A Fazer
             </header>
             <div class="panel-body">
-                <ul class="to-do-list ui-sortable" id="sortable-todo">
+                <ul class="to-do-list sortable-todo">
                 @foreach (var item in Model)
                 {
                     <span>
@@ -77,11 +66,14 @@
                             </p>
                         </li>
                         }
+                        
                     </span>
                 }
                 </ul>
+                
             </div>
         </div>
+        <p class="sortable-description">Tarefas que precisam ser feitas</p>
     </div>
     <div class="col-md-3">
         <div class="panel">
@@ -93,7 +85,7 @@
                 </span>
             </header>
             <div class="panel-body">
-                <ul class="to-do-list ui-sortable" id="sortable-todo">
+                <ul class="to-do-list sortable-todo">
                     @foreach (var item in Model)
                     {
                         <span>
@@ -120,9 +112,12 @@
                             }
                         </span>
                     }
+
                 </ul>
+                
             </div>
         </div>
+        <p class="sortable-description">Tarefas que está trabalhando</p>
     </div>
     <div class="col-md-3">
         <div class="panel">
@@ -134,7 +129,7 @@
                 </span>
             </header>
             <div class="panel-body">
-                <ul class="to-do-list ui-sortable" id="sortable-todo">
+                <ul class="to-do-list sortable-todo">
                     @foreach (var item in Model)
                     {
                         <span>
@@ -164,6 +159,7 @@
                 </ul>
             </div>
         </div>
+        <p class="sortable-description">Testes estão sendo realizados</p>
     </div>
     <div class="col-md-3">
         <div class="panel">
@@ -175,7 +171,7 @@
                 </span>
             </header>
             <div class="panel-body">
-                <ul class="to-do-list ui-sortable" id="sortable-todo">
+                <ul class="to-do-list sortable-todo" >
                     @foreach (var item in Model)
                     {
                         <span>
@@ -205,6 +201,7 @@
                 </ul>
             </div>
         </div>
+        <p class="sortable-description">Tarefas finalizadas. Parabéns!</p>
     </div>
 
 </div>

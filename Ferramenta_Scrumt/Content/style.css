@@ -28,13 +28,14 @@ a {
     color: #65CEA7;
 }
 
-a:focus, a:active, a:hover {
-    outline: none;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    color: #353F4F;
-}
+    a:focus, a:active, a:hover {
+        text-decoration: none;
+        outline: none;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        color: #353F4F;
+    }
 
 h1, h2, h3, h4, h5 {
     font-family: 'Open Sans', sans-serif;
@@ -1595,28 +1596,42 @@ ul.user-states li {
 /*------------------------------
          TODOLIST STYLES
 ------------------------------*/
+.menu-icon {
+    text-decoration: none;
+}
+    .menu-icon:before {
+        font-family: FontAwesome;
+        content: "\f141";
+        margin-right: -20px;
+        margin-top: -6px;
+        color: #909090;
+        font-size: 16px;
+    }
+    .menu-icon:hover:before {
+        color: #88C541;
+        
+    }
 .todo-title {
-    margin-right:25px;
+    margin-right: 25px;
     padding-top: 5px;
-
 }
 .to-do-list {
     padding-left: 0;
     margin-top: -10px;
     font-size: 12px;
 }
-.to-do-list li {
-    padding: 17px 0;
-    -webkit-border-radius:3px;
-    -moz-border-radius:3px;
-    border-radius:3px;
-    position:relative;
-    cursor:move;
-    list-style: none;
-    font-size: 12px;
-    background: #fff;
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
-}
+    .to-do-list li {
+        padding: 17px 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        position: relative;
+        cursor: -webkit-grab;
+        list-style: none;
+        font-size: 12px;
+        background: #fff;
+        border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+    }
 .to-do-list li p {
     margin-bottom:0px;
 }
