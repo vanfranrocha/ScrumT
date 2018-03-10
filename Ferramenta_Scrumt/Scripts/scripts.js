@@ -58,6 +58,10 @@
          jQuery('.main-content').height(docHeight);
    }
 
+   $("#sortable-todo, #sortable-todo1, #sortable-todo2, #sortable-todo3").sortable({
+       connectWith: ".to-do-list",
+   }).disableSelection();
+
    //  class add mouse hover
    jQuery('.custom-nav > li').hover(function(){
       jQuery(this).addClass('nav-hover');
@@ -149,7 +153,6 @@
         return false;
     });
 
-    $("#sortable-todo").sortable();
 
 
     // panel close
