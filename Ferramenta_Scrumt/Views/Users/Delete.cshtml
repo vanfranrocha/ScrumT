@@ -8,7 +8,7 @@
     <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title">Deseja Realmente Excluir este Registro?</h4>
+            <h4 class="modal-title">Deseja excluir este membro do time?</h4>
         </div>
         <div class="modal-body">
             <p>@Html.DisplayNameFor(model => model.Nome) : @Html.DisplayFor(model => model.Nome)</p>
@@ -17,7 +17,6 @@
         </div>
         <div class="modal-footer">
             <input type="submit" formmethod="post" value="Deletar" class="btn btn-danger" />
-            @Html.ActionLink("Voltar", "Index", 0, new { @class = "btn btn-success" })
         </div>
     </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->

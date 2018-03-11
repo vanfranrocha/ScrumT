@@ -62,12 +62,6 @@
        connectWith: ".sortable-todo"
    }).disableSelection();
 
-   $(".delete").click(function () {
-       var id = $(this).attr("id");
-       $("#modal").load("delete?id=" + ID, function () {
-           $("#modal").modal();
-       })
-   });
    //  class add mouse hover
    jQuery('.custom-nav > li').hover(function(){
       jQuery(this).addClass('nav-hover');

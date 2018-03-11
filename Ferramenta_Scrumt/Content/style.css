@@ -52,7 +52,12 @@ hr {
 /*-------------------------------
             LOGIN STYLES
 -------------------------------*/
-
+.modal-dialog {
+    left:auto !important;
+}
+.modal-header {
+    background: #88C541 !important;
+}
 .login-body {
     background: #f1eded;
     background-size: cover;
