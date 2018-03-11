@@ -10,51 +10,66 @@
     <div class="row states-info">
         @foreach (var item in Model)
         {
-            <div class="col-md-4">
-                <div class="panel blue-bg">
+            <div class="col-md-3">
+                <div class="panel write-bg">
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-xs-4">
                                 <i class="ico-stack"></i>
                             </div>
                             <div class="col-xs-8">
-                                <span class="state-title"> Projetos em Execução </span>
+                                <span class="state-title"> Projetos</span>
                                 <h4>@Html.DisplayFor(modelItem => item.totalprojeto)</h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-                <div class="col-md-4">
-                    <div class="panel yellow-bg">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-xs-4">
-                                    <i class="ico-files"></i>
-                                </div>
-                                <div class="col-xs-8">
-                                    <span class="state-title">  Histórias Cadastradas </span>
-                                    <h4>@Html.DisplayFor(modelItem => item.totalhistorias)</h4>
-                                </div>
+            <div class="col-md-3">
+                <div class="panel write-bg">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <i class="ico-file3"></i>
+                            </div>
+                            <div class="col-xs-8">
+                                <span class="state-title">  Histórias</span>
+                                <h4>@Html.DisplayFor(modelItem => item.totalhistorias)</h4>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="panel red-bg">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-xs-4">
-                                    <i class="ico-code"></i>
-                                </div>
-                                <div class="col-xs-8">
-                                    <span class="state-title">  Testes em Espera  </span>
-                                    <h4>@Html.DisplayFor(modelItem => item.totalteste)</h4>
-                                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel write-bg">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <i class="ico-code"></i>
+                            </div>
+                            <div class="col-xs-8">
+                                <span class="state-title">  Testes em Espera  </span>
+                                <h4>@Html.DisplayFor(modelItem => item.totalteste)</h4>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel write-bg">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <i class="fa fa-coffee"></i>
+                            </div>
+                            <div class="col-xs-8">
+                                <span class="state-title">  Membros do time  </span>
+                                <h4>5</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         }
     </div>
     <div class="col-md-6">

@@ -44,7 +44,7 @@
                 <ul class="to-do-list sortable-todo">
                 @foreach (var item in Model)
                 {
-                    <span>
+                    <p>
                         @if (item.Situacao == "A Fazer")
                         {
                         <li class="clearfix">
@@ -63,11 +63,12 @@
                                     {
                                         <span class="label label-success">Baixa</span>
                                     }
+                                <a class="menu-icon pull-right" href="#"></a>
                             </p>
                         </li>
                         }
                         
-                    </span>
+                    </p>
                 }
                 </ul>
                 
@@ -79,10 +80,6 @@
         <div class="panel">
             <header class="panel-heading">
                 Em Execução
-                <span class="tools pull-right">
-                    <a class="fa fa-chevron-down" href="javascript:;"></a>
-                    <a class="fa fa-times" href="javascript:;"></a>
-                </span>
             </header>
             <div class="panel-body">
                 <ul class="to-do-list sortable-todo">
@@ -107,9 +104,11 @@
                                         {
                                             <span class="label label-success">Baixa</span>
                                         }
+                                        <a class="menu-icon pull-right" href="#"></a>
                                     </p>
                                 </li>
                             }
+
                         </span>
                     }
 
@@ -123,10 +122,6 @@
         <div class="panel">
             <header class="panel-heading">
                 Em Teste
-                <span class="tools pull-right">
-                    <a class="fa fa-chevron-down" href="javascript:;"></a>
-                    <a class="fa fa-times" href="javascript:;"></a>
-                </span>
             </header>
             <div class="panel-body">
                 <ul class="to-do-list sortable-todo">
@@ -137,7 +132,6 @@
                             {
                                 <li class="clearfix">
                                     <p class="todo-title">
-
                                         @Html.DisplayFor(modelItem => item.Historia)
                                         @if (item.Importancia == "Alta")
                                         {
@@ -151,6 +145,7 @@
                                         {
                                             <span class="label label-success">Baixa</span>
                                         }
+                                        <a class="menu-icon pull-right" href="#"></a>
                                     </p>
                                 </li>
                             }
@@ -165,10 +160,6 @@
         <div class="panel">
             <header class="panel-heading">
                 Done (Pronto)
-                <span class="tools pull-right">
-                    <a class="fa fa-chevron-down" href="javascript:;"></a>
-                    <a class="fa fa-times" href="javascript:;"></a>
-                </span>
             </header>
             <div class="panel-body">
                 <ul class="to-do-list sortable-todo" >
@@ -193,6 +184,7 @@
                                         {
                                             <span class="label label-success">Baixa</span>
                                         }
+                                        <a class="menu-icon pull-right" href="#"></a>
                                     </p>
                                 </li>
                             }
