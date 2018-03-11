@@ -4511,7 +4511,7 @@ ol.comment-list {
     color: #7A7676;
 }
 
-.directory-info-row h4, .directory-info-row a {
+.directory-info-row h4 {
     color: #424F63;
 }
 
@@ -4520,14 +4520,20 @@ ol.comment-list {
     -webkit-border-radius: 50%;
     margin-right: 20px;
 }
-
+.btn-time {
+    color: #ddd;
+    margin-top: 20px;
+    font-size: 16px;
+}
+.btn-time:hover{
+    color:#eb2121;
+    
+}
 /*-------------------------------
             chat styles
 -------------------------------*/
-
-
 .chats {
-    margin:0;
+    margin: 0;
     padding: 0;
     margin-top: -15px;
     margin-right: 10px;

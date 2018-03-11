@@ -29,83 +29,37 @@
     <hr>
 </div>
 <div class="wrapper">
-    <div class="row">
-        <div class="col-sm-12">
-            <section class="panel">
-                <header class="panel-heading">
-                    Membros Cadastrados
-                    <span class="tools pull-right">
-                        <a href="javascript:;" class="fa fa-chevron-down"></a>
-                    </span>
-                </header>
-                <div class="panel-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>
-                                    <div class="col-md-3 col-xs-8">
-                                        @Html.DisplayNameFor(model => model.Nome)
-                                    </div>
-                                    <div class="col-md-3 col-xs-8">
-                                        @Html.DisplayNameFor(model => model.Email)
-                                    </div>
-                                    <div class="col-md-3 col-xs-8">
-                                        @Html.DisplayNameFor(model => model.Funcao)
-                                    </div>
-                                </th>
-                            </tr>
-                        </thead>
-                        @foreach (var item in Model)
-                        {
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="col-md-3 col-xs-8">
-                                        <b class="hidden-md hidden-lg">
-                                            @Html.DisplayNameFor(model => model.Nome)
-                                        </b>@Html.DisplayFor(modelItem => item.Nome)
-                                    </div>
-                                    <div class="col-md-3 col-xs-8">
-                                        <b class="hidden-md hidden-lg">
-                                            @Html.DisplayNameFor(model => model.Email)
-                                        </b>@Html.DisplayFor(modelItem => item.Email)
-                                    </div>
-                                    <div class="col-md-3 col-xs-8">
-                                        <b class="hidden-md hidden-lg">
-                                            @Html.DisplayNameFor(model => model.Funcao)
-                                        </b>@Html.DisplayFor(modelItem => item.Nome_Funcao)
-                                    </div>
-                                    <div class="col-md-3 col-xs-8">
-                                        
-                                        @Html.ActionLink(" ", "Edit", new { id = item.ID }, new { @class = "btn btn-default btn-lg glyphicon glyphicon-edit edit" })
-                                        @Html.ActionLink(" ", "Details", new { id = item.ID }, new { @class = "btn btn-info btn-lg glyphicon glyphicon-file details" })
-                                        @Html.ActionLink(" ", "Delete", new { id = item.ID }, new { @class = "btn btn-danger btn-lg glyphicon glyphicon-trash delete", data_target = "#delete-container", data_toggle = "modal" })
-
-
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                        }
-                    </table>
-                    <div class="modal" id="modal">
-
+    <div class="directory-info-row">
+        <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-6 col-sm-6">
+                <div class="panel">
+                    <div class="panel-body">
+                   
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="thumb media-object" src="http://placehold.it/80x80" alt="">
+                            </a>
+                            <div class="col-md-7 media-body">
+                                <h4>@Html.DisplayFor(model => item.Nome) <span class="text-muted small"> - @Html.DisplayFor(modelItem => item.Nome_Funcao)</span></h4>
+                                <address>
+                                    <strong>@Html.DisplayFor(modelItem => item.Email)</strong><br>
+                                </address>
+                            
+                            </div>
+                             <div class="col-md-2 media-body">
+                                 @Html.ActionLink(" ", "Delete", new { id = item.ID }, new { @class = "btn btn-time delete glyphicon glyphicon-trash"})
+                             </div>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        }
+            <div class="modal" id="modal">
+
+            </div>
         </div>
     </div>
 </div>
 
-@section scripts{
-    <script>
-        $(function () {
-            $("#delete_container").on(function () {
-                var id = $(this).attr("id");
-                $("#modal").load("delete?id=" + ID, function () {
-                    $("#modal").modal();
-                })
-            });
-        })
-    </script>
-}
