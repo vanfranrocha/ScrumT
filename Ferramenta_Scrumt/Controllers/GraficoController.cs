@@ -11,6 +11,7 @@ namespace Ferramenta_Scrumt.Controllers
     public class GraficoController : Controller
     {
         List<Grafico> GraficoList;
+        List<Grafico> GraficoList2;
         GraficoRepositorio _GraficoRep = new GraficoRepositorio();
 
         // GET: Grafico
@@ -22,6 +23,11 @@ namespace Ferramenta_Scrumt.Controllers
         {
             GraficoList = _GraficoRep.Lista(new GraficoMapper());
             return Json(GraficoList, JsonRequestBehavior.AllowGet);
+        }
+        public JsonResult GetDados2()
+        {
+            GraficoList2 = _GraficoRep.Lista2(new GraficoMapper());
+            return Json(GraficoList2, JsonRequestBehavior.AllowGet);
         }
 
     }

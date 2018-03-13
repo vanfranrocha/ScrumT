@@ -84,7 +84,16 @@
         }
         var myLineChart = new Chart(document.getElementById("line-chart-js").getContext("2d")).Line(Linedata);
 
+    $.ajax({
+        url: "/Grafico/GetDados2",
+        type: "POST",
 
+        dataType: "json",
+        cache: false,
+        success: function (result) {
+            var eventosGrafico2 = result;
+            $(function () {
+                var data = eventosGrafico2;
         var pieData = [
             {
                 value: 30,

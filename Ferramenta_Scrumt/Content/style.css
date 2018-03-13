@@ -874,7 +874,9 @@ h5.left-nav-title {
 /* ------------------------------
         STICKY HEADER
 ---------------------------------*/
-
+.label-purple {
+    background-color: #954699;
+}
 .sticky-header .logo {
     position: fixed;
     padding-top:7px;
