@@ -15,7 +15,7 @@ body {
     color: #7a7676;
     line-height: 20px;
     overflow-x: hidden;
-    font-size: 14px;
+    font-size: 15px;
     background: #eff0f4;
 }
 
@@ -304,12 +304,18 @@ hr {
     margin-bottom: 10px;
 }
 
-.custom-nav > li > a {
-    color: #585757;
-    padding: 12px 20px;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-}
+    .custom-nav > li > a {
+        color: #585757;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 20px;
+        padding-right: 15px;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+    }
+    .custom-nav > li > a i{
+        margin-right: 5px;
+    }
 
     .custom-nav > li > a:hover,
     .custom-nav > li > a:active {
@@ -320,19 +326,17 @@ hr {
     }
 
 .custom-nav > li.menu-list > a {
-    background: transparent url(../images/plus-white.png) no-repeat 93% center;
+    background: transparent;
     border-left: 3px solid transparent;
 }
 
     .custom-nav > li.menu-list > a:hover {
         background-color: #e2e4e6;
         border-left-color: #88c541;
-        background-image: url(../images/plus.png);
     }
 
     .custom-nav > li.nav-active > a {
         background-color: #353f4f;
-        background-image: url(../images/minus.png);
         color: #88c541;
     }
 
@@ -340,9 +344,9 @@ hr {
     display: block;
 }
 
-.custom-nav > li.nav-active > a:hover {
-    background-image: url(../images/minus.png);
-}
+    .custom-nav > li.nav-active > a .fa-angle-right {
+        transform: rotate(90deg);
+    }
 
     .custom-nav > li.active > a,
     .custom-nav > li.active > a:hover,
@@ -365,13 +369,15 @@ hr {
     background-image: url(../images/minus.png);
 }
 
-.custom-nav li .fa {
-    font-size: 16px;
-    vertical-align: middle;
-    margin-right: 10px;
-    width: 16px;
-    text-align: center;
-}
+    .custom-nav li .fa {
+        font-size: 16px;
+        float:right;
+        /* vertical-align: middle;
+        margin-right: 10px;
+        width: 16px;
+        text-align: center;
+        */
+    }
 
 .custom-nav .sub-menu-list {
     list-style: none;
@@ -5042,7 +5048,7 @@ ul.iconic-list li a:hover, ul.iconic-list li.active a {
 /*-------------------*/
 
 .states-info {
-    color: #fff;
+    color: #939395;
     padding: 20px;
 }
 
@@ -5052,6 +5058,10 @@ ul.iconic-list li a:hover, ul.iconic-list li.active a {
 .states-info .blue-bg {
     background: #00c0ef !important;
 }
+    .states-info .write-bg {
+        background: #fff !important;
+        box-shadow: 0 2px 1px 0 rgba(216, 216, 216, 0.54);
+    }
 .states-info .green-bg {
     background: #00a65a !important;
 }
@@ -5059,9 +5069,10 @@ ul.iconic-list li a:hover, ul.iconic-list li.active a {
     background: #f39c12 !important;
 }
 
-.states-info i {
-    font-size: 50px;
-}
+    .states-info i {
+        font-size: 50px;
+        color: #88c541;
+    }
 
 .states-info .state-title {
     font-size: 13px;
@@ -5422,4 +5433,9 @@ ul.iconic-list li a:hover, ul.iconic-list li.active a {
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
+}
+
+.img-perfil {
+    border-radius: 50% !important;
+    width: 2rem;
 }

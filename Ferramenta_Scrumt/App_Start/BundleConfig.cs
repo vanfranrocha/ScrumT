@@ -52,6 +52,7 @@ namespace Ferramenta_Scrumt
                       "~/fonts/icomoon.css",
                       "~/Content/style.css",
                       "~/Content/custom-ico-fonts.css",
+                      "~/Content/partial-nucleo-icons.css",
                       "~/Content/style-responsive.css",
                       "~/Content/timeline.css",
                       "~/Content/bootstrap-reset.css",
