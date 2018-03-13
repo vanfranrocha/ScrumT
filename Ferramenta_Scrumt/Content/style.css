@@ -969,9 +969,9 @@ h5.left-nav-title {
     color: #999999;
 }
 
-.page-heading .breadcrumb li.active {
-    color: #65CEA7;
-}
+    .page-heading .breadcrumb li.active {
+        color: #a1d609;
+    }
 
 .wrapper {
     padding: 15px;
@@ -2090,13 +2090,13 @@ ul.user-states li {
 }
 
 .fc-state-active, .fc-state-active .fc-button-inner, .fc-state-active, .fc-button-today .fc-button-inner, .fc-state-hover, .fc-state-hover .fc-button-inner {
-    background: #65CEA7 !important;
+    background: #954699 !important;
     color: #fff !important;
 }
 
 .fc-event-skin {
-    background-color: #5d708c !important;
-    border-color: #5d708c !important;
+    background-color: #a1d609 !important;
+    border-color: #a1d609 !important;
     color: #FFFFFF !important;
 }
 
@@ -2104,13 +2104,13 @@ ul.user-states li {
     height: 45px;
     line-height: 45px;
     text-align: center;
-    background: #65CEA7 !important;
+    background: #954699 !important;
     color: #fff;
     text-transform: uppercase;
 }
 
 .fc-widget-header {
-    border-color: #62c6a0;
+    border-color: #954699;
 }
 
 .fc-widget-content {

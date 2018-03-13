@@ -216,7 +216,7 @@ hr {
     height: 60px;
 }
 .logo img{
-    width:140px;
+    width:100%;
 }
 .logo a {
     font-size: 28px;
@@ -315,6 +315,7 @@ hr {
     }
     .custom-nav > li > a i{
         margin-right: 5px;
+        font-size: 18px;
     }
 
     .custom-nav > li > a:hover,
@@ -849,8 +850,8 @@ h5.left-nav-title {
 .info-number .badge {
     background: #FF6C60;
     border-radius: 2px;
-    -webkit-border-radius: 2px;
-    font-size: 10px;
+    -webkit-border-radius: 10px;
+    font-size: 12px;
     font-weight: normal;
     line-height: 13px;
     padding: 2px 5px;
@@ -873,14 +874,20 @@ h5.left-nav-title {
 /* ------------------------------
         STICKY HEADER
 ---------------------------------*/
-
+.label-purple {
+    background-color: #954699;
+}
 .sticky-header .logo {
     position: fixed;
+    padding-top:7px;
+    font-size: 20px;
+    color: #fff;
+    font-weight:400;
     top: 0;
     left: 0;
     width: 240px;
     z-index: 100;
-    background: #88C541;
+    background: #a1d609;
 }
 
 .sticky-header .left-side {
