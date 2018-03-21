@@ -63,7 +63,7 @@
                                     {
                                         <span class="label label-success">Baixa</span>
                                     }
-                                <a class="menu-icon pull-right" href="#"></a>
+                                <a href="#" class="menu-icon btndetails pull-right" data-value="@item.id_Pbacklog"></a>
                             </p>
                         </li>
                         }
@@ -104,7 +104,7 @@
                                         {
                                             <span class="label label-success">Baixa</span>
                                         }
-                                        <a class="menu-icon pull-right" href="#"></a>
+                                        <a href="#" class="menu-icon btndetails pull-right" data-value="@item.id_Pbacklog"></a>
                                     </p>
                                 </li>
                             }
@@ -145,7 +145,7 @@
                                         {
                                             <span class="label label-success">Baixa</span>
                                         }
-                                        <a class="menu-icon pull-right" href="#"></a>
+                                        <a href="#" class="menu-icon btndetails pull-right" data-value="@item.id_Pbacklog"></a>
                                     </p>
                                 </li>
                             }
@@ -184,7 +184,7 @@
                                         {
                                             <span class="label label-success">Baixa</span>
                                         }
-                                        <a class="menu-icon pull-right" href="#"></a>
+                                        <a href="#" class="menu-icon btndetails pull-right" data-value="@item.id_Pbacklog"></a>
                                     </p>
                                 </li>
                             }
@@ -197,4 +197,24 @@
     </div>
 
 </div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 
+</div>
+@section scripts{
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $.ajaxSetup({ cache: true });
+
+            $(".btndetails").click(function () {
+                var id = $(this).data("value");
+                $("#myModal").load("/Quadrotarefas/Details/" + id, function () {
+                    $('#myModal').modal("show");
+                });
+            });
+        });
+
+    </script>
+}

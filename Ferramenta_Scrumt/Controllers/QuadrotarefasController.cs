@@ -2,6 +2,7 @@
 using Ferramenta_Scrumt.MODEL;
 using Ferramenta_Scrumt.REPOSITORIO;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace Ferramenta_Scrumt.Controllers
@@ -29,6 +30,11 @@ namespace Ferramenta_Scrumt.Controllers
             ProjetoList = _ProjetoRep.Lista(new ProjetoMapper(),Equipes);
             ViewBag.Projeto = new SelectList(ProjetoList, "ID", "Descricao");
             return View(QtarefasList);
+        }
+        public ActionResult Details(int id)
+        {
+            CarregaLista();
+            return View(QtarefasList.Where(X => X.id_Pbacklog == id).First());
         }
     }
 }

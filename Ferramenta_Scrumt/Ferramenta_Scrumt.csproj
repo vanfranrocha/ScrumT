@@ -729,6 +729,7 @@
     <Content Include="Views\TesteAceitacao\Create.cshtml" />
     <Content Include="Views\Fluxo\Index.cshtml" />
     <Content Include="Views\Grafico\Index.cshtml" />
+    <Content Include="Views\Quadrotarefas\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
