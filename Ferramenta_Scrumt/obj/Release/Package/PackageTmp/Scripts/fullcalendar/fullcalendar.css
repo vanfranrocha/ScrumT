@@ -277,12 +277,12 @@ a.fc-event {
 .fc-rtl .fc-event {
 	text-align: right;
 	}
-	
+
 .fc-event-skin {
-	border-color: #36c;     /* default BORDER color */
-	background-color: #36c; /* default BACKGROUND color */
-	color: #fff;            /* default TEXT color */
-	}
+    border-color: #a1d609; /* default BORDER color */
+    background-color: #a1d609; /* default BACKGROUND color */
+    color: #fff; /* default TEXT color */
+}
 	
 .fc-event-inner {
 	position: relative;

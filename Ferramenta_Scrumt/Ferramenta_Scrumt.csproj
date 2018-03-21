@@ -295,6 +295,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\icomoon.css" />
     <Content Include="fonts\icomoon.svg" />
+    <Content Include="fonts\nucleo-icons.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="images\404-error.png" />
@@ -635,6 +636,10 @@
     <Content Include="fonts\custom-ico-font.eot" />
     <Content Include="fonts\custom-ico-font.ttf" />
     <Content Include="fonts\custom-ico-font.woff" />
+    <Content Include="fonts\nucleo-icons.eot" />
+    <Content Include="fonts\nucleo-icons.ttf" />
+    <Content Include="fonts\nucleo-icons.woff" />
+    <Content Include="fonts\nucleo-icons.woff2" />
     <None Include="Properties\PublishProfiles\scrumt - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\scrumt - Web Deploy.pubxml" />
     <None Include="Properties\Settings.settings">

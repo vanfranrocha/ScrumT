@@ -25,7 +25,7 @@ input, select, textarea {
 }
 
 a {
-    color: #65CEA7;
+    color: #a1d60b;
 }
 
     a:focus, a:active, a:hover {
@@ -380,13 +380,13 @@ hr {
         */
     }
 
-.custom-nav .sub-menu-list {
-    list-style: none;
-    display: none;
-    margin: 0;
-    padding: 0;
-    background: #353f4f;
-}
+    .custom-nav .sub-menu-list {
+        list-style: none;
+        display: none;
+        margin: 0;
+        padding: 0;
+        background: #71397c;
+    }
 
 .custom-nav .sub-menu-list > li > a {
     color: #fff;
@@ -403,7 +403,7 @@ hr {
     .custom-nav .sub-menu-list > li > a:focus {
         text-decoration: none;
         color: #88c541;
-        background: #2a323f;
+        background: #613469;
     }
 
 .custom-nav .sub-menu-list > li .fa {
