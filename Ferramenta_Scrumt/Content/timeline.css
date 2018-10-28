@@ -132,7 +132,7 @@
   width: 20%;
   float: none !important;
   padding-left: 0px;
-  padding-right: 0px;
+  padding-right: 20px;
   margin: 0 auto;
   vertical-align: bottom;
 }
@@ -143,7 +143,7 @@
   float: none !important;
   left: 0 !important;
   right: 0 !important;
-  width: 80%;
+  width: 100%;
   margin-bottom: 20px;
 }
 .timeline-horizontal .timeline-item .timeline-panel:before {

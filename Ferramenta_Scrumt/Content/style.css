@@ -66,17 +66,17 @@ hr {
 }
 
 .form-signin {
-    max-width: 330px;
-    margin: 100px auto;
-    background: #fff;
+    min-width: 500px;
+    margin-left: 40%;
+    top: 25%;
     border-radius: 5px;
+    position: absolute;
     -webkit-border-radius: 5px;
 }
 
 .form-signin .form-signin-heading {
     margin: 0;
     padding: 25px 15px;
-    text-align: center;
     color: #fff;
     position: relative;
 }
@@ -133,7 +133,7 @@ hr {
     border-radius: 5px;
     -webkit-border-radius: 5px;
     border: 1px solid #eaeaec;
-    background: #eaeaec;
+    background: #fff;
     box-shadow: none;
     font-size: 12px;
 }
@@ -151,12 +151,12 @@ hr {
     font-size: 24px;
 }
 
-.form-signin .btn-login:hover {
-    background: #688ac2;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-}
+    .form-signin .btn-login:hover {
+        background: #95469a;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+    }
 
 .form-signin p {
     text-align: left;
@@ -181,14 +181,44 @@ hr {
 
 .registration {
     color: #c7c7c7;
-    text-align: center;
     margin-top: 15px;
 }
+.form-left-img {
+    width: 35%;
+    position: absolute;
+    display: inline-block;
+    background: #fff;
+    height: 100%;
+    padding:10%;
+}
+.form-left-img .row{
+    margin-top:10%;
+}
+.txt-hero-typed {
+    border-bottom: 2px solid #ffffff;
+}
 
+.txt-hero-typed-cursor {
+    opacity: 1;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 /*---------------------------------
             LEFT SIDE
 ----------------------------------*/
-
 .left-side {
     width: 240px;
     position: absolute;

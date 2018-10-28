@@ -11,19 +11,34 @@
 
 </head>
 <body class="login-body">
+    <div class="form-left-img">
+        <div class="row">
+            <img style="max-width: 140%;height: auto;" src="/images/shape-1.png" alt="illustration">
+            <h3 style="font-weight:bold; color: #85CE36">
+                Bem vindo ao Scrumt
+            </h3>
+            <h4>Organize <span id="txt-hero-typed" class="txt-hero-typed"></span></h4>
+            
+        </div>
+    </div>
     <div class="form-signin">
-        <div class="form-signin-heading text-center">
+        <div class="form-signin-heading">
             <img src="/images/login-logo.png" alt="" />
         </div>
 
         <div class="login-wrap">
             @RenderBody()
         </div>
+        <footer class="sticky-footer" style="background:none">
+            @DateTime.Now.Year &copy; Scrumt - Todos os Direitos Reservados. Desenvolvido por Vanessa Rocha
+        </footer>
     </div>
+
 
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 </body>
 </html>

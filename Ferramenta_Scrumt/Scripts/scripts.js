@@ -14,7 +14,16 @@
         $(".left-side").getNiceScroll().hide();
     }
 
-
+    $(function () {
+        new Typed('.txt-hero-typed', {
+        strings: [' os projetos da sua equipe!', ' seus testes!', ' o andamento do time!'],
+        typeSpeed: 50,
+        backSpeed: 80,
+        backDelay: 2500,
+        loop: true,
+        callback: function (){}
+        });
+    });
 
     // Toggle Left Menu
    jQuery('.menu-list > a').click(function() {
